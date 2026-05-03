@@ -468,28 +468,54 @@
       font-size: 12px;
     }
 
-    .pool-skills {
-      grid-column: 1 / -1;
-      display: none;
-      gap: 6px;
-      padding-top: 7px;
-      border-top: 1px solid var(--line);
+    .skill-modal {
+      z-index: 30;
     }
 
-    .pool-item.expanded .pool-skills {
+    .skill-panel {
+      width: min(620px, 100%);
+      max-height: min(720px, 88vh);
       display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 12px;
+      padding: 14px;
+      background: #fffaf1;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
     }
 
-    .pool-skill {
-      color: #3c3028;
-      font-size: 12px;
-      line-height: 1.45;
-      white-space: normal;
-      overflow-wrap: anywhere;
+    .skill-detail {
+      overflow: auto;
+      display: grid;
+      gap: 10px;
     }
 
-    .pool-skill b {
+    .skill-detail-meta {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .skill-detail-item {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 252, 246, .82);
+    }
+
+    .skill-detail-name {
+      display: inline-block;
+      margin-bottom: 6px;
       color: #71480f;
+      font-weight: 900;
+    }
+
+    .skill-detail-text {
+      margin: 0;
+      color: #3c3028;
+      font-size: 14px;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
     }
 
     @media (min-width: 760px) {
@@ -561,6 +587,19 @@
     </div>
   </section>
 
+  <section class="modal skill-modal" id="skillModal" aria-hidden="true" aria-labelledby="skillTitle">
+    <div class="skill-panel" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <div>
+          <h2 id="skillTitle">武将技能</h2>
+          <div class="skill-detail-meta" id="skillMeta"></div>
+        </div>
+        <button class="icon-button" id="closeSkillButton" type="button" aria-label="关闭">×</button>
+      </div>
+      <div class="skill-detail" id="skillDetail"></div>
+    </div>
+  </section>
+
   <script src="heroes-data.js?v=20260503-top100-hp"></script>
   <script>
     const heroes = window.SANGUOSHA_HEROES || [];
@@ -579,6 +618,11 @@
     const closePoolButton = document.querySelector("#closePoolButton");
     const poolTabs = document.querySelector("#poolTabs");
     const poolList = document.querySelector("#poolList");
+    const skillModal = document.querySelector("#skillModal");
+    const closeSkillButton = document.querySelector("#closeSkillButton");
+    const skillTitle = document.querySelector("#skillTitle");
+    const skillMeta = document.querySelector("#skillMeta");
+    const skillDetail = document.querySelector("#skillDetail");
 
     const STATE_KEY = "sanguosha-selector-state-v2";
     const LOCK_MS = 5 * 60 * 1000;
@@ -586,7 +630,6 @@
     let currentHeroes = [];
     let selectedId = null;
     let refreshTimer = null;
-    let expandedPoolHeroId = null;
 
     poolStatus.textContent = `将池 ${heroes.length} 名`;
 
@@ -748,26 +791,20 @@
       poolList.innerHTML = shown.map(hero => {
         const name = escapeHtml(hero.name);
         const faction = escapeHtml(hero.faction);
-        const isExpanded = hero.id === expandedPoolHeroId;
-        const skills = hero.skills.map(([skillName, skillText]) => `
-          <div class="pool-skill"><b>${escapeHtml(skillName)}</b>：${escapeHtml(skillText)}</div>
-        `).join("");
         return `
-          <button class="pool-item ${isExpanded ? "expanded" : ""}" type="button" data-hero-id="${hero.id}">
+          <button class="pool-item" type="button" data-hero-id="${hero.id}">
             <img class="pool-avatar" src="${encodeURI(hero.thumb || hero.image)}" alt="${name}头像" loading="lazy">
             <div>
               <div class="pool-name">${name}</div>
-              <div class="pool-meta">${faction}势力 · ${escapeHtml(hero.hp)}体力 · ${isExpanded ? "点击收起技能" : "点击查看技能"}</div>
+              <div class="pool-meta">${faction}势力 · ${escapeHtml(hero.hp)}体力 · 点击查看技能</div>
             </div>
             <span class="faction ${escapeHtml(hero.factionClass)}">${faction}</span>
-            <div class="pool-skills">${skills}</div>
           </button>
         `;
       }).join("");
     }
 
     function openPool() {
-      expandedPoolHeroId = null;
       renderPool();
       poolModal.classList.add("open");
       poolModal.setAttribute("aria-hidden", "false");
@@ -776,6 +813,26 @@
     function closePool() {
       poolModal.classList.remove("open");
       poolModal.setAttribute("aria-hidden", "true");
+    }
+
+    function openSkill(heroId) {
+      const hero = heroes.find(item => item.id === heroId);
+      if (!hero) return;
+      skillTitle.textContent = hero.name;
+      skillMeta.textContent = `${hero.faction}势力 · ${hero.hp}体力`;
+      skillDetail.innerHTML = hero.skills.map(([skillName, skillText]) => `
+        <div class="skill-detail-item">
+          <span class="skill-detail-name">${escapeHtml(skillName)}</span>
+          <p class="skill-detail-text">${escapeHtml(skillText)}</p>
+        </div>
+      `).join("");
+      skillModal.classList.add("open");
+      skillModal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeSkill() {
+      skillModal.classList.remove("open");
+      skillModal.setAttribute("aria-hidden", "true");
     }
 
     countInput.addEventListener("input", () => {
@@ -796,21 +853,26 @@
     poolTabs.addEventListener("click", event => {
       const button = event.target.closest("[data-faction]");
       if (!button) return;
-      expandedPoolHeroId = null;
       renderPool(button.dataset.faction);
     });
 
     poolList.addEventListener("click", event => {
       const button = event.target.closest("[data-hero-id]");
       if (!button) return;
-      const heroId = Number(button.dataset.heroId);
-      expandedPoolHeroId = expandedPoolHeroId === heroId ? null : heroId;
-      const activeTab = poolTabs.querySelector(".active");
-      renderPool(activeTab?.dataset.faction || "全");
+      openSkill(Number(button.dataset.heroId));
+    });
+
+    closeSkillButton.addEventListener("click", closeSkill);
+
+    skillModal.addEventListener("click", event => {
+      if (event.target === skillModal) closeSkill();
     });
 
     document.addEventListener("keydown", event => {
-      if (event.key === "Escape") closePool();
+      if (event.key === "Escape") {
+        closeSkill();
+        closePool();
+      }
     });
 
     grid.addEventListener("click", event => {
