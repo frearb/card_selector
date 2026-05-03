@@ -336,6 +336,24 @@
       color: #241405;
     }
 
+    .reroll-button {
+      width: calc(100% - 24px);
+      margin: 0 12px 8px;
+      min-height: 36px;
+      border-radius: 8px;
+      background: #efe1cf;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .reroll-button:disabled {
+      color: var(--muted);
+      background: rgba(239, 225, 207, .56);
+      cursor: not-allowed;
+    }
+
     .source {
       margin: 18px 0 0;
       padding: 12px;
@@ -587,9 +605,9 @@
       <div class="controls" aria-label="选将控制">
         <div class="control-line">
           <label class="control-label" for="cardCount">本轮候选数量</label>
-          <span class="count-value" id="countValue">6</span>
+          <span class="count-value" id="countValue">5</span>
         </div>
-        <input id="cardCount" type="range" min="3" max="10" value="6">
+        <input id="cardCount" type="range" min="3" max="10" value="5">
         <div class="actions">
           <button class="primary" id="refreshButton" type="button">刷新武将</button>
           <button class="danger" id="forceRefreshButton" type="button">强制刷新</button>
@@ -675,6 +693,7 @@
     let selectedId = null;
     let refreshTimer = null;
     let poolFilter = "全";
+    let rerolledSlots = new Set();
 
     poolStatus.textContent = `将池 ${heroes.length} 名`;
 
@@ -692,6 +711,7 @@
         heroIds: currentHeroes.map(hero => hero.id),
         selectedId,
         count: Number(countInput.value),
+        rerolledSlots: [...rerolledSlots],
         ...patch
       };
       localStorage.setItem(STATE_KEY, JSON.stringify(next));
@@ -739,6 +759,7 @@
       if (!force && Number(state.lockUntil || 0) > now && state.heroIds?.length) {
         currentHeroes = heroesFromIds(state.heroIds);
         selectedId = Number(state.selectedId) || null;
+        rerolledSlots = new Set(Array.isArray(state.rerolledSlots) ? state.rerolledSlots.map(Number) : []);
         render();
         updateRefreshState();
         return;
@@ -747,6 +768,7 @@
       selectedId = null;
       selectedStatus.textContent = "未选择";
       currentHeroes = shufflePool().slice(0, Number(countInput.value));
+      rerolledSlots = new Set();
       const forceWindowStart = now - Number(state.forceWindowStart || 0) < LOCK_MS ? Number(state.forceWindowStart) : now;
       const forceCount = force
         ? (now - Number(state.forceWindowStart || 0) < LOCK_MS ? Number(state.forceCount || 0) + 1 : 1)
@@ -754,8 +776,29 @@
       saveState({
         lockUntil: now + LOCK_MS,
         forceWindowStart,
-        forceCount
+        forceCount,
+        rerolledSlots: []
       });
+      render();
+    }
+
+    function rerollHero(slotIndex) {
+      if (rerolledSlots.has(slotIndex) || !currentHeroes[slotIndex]) return;
+
+      const currentIds = new Set(currentHeroes.map(hero => hero.id));
+      const replacement = heroes
+        .filter(hero => !currentIds.has(hero.id))
+        .sort(() => crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32 - .5)[0];
+      if (!replacement) return;
+
+      if (selectedId === currentHeroes[slotIndex].id) {
+        selectedId = null;
+        selectedStatus.textContent = "未选择";
+      }
+
+      currentHeroes[slotIndex] = replacement;
+      rerolledSlots.add(slotIndex);
+      saveState();
       render();
     }
 
@@ -802,12 +845,13 @@
     }
 
     function render() {
-      const visibleHeroes = selectedId
-        ? currentHeroes.filter(hero => hero.id === selectedId)
-        : currentHeroes;
+      const visibleHeroes = currentHeroes
+        .map((hero, index) => ({ hero, index }))
+        .filter(({ hero }) => !selectedId || hero.id === selectedId);
 
-      grid.innerHTML = visibleHeroes.map(hero => {
+      grid.innerHTML = visibleHeroes.map(({ hero, index }) => {
         const isSelected = hero.id === selectedId;
+        const isRerolled = rerolledSlots.has(index);
         const skills = hero.skills.map(([name, text]) => `
           <div class="skill">
             <span class="skill-name">${escapeHtml(name)}</span>
@@ -835,6 +879,7 @@
               </div>
               <div class="skills">${skills}</div>
             </div>
+            <button class="reroll-button" type="button" data-reroll-index="${index}" ${isRerolled || isSelected ? "disabled" : ""}>${isRerolled ? "已刷新" : "单独刷新"}</button>
             <button class="pick-button" type="button" data-id="${hero.id}">${isSelected ? "当前选择" : "选定此将"}</button>
           </article>
         `;
@@ -964,6 +1009,12 @@
     });
 
     grid.addEventListener("click", event => {
+      const rerollButton = event.target.closest("[data-reroll-index]");
+      if (rerollButton) {
+        rerollHero(Number(rerollButton.dataset.rerollIndex));
+        return;
+      }
+
       const button = event.target.closest("[data-id]");
       if (!button) return;
       selectHero(Number(button.dataset.id));
@@ -977,8 +1028,10 @@
       }
       currentHeroes = heroesFromIds(state.heroIds);
       selectedId = Number(state.selectedId) || null;
+      rerolledSlots = new Set(Array.isArray(state.rerolledSlots) ? state.rerolledSlots.map(Number) : []);
       if (!currentHeroes.length) {
         currentHeroes = shufflePool().slice(0, Number(countInput.value));
+        rerolledSlots = new Set();
         saveState({ lockUntil: 0, forceWindowStart: Date.now(), forceCount: 0 });
       }
       const hero = heroes.find(item => item.id === selectedId);
