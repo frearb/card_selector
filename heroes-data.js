@@ -2325,5 +2325,189 @@ window.SANGUOSHA_HEROES = [
       ]
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/YJ%E5%A4%8F%E4%BE%AF%E6%B0%8F"
+  },
+  {
+    "id": 562,
+    "name": "郭女王",
+    "faction": "魏",
+    "factionClass": "wei",
+    "hp": "3",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/75300.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/75300.jpg",
+    "intro": "文德郭皇后（184年4月8日－235年3月14日），名不详，字女王，安平郡广宗县（今河北广宗）人，东汉南郡太守郭永之次女，魏文帝曹丕的皇后。郭氏少年秀慧，父亲郭永奇之曰：“此乃我女中王也。”遂以女王为字。",
+    "source": "https://www.sanguosha.cn/hero-detail-562.html",
+    "skills": [
+      [
+        "易宠",
+        "准备阶段，你可以选择一名其他角色并指定一种花色，获得其所有该花色的牌，并直到你下个回合开始令其获得“雀”标记（若场上已有“雀”标记，则转移给该角色）。拥有“雀”标记的角色获得下一张你指定花色的牌时，你获得此牌。"
+      ],
+      [
+        "诬诽",
+        "你的【杀】或伤害类普通锦囊即将造成的伤害，视为由拥有“雀”标记的角色作为伤害来源造成的。你受到伤害后，若拥有“雀”的角色体力值大于3，你可以令其受到1点无来源伤害。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%83%AD%E5%A5%B3%E7%8E%8B"
+  },
+  {
+    "id": 436,
+    "name": "星黄忠",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/61000.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/61000.jpg",
+    "intro": "黄忠（？－220年），字汉升（一作“汉叔” ），南阳（今河南南阳）人。建安十三年，曹操挥师南下，降下荆州后，以黄忠代理裨将军，在长沙郡仕官，归长沙太守韩玄统属。刘备于赤壁之战大获全胜，趁机夺取江南四郡，时黄忠镇守长沙郡，关羽率五百校刀手来攻，与黄忠大战一百回合不分胜负，第二天关羽用拖刀计时，黄忠马失前蹄，跌落在地，关羽大义释之。次日，黄忠计诱关羽，为报关羽不杀之恩，用弓箭只射关羽盔缨，太守韩玄因此怀疑黄忠有二心，将斩黄忠，遭魏延劫场，韩玄被杀，黄忠与魏延一同投降刘备。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-436.html",
+    "skills": [
+      [
+        "势敌",
+        "转换技，锁定技，准备阶段，转换为阳，结束阶段，转换为阴。阳：你计算与其他角色的距离-1，你使用的黑色【杀】不可被响应。阴：其他角色计算与你的距离+1，你不可响应其他角色对你使用的红色【杀】。"
+      ],
+      [
+        "义释",
+        "当你对其他角色造成伤害时，你可以令此伤害-1，并获得其装备区中的一张牌。"
+      ],
+      [
+        "骑射",
+        "你可以将一张装备牌当做【酒】使用。你的手牌上限+X（X为你装备区牌数量）。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%BE%A4%E9%BB%84%E5%BF%A0"
+  },
+  {
+    "id": 431,
+    "name": "阎圃",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "3",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/59800.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/59800.jpg",
+    "intro": "东汉末年人物，本为张鲁部下谋士，后随张鲁一同投降曹操，封平乐乡侯。",
+    "source": "https://www.sanguosha.cn/hero-detail-431.html",
+    "skills": [
+      [
+        "缓图",
+        "每轮限一次，你攻击范围内一名其他角色摸牌阶段前，你可以交给其一张牌，令其跳过摸牌阶段，若如此做，其结束阶段你须选择一项：1.令其回复1点体力并摸两张牌；2.你摸三张牌并交给其两张手牌。"
+      ],
+      [
+        "避祸",
+        "限定技，一名角色脱离濒死状态时，你可以对其发动，令其摸三张牌，然后其他角色本轮计算与其的距离时+X（X为场上角色数）。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%98%8E%E5%9C%83"
+  },
+  {
+    "id": 451,
+    "name": "朱儁",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/59600.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/59600.jpg",
+    "intro": "朱儁（？—195年），字公伟，东汉末年名将。朱儁出身寒门，赡养母亲，以好义轻财闻名，受乡里敬重。黄巾起义爆发，朱儁以右中郎将、持节平定三郡之地，以功进封西乡侯，迁镇贼中郎将。又率军讨平黄巾，威声满天下。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-451.html",
+    "skills": [
+      [
+        "佯解",
+        "出牌阶段限一次，你可以与一名角色拼点，若你没赢，你可以令另一名其他角色视为对与你拼点的角色使用一张无距离限制的火【杀】。"
+      ],
+      [
+        "拒降",
+        "限定技，其他角色脱离濒死时，你对其造成伤害。"
+      ],
+      [
+        "厚俸",
+        "令其他角色执行整肃，若未失败，自己也获得整肃奖励。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9C%B1%E5%84%81"
+  },
+  {
+    "id": 345,
+    "name": "郝昭",
+    "faction": "魏",
+    "factionClass": "wei",
+    "hp": "4",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/46600.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/46600.jpg",
+    "intro": "郝昭，字伯道，太原人，中国东汉末年至曹魏初年著名将领。郝昭少年从军，屡立战功，逐渐晋升为杂号将军，后受曹真的推荐镇守陈仓，防御蜀汉。太和二年（228年），诸葛亮率军北伐，为郝昭所阻，劝降不成，昼夜相攻二十余日后被迫退军。魏明帝因此封其为关内侯。不久因染疾而病死。",
+    "source": "https://www.sanguosha.cn/hero-detail-345.html",
+    "skills": [
+      [
+        "镇骨",
+        "结束阶段，你可以选择一名其他角色，你的回合结束后和该角色的下个回合结束后，其将手牌摸至或弃至与你手牌数相同（最多摸至五张）。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%83%9D%E6%98%AD"
+  },
+  {
+    "id": 261,
+    "name": "徐荣",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/42800.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/42800.jpg",
+    "intro": "徐荣，玄菟人，东汉末年将领。本为中郎将，曾向董卓推举同郡出身的公孙度出任辽东太守。于汴水之战中击败曹操的独立追击军，以及在梁东之战中击败孙坚的部队。在董卓死后，受司徒王允的命令与李傕、郭汜交战，因部将胡轸投降，寡不敌众，于新丰之战被击败，战死在乱军之中。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-261.html",
+    "skills": [
+      [
+        "凶镬",
+        "游戏开始时，你获得3个“暴戾”标记。出牌阶段，你可以交给一名其他角色一个“暴戾”标记，你对有此标记的角色造成的伤害+1，且其出牌阶段开始时，移去“暴戾”并随机执行一项：受到1点火焰伤害且本回合不能对你使用【杀】；流失1点体力且本回合手牌上限-1；你随机获得其一张手牌和一张装备区里的牌。"
+      ],
+      [
+        "杀绝",
+        "锁定技，其他角色进入濒死状态时，若其需要超过一张【桃】或【酒】救回，则你获得一个“暴戾”标记，并获得使其进入濒死状态的牌。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BE%90%E8%8D%A3"
+  },
+  {
+    "id": 449,
+    "name": "皇甫嵩",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/59400.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/59400.jpg",
+    "intro": "皇甫嵩出身于将门世家，最初被举为孝廉、茂才。汉灵帝时被征为侍郎，迁北地太守。黄巾起义爆发后，与宦官吕强上疏请求解除党锢，被授为左中郎将，率兵讨平黄巾之乱，威震天下。战后升任左车骑将军，领冀州牧，封槐里侯。到任后，他奏请减免冀州百姓一年的租税。",
+    "source": "https://www.sanguosha.cn/hero-detail-449.html",
+    "skills": [
+      [
+        "讨乱",
+        "可以打断终止结果为黑桃的判定，并对判定者出杀或你获得判定牌。"
+      ],
+      [
+        "势击",
+        "造成属性伤害时，若自己手牌不为全场最多，可以查看并弃置目标手牌中所有的红色牌，然后令自己摸牌。"
+      ],
+      [
+        "整军",
+        "执行整肃，并令队友也获得奖励。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%9A%87%E7%94%AB%E5%B5%A9"
+  },
+  {
+    "id": 421,
+    "name": "袁涣",
+    "faction": "魏",
+    "factionClass": "wei",
+    "hp": "3",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/58100.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/58100.jpg",
+    "intro": "袁涣，字曜卿，陈郡扶乐（今河南省周口市太康县）人。东汉末年官员，出身陈郡袁氏，为东汉司徒袁滂之子。袁涣早年曾任郡功曹，后被公府征辟，相继被举为高第、秀才。汉末战乱时，袁涣流寓江淮一带，初为袁术所用，后投吕布。建安三年（198年），曹操率兵剿灭了吕布，袁涣又转投曹操，拜沛南部都尉，后又任谏议大夫、郎中令等职，在任上尽心尽责，以敢谏直言称名。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-421.html",
+    "skills": [
+      [
+        "请决",
+        "每轮限一次，其他角色使用牌指定一名体力值小于其且不处于濒死状态的除你以外的角色为唯一目标时，你可以摸一张牌，然后与其进行一次拼点，若你赢，则取消之。若你没赢，你代替成为此牌的目标。"
+      ],
+      [
+        "奉节",
+        "锁定技，准备阶段，你选择一名其他角色，直到你的下个回合开始前，每名角色的结束阶段，若其存活，你摸牌（至多摸至4张）或弃牌至手牌数与其体力值相同。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%A2%81%E6%B6%A3"
   }
 ];
