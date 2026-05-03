@@ -107,12 +107,13 @@
 
     .actions {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 8px;
     }
 
     .primary,
-    .secondary {
+    .secondary,
+    .danger {
       min-height: 44px;
       border-radius: 8px;
       font-weight: 800;
@@ -123,10 +124,27 @@
       color: white;
     }
 
+    .primary:disabled {
+      background: #b7aaa0;
+      color: rgba(255, 255, 255, .84);
+      cursor: not-allowed;
+    }
+
     .secondary {
       background: #efe1cf;
       color: var(--ink);
       border: 1px solid var(--line);
+    }
+
+    .danger {
+      background: #2f587b;
+      color: white;
+    }
+
+    .refresh-note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
     }
 
     .status {
@@ -355,8 +373,10 @@
         <input id="cardCount" type="range" min="3" max="10" value="6">
         <div class="actions">
           <button class="primary" id="refreshButton" type="button">刷新武将</button>
+          <button class="danger" id="forceRefreshButton" type="button">强制刷新</button>
           <button class="secondary" id="clearButton" type="button">取消选择</button>
         </div>
+        <div class="refresh-note" id="refreshNote">普通刷新后 5 分钟内会锁定结果。</div>
       </div>
     </section>
 
@@ -374,7 +394,7 @@
     </p>
   </main>
 
-  <script src="heroes-data.js?v=20260503-top100"></script>
+  <script src="heroes-data.js?v=20260503-top100-hp"></script>
   <script>
     const heroes = window.SANGUOSHA_HEROES || [];
 
@@ -384,21 +404,97 @@
     const selectedStatus = document.querySelector("#selectedStatus");
     const poolStatus = document.querySelector("#poolStatus");
     const refreshButton = document.querySelector("#refreshButton");
+    const forceRefreshButton = document.querySelector("#forceRefreshButton");
     const clearButton = document.querySelector("#clearButton");
+    const refreshNote = document.querySelector("#refreshNote");
+
+    const STATE_KEY = "sanguosha-selector-state-v2";
+    const LOCK_MS = 5 * 60 * 1000;
 
     let currentHeroes = [];
     let selectedId = null;
+    let refreshTimer = null;
 
     poolStatus.textContent = `将池 ${heroes.length} 名`;
+
+    function loadState() {
+      try {
+        return JSON.parse(localStorage.getItem(STATE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveState(patch = {}) {
+      const next = {
+        ...loadState(),
+        heroIds: currentHeroes.map(hero => hero.id),
+        selectedId,
+        count: Number(countInput.value),
+        ...patch
+      };
+      localStorage.setItem(STATE_KEY, JSON.stringify(next));
+      updateRefreshState();
+    }
+
+    function heroesFromIds(ids) {
+      if (!Array.isArray(ids)) return [];
+      const byId = new Map(heroes.map(hero => [hero.id, hero]));
+      return ids.map(id => byId.get(id)).filter(Boolean);
+    }
+
+    function formatRemaining(ms) {
+      const totalSeconds = Math.max(0, Math.ceil(ms / 1000));
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = String(totalSeconds % 60).padStart(2, "0");
+      return `${minutes}:${seconds}`;
+    }
+
+    function updateRefreshState() {
+      const state = loadState();
+      const now = Date.now();
+      const remaining = Math.max(0, Number(state.lockUntil || 0) - now);
+      const forceCount = now - Number(state.forceWindowStart || 0) < LOCK_MS ? Number(state.forceCount || 0) : 0;
+
+      refreshButton.disabled = remaining > 0;
+      refreshButton.textContent = remaining > 0 ? `刷新锁定 ${formatRemaining(remaining)}` : "刷新武将";
+      refreshNote.textContent = remaining > 0
+        ? `当前结果已锁定，刷新浏览器仍会保留。5 分钟内强制刷新 ${forceCount} 次。`
+        : `普通刷新后 5 分钟内会锁定结果。当前 5 分钟内强制刷新 ${forceCount} 次。`;
+
+      clearTimeout(refreshTimer);
+      if (remaining > 0) {
+        refreshTimer = setTimeout(updateRefreshState, 1000);
+      }
+    }
 
     function shufflePool() {
       return [...heroes].sort(() => crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32 - .5);
     }
 
-    function drawHeroes() {
+    function drawHeroes({ force = false } = {}) {
+      const state = loadState();
+      const now = Date.now();
+      if (!force && Number(state.lockUntil || 0) > now && state.heroIds?.length) {
+        currentHeroes = heroesFromIds(state.heroIds);
+        selectedId = Number(state.selectedId) || null;
+        render();
+        updateRefreshState();
+        return;
+      }
+
       selectedId = null;
       selectedStatus.textContent = "未选择";
       currentHeroes = shufflePool().slice(0, Number(countInput.value));
+      const forceWindowStart = now - Number(state.forceWindowStart || 0) < LOCK_MS ? Number(state.forceWindowStart) : now;
+      const forceCount = force
+        ? (now - Number(state.forceWindowStart || 0) < LOCK_MS ? Number(state.forceCount || 0) + 1 : 1)
+        : (now - Number(state.forceWindowStart || 0) < LOCK_MS ? Number(state.forceCount || 0) : 0);
+      saveState({
+        lockUntil: now + LOCK_MS,
+        forceWindowStart,
+        forceCount
+      });
       render();
     }
 
@@ -406,12 +502,14 @@
       selectedId = heroId;
       const hero = heroes.find(item => item.id === heroId);
       selectedStatus.textContent = hero ? `已选择：${hero.name}` : "未选择";
+      saveState();
       render();
     }
 
     function clearSelection() {
       selectedId = null;
       selectedStatus.textContent = "未选择";
+      saveState();
       render();
     }
 
@@ -426,7 +524,11 @@
     }
 
     function render() {
-      grid.innerHTML = currentHeroes.map(hero => {
+      const visibleHeroes = selectedId
+        ? currentHeroes.filter(hero => hero.id === selectedId)
+        : currentHeroes;
+
+      grid.innerHTML = visibleHeroes.map(hero => {
         const isSelected = hero.id === selectedId;
         const skills = hero.skills.map(([name, text]) => `
           <div class="skill">
@@ -465,8 +567,9 @@
       countValue.textContent = countInput.value;
     });
 
-    countInput.addEventListener("change", drawHeroes);
-    refreshButton.addEventListener("click", drawHeroes);
+    countInput.addEventListener("change", () => saveState({ count: Number(countInput.value) }));
+    refreshButton.addEventListener("click", () => drawHeroes());
+    forceRefreshButton.addEventListener("click", () => drawHeroes({ force: true }));
     clearButton.addEventListener("click", clearSelection);
 
     grid.addEventListener("click", event => {
@@ -475,7 +578,25 @@
       selectHero(Number(button.dataset.id));
     });
 
-    drawHeroes();
+    function init() {
+      const state = loadState();
+      if (state.count) {
+        countInput.value = state.count;
+        countValue.textContent = state.count;
+      }
+      currentHeroes = heroesFromIds(state.heroIds);
+      selectedId = Number(state.selectedId) || null;
+      if (!currentHeroes.length) {
+        currentHeroes = shufflePool().slice(0, Number(countInput.value));
+        saveState({ lockUntil: 0, forceWindowStart: Date.now(), forceCount: 0 });
+      }
+      const hero = heroes.find(item => item.id === selectedId);
+      selectedStatus.textContent = hero ? `已选择：${hero.name}` : "未选择";
+      render();
+      updateRefreshState();
+    }
+
+    init();
   </script>
 </body>
 </html>

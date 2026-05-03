@@ -1,12 +1,13 @@
 // Curated from the official Sanguosha Mobile hero list.
 // Pool scope: about top 100 Doudizhu-environment high-strength heroes, refreshed 2026-05-03.
+// HP values are parsed from BWIKI classic hero pages where available and supplemented from Sanguosha Wiki/Fandom for pages blocked during refresh.
 window.SANGUOSHA_HEROES = [
   {
     "id": 492,
     "name": "界·沮授",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/60400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/604.jpg",
     "intro": "沮[jǔ]授，袁绍帐下谋士。史载他“少有大志，擅于谋略”。曾为冀州别驾，举茂才，并当过两次县令。后来又当韩馥[fù]别驾，被韩馥[fù]表为骑都尉。袁绍占据冀州后任用沮授为从事。经常对袁绍提出良策，但很多时候袁绍并不听从。官渡之战时袁绍大败，沮授未及逃走，被曹操所获，因拒降被曹操处死。",
@@ -27,7 +28,7 @@ window.SANGUOSHA_HEROES = [
     "name": "界·徐盛",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/49100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/491.png",
     "intro": "字文向，琅邪[láng yá]莒[jǔ]县人。三国时期吴将。徐盛最初因讨伐山贼有功而被加为中郎将，后于濡须口之战中表现出色，得到孙权的赞赏。魏文帝曹丕伐吴时，徐盛以疑城之计退去魏军。",
@@ -44,7 +45,7 @@ window.SANGUOSHA_HEROES = [
     "name": "神郭嘉",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/22000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/220.png",
     "intro": "郭嘉（170年－207年），字奉孝，颍川阳翟（今河南禹州）人。东汉末年曹操帐下著名谋士。 郭嘉出身颍川郭氏。原为袁绍部下，后转投曹操，为曹操统一中国北方立下了功勋，官至军师祭酒，封洧阳亭侯。在曹操征伐乌丸时病逝，年仅三十八岁。谥号贞侯。 史书上称他“才策谋略，世之奇士”。曹操称赞他见识过人，是自己的“奇佐”。",
@@ -62,14 +63,15 @@ window.SANGUOSHA_HEROES = [
         "辉逝",
         "限定技，出牌阶段，你可选择一名角色：若其有未触发的觉醒技，且你体力上限不小于X(X为场上存活人数)，则你选择其中一个觉醒技，其视为已满足觉醒条件；否则其摸四张牌。若如此做，你减少2点体力上限。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E9%83%AD%E5%98%89"
   },
   {
     "id": 439,
     "name": "孙寒华",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/58800.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/588.png",
     "intro": "孙寒华，三国时女仙，其父孙贲为孙权堂兄，寒华少时与杜契有私情，后从杜契受玄白之要，颜容日少。周旋吴越诸山十馀年，得道仙去。",
@@ -87,14 +89,15 @@ window.SANGUOSHA_HEROES = [
         "莲华",
         "1级，你成为其他角色使用【杀】的目标时，你摸一张牌。2级，你成为其他角色使用【杀】的目标时，你摸一张牌，然后进行一次判定，若判定结果为黑桃，则取消之。3级，你成为其他角色使用【杀】的目标时，你摸一张牌，除非该角色弃置一张牌，否则取消之。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%AD%99%E5%AF%92%E5%8D%8E"
   },
   {
     "id": 584,
     "name": "曹髦",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/78301.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/964aa233ac9ea4375baa593a13fd8f55.png",
     "intro": "曹髦（241年11月15日－260年6月2日）， 字彦士，沛国谯县（今安徽省亳州市）人，魏文帝曹丕之孙，东海王曹霖之子，曹魏第四位皇帝。曹髦少而好学，即位后曾多次幸太学，向诸儒问学。在与诸儒讨论《易》《尚书》《礼记》等经典时，屡屡表达自己的政治理想。正元二年（255年），司马师去世，其弟司马昭执政。随年龄增长，曹髦渐不满司马昭擅权，欲以武力铲除司马氏，恢复皇权。甘露五年（260年）五月，召集侍中王沈、尚书王经、散骑常侍王业等商议，慷慨陈词：“司马昭之心，路人所知也。吾不能坐受废辱，今日当与卿等自出讨之。”王沈、王业奔告司马昭，司马昭调兵以备。曹髦亲率卫士、奴仆数百人，擂鼓往攻司马昭，途中与司马昭心腹贾充所率军队相遇交战，曹髦身先士卒，被太子舍人成济所杀。",
@@ -108,14 +111,15 @@ window.SANGUOSHA_HEROES = [
         "卫统",
         "持恒技。主公技。游戏开始时，若场上有其他魏势力角色且你拥有“潜龙”，则你因“潜龙”于游戏开始时获得的道心值修改为60点。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%9B%B9%E9%AB%A6"
   },
   {
     "id": 566,
     "name": "阎象",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/75500.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/755.jpg",
     "intro": "阎象，东汉末期人物，袁术的主簿。献帝兴平二年（195），手执玉玺的袁术要称帝时，问于部下，只有阎象引用周文王虽拥有三分之二的天下还向殷称臣的故事进行劝谏。却未被采纳。",
@@ -129,14 +133,15 @@ window.SANGUOSHA_HEROES = [
         "睿敛",
         "每轮开始时，你可以选择一名角色，该角色接下来的一个回合结束时，若其此回合弃置的牌数不小于1，你可以选择一种类型（其本回合须弃置过此类型的牌），然后你与该角色依次从弃牌堆中随机获得一张此类型的牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%98%8E%E8%B1%A1"
   },
   {
     "id": 430,
     "name": "蒋钦",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/59300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/593.png",
     "intro": "蒋钦（？－220年），字公奕，汉末东吴名将，早年随孙策平定丹阳、吴郡、会稽和豫章四郡。平盗贼，迁西部都尉。讨会稽贼吕合、秦狼等，徙讨越中郎将。又与贺齐并力讨平黟贼。从征合肥，因功迁荡寇将军，领濡须督，后召还都拜右护军，典领辞讼。",
@@ -150,14 +155,15 @@ window.SANGUOSHA_HEROES = [
         "尚义",
         "出牌阶段限一次，你可以弃置一张牌并选择一名有手牌的其他角色，令其查看你的手牌，然后你查看其手牌并获得其中一张。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%92%8B%E9%92%A6"
   },
   {
     "id": 377,
     "name": "星·徐晃",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/52400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/524.png",
     "intro": "字公明，河东杨人。三国时期曹魏名将，本为杨奉帐下骑都尉，杨奉被曹操击败后转投曹操，在曹操手下多立功勋，参与官渡、赤壁、关中征伐、汉中征伐等几次重大战役。",
@@ -167,14 +173,15 @@ window.SANGUOSHA_HEROES = [
         "治严",
         "出牌阶段各限一次，你可以选择一项执行对应效果：1.将手牌数摸至体力上限，然后直至本阶段结束时不能对其他角色使用牌；2.将x张手牌交给一名其他角色(x为你的手牌数减去体力值)。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%98%9F%E5%BE%90%E6%99%83"
   },
   {
     "id": 89,
     "name": "马良",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/12800.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/128.jpg",
     "intro": "字季常，因眉毛中有白毛，人称白眉马良，马谡的兄长。马良在兄弟五人中名声最佳，因此有“马氏五常，白眉最良”的说法。",
@@ -188,14 +195,15 @@ window.SANGUOSHA_HEROES = [
         "应援",
         "当你于回合内使用的牌置入弃牌堆后，你可以将之交给一名其他角色（相同牌名的牌每回合限一次）。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%A9%AC%E8%89%AF"
   },
   {
     "id": 142,
     "name": "神诸葛亮",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/20400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/204.jpg",
     "intro": "字孔明、号卧龙，汉族，琅琊[láng yá]阳都人，三国时期蜀汉丞相、杰出的政治家、军事家、发明家、文学家。在世时被封为武乡侯，死后追谥忠武侯，后来东晋政权推崇诸葛亮军事才能，特追封他为武兴王。诸葛亮为匡扶蜀汉政权，呕心沥血、鞠躬尽瘁、死而后已。其代表作有《前出师表》、《后出师表》、《诫子书》等。曾发明木牛流马等，并改造连弩，可一弩十矢俱发。于234年在宝鸡五丈原逝世。",
@@ -213,14 +221,15 @@ window.SANGUOSHA_HEROES = [
         "大雾",
         "结束阶段，你可以移去任意张\"星\"并选择等量的角色，然后直到你的下回合开始之前，当这些角色受到非雷电伤害时，防止此伤害。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E8%AF%B8%E8%91%9B%E4%BA%AE"
   },
   {
     "id": 70,
     "name": "SP赵云",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/10800.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/108.jpg",
     "intro": "字子龙，常山真定人。身长八尺，姿颜雄伟。长坂坡单骑救阿斗，先主云：“子龙一身都是胆也。”",
@@ -234,14 +243,15 @@ window.SANGUOSHA_HEROES = [
         "冲阵",
         "每当你发动龙胆使用或者打出一张手牌时，你可以立即获得对方的一张手牌"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/SP%E8%B5%B5%E4%BA%91"
   },
   {
     "id": 384,
     "name": "界·满宠",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/53200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/532.png",
     "intro": "初在曹操手下任许县县令，掌管司法，以执法严格著称；转任汝南太守，开始参与军事，曾参与赤壁之战。后关羽围攻樊城，满宠协助曹仁守城，劝阻了弃城而逃的计划，成功坚持到援军到来。曹丕在位期间，满宠驻扎在新野，负责荆州侧的对吴作战。曹叡[ruì]在位期间，满宠转任到扬州，接替曹休负责东侧对吴作战，屡有功劳。",
@@ -255,14 +265,15 @@ window.SANGUOSHA_HEROES = [
         "御策",
         "当你受到伤害后，你可以展示一张手牌。若如此做，除非伤害来源弃置与你展示的牌类别不同的一张手牌，否则你回复1点体力。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%95%8C%E6%BB%A1%E5%AE%A0"
   },
   {
     "id": 235,
     "name": "界·孙权",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/800.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/402.jpg",
     "intro": "吴大帝，字仲谋，吴郡富春县人。统领吴与蜀魏三足鼎立，制衡天下。",
@@ -276,14 +287,15 @@ window.SANGUOSHA_HEROES = [
         "救援",
         "主公技，其他吴势力角色对其自己使用【桃】时，若其体力值大于你，则该角色可以改为令你回复1点体力，然后其摸一张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%95%8C%E5%AD%99%E6%9D%83"
   },
   {
     "id": 344,
     "name": "张绣",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/46500.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/465.png",
     "intro": "张绣（？—207年），武威郡祖厉（今甘肃靖远县）人也。骠骑将军张济的从子。东汉末年割据宛城的军阀，汉末群雄之一。曹魏时期，与段煨、贾诩、明元郭氏皇后是同乡，也是凉州豪族集团的代表人物。",
@@ -297,14 +309,15 @@ window.SANGUOSHA_HEROES = [
         "从谏",
         "当你成为锦囊牌的目标时，若此牌的目标数大于1，则你可以交给一名其他目标角色一张牌，然后摸一张牌。若你给出的牌是装备牌，改为摸两张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%BC%A0%E7%BB%A3"
   },
   {
     "id": 454,
     "name": "谋·张飞",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/71000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/710.png",
     "intro": "字翼德，涿郡人，燕颌虎须，豹头环眼。有诗云:“长坂坡头杀气生，横枪立马眼圆睁。一声好似轰雷震，独退曹家百万兵。",
@@ -318,14 +331,15 @@ window.SANGUOSHA_HEROES = [
         "协击",
         "若你与一名角色完成协力，则对至多三名角色使用一张普通【杀】，然后摸等同于造成伤害值的牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%BC%A0%E9%A3%9E"
   },
   {
     "id": 589,
     "name": "谋·韩当",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/62600.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/3c411628e054d3819501913bba31fecb.jpg",
     "intro": "字义公，辽西令支（今河北迁安）人，吴国将领。韩当因为长于弓箭、骑术并且膂[lǚ]力过人而被孙坚赏识，追随他四处征伐周旋，数次冒险犯难，攻陷敌人、擒拿俘虏。对江东基业的逐渐稳固和吴国的建立有着重要影响。",
@@ -339,14 +353,15 @@ window.SANGUOSHA_HEROES = [
         "解烦",
         "出牌阶段限一次，你可指定一名角色，令其选择一项：1.攻击范围内含有其的角色依次弃一张牌;2.其摸此时攻击范围内有其的角色数的牌；背水：此技能失效直至你杀死一名角色。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E9%9F%A9%E5%BD%93"
   },
   {
     "id": 426,
     "name": "高览",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/58700.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/587.png",
     "intro": "本属袁绍部将，与颜良、文丑、张郃被后世并称为“河北四庭柱”。官渡之战中，淳于琼被曹操击破，高览与张郃一同投降曹操。",
@@ -360,14 +375,15 @@ window.SANGUOSHA_HEROES = [
         "等力",
         "当你使用【杀】指定其他角色为目标时或当你成为其他角色使用的【杀】的目标时，若你与其体力值相等，则你可以摸一张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%AB%98%E8%A7%88"
   },
   {
     "id": 601,
     "name": "星·董卓",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/82000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/d3ea78edaa9937cefa99a32cdfc894c5.png",
     "intro": "字仲颖，陇西临洮[táo] 人。东汉末年少帝、献帝时权臣，西凉军阀。官至太师、郿[méi]侯。其为人残忍嗜杀，倒行逆施，招致群雄联合讨伐，但联合军在董卓迁都长安不久后瓦解。后被其亲信吕布所杀。",
@@ -385,14 +401,15 @@ window.SANGUOSHA_HEROES = [
         "暴袭",
         "每轮各限一次。当一次性至少两张基本牌进入弃牌堆后，你可以减1点体力上限，将一张手牌当【决斗】使用。当一次性至少两张非基本牌进入弃牌堆后，你可以减1点体力上限，将一张手牌当不计入次数且无次数限制的【杀】使用。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%98%9F%E8%91%A3%E5%8D%93"
   },
   {
     "id": 437,
     "name": "毛玠",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/61100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/611.png",
     "intro": "毛玠[jiè]字孝先，陈留平丘（今河南封丘）人。东汉末年大臣。投靠曹操后，向曹操提出“奉天子以令不臣，脩耕植，畜军资”的战略规划，得到曹操的欣赏。",
@@ -402,14 +419,15 @@ window.SANGUOSHA_HEROES = [
         "秉清",
         "你于出牌阶段内使用牌结算结束后，若此牌与你此阶段使用并结算完毕的所有牌的花色均不相同，则记录此牌花色，然后根据记录的花色数，你可以执行对应效果： 两种：令一名角色摸两张牌； 三种：弃置一名角色区域内的一张牌； 四种：对一名其他角色造成1点伤害。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%AF%9B%E7%8E%A0"
   },
   {
     "id": 427,
     "name": "马元义",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/58900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/589.png",
     "intro": "东汉末年黄巾之乱的组织者之一，是黄巾大方首领，奉黄巾军首领张角之命，筹划起事的准备工作。后因张角弟子唐周告密而被捕，送往洛阳车裂。",
@@ -427,14 +445,15 @@ window.SANGUOSHA_HEROES = [
         "谋篡",
         "觉醒技，准备阶段，若你拥有至少X张“兵”（X为场上势力数），你减少1点体力值上限，然后获得技能“兵祸※”。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%A9%AC%E5%85%83%E4%B9%89"
   },
   {
     "id": 567,
     "name": "星·周不疑",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/76000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/760.png",
     "intro": "字元直（或作“文直”），零陵重安（今湖南衡阳县）人，刘表别驾刘先的外甥，少有异才，聪明敏达，在十七岁时就著有文论四首。",
@@ -448,14 +467,15 @@ window.SANGUOSHA_HEROES = [
         "雀颂",
         "雀颂：一名角色的结束阶段，若你于此回合内受到过伤害，则你可令一名角色选择一项执行：1、摸三张牌并复原武将牌（若其装备区的牌数不小于3，则摸牌数修改为2）； 2、回复1点体力。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%98%9F%E5%91%A8%E4%B8%8D%E7%96%91"
   },
   {
     "id": 258,
     "name": "马钧",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/42500.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/425.jpg",
     "intro": "字德衡，三国曹魏扶风（今陕西兴平县）人，机械制造家。 中国历史上著名的发明家，因为在传动机械方面造诣很深，有天下之名巧的美誉。善于发明机械、武器。曾奉命监督崇华殿的建造。",
@@ -469,14 +489,15 @@ window.SANGUOSHA_HEROES = [
         "巧思",
         "出牌阶段限一次，你可以表演“水转百戏图”来赢取相应的牌，然后你选择一项：弃置等量的牌，或将等量的牌交给一名其他角色。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%A9%AC%E9%92%A7"
   },
   {
     "id": 359,
     "name": "杨彪",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/49400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/494.png",
     "intro": "杨彪，字文先。东汉末年名臣，太尉杨赐之子、名士杨修之父。杨彪少年时受家学熏陶，为人有才学的同时还有高洁的品质，早年就累任侍中、五官中郎将、卫尉等职。汉献帝时更是遍历三公(司空、司徒、太尉)之职。其为人一生向汉，权臣董卓意图迁都时，他据理力争。献帝东迁时，杨彪尽节护主。曹操挟献帝定都许县后，将杨彪下狱，朝野之内尽是求情之人，获释后又任太常。之后汉室日渐衰微，便诈称脚疾，不理世事。曹魏建立后，拒绝出任太尉，改光禄大夫，待以客礼。",
@@ -494,14 +515,15 @@ window.SANGUOSHA_HEROES = [
         "义争",
         "出牌阶段限一次，你可选择一名体力不大于你的角色拼点：若你赢，跳过其下个摸牌阶段；若你没赢，你扣减一点体力上限。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9D%A8%E5%BD%AA"
   },
   {
     "id": 254,
     "name": "许攸",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/42100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/421.jpg",
     "intro": "本为袁绍帐下谋士，官渡之战时其家人因犯法而被收捕，许攸因此背袁投曹，并为曹操设下偷袭袁绍军屯粮之所乌巢的计策，袁绍因此而大败于官渡。后许攸随曹操平定冀州，因自恃其功而屡屡口出狂言，终因触怒曹操而被杀。",
@@ -519,14 +541,15 @@ window.SANGUOSHA_HEROES = [
         "寸目",
         "锁定技，当你摸牌时，改为从牌堆底摸牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%AE%B8%E6%94%B8"
   },
   {
     "id": 348,
     "name": "神甘宁",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "6",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/46900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/469.png",
     "intro": "字兴霸，巴郡临江人，祖籍荆州南阳郡。为人勇猛刚强，忠心耿耿，勇往无前。曾带兵百人于二更奇袭曹营，大挫其锐气。",
@@ -540,14 +563,15 @@ window.SANGUOSHA_HEROES = [
         "劫营",
         "回合开始时，若全场没有有“营”的角色，你获得一个“营”标记；结束阶段，你可以将“营”放到一名其他角色武将旁；有“营”的角色摸牌阶段多摸一张牌、出牌阶段可多使用一张【杀】、手牌上限+1。有“营”的其他角色回合结束后，移去“营”，然后你获得其所有手牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%A5%9E%E7%94%98%E5%AE%81"
   },
   {
     "id": 337,
     "name": "神荀彧",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/22200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/222.png",
     "intro": "荀彧，字文若，颍川颍阴（今河南许昌）人。东汉末年曹操帐下首席谋臣，杰出的战略家。自小被世人称作“王佐之才”。",
@@ -565,14 +589,15 @@ window.SANGUOSHA_HEROES = [
         "定汉",
         "每种牌名限一次，你成为锦囊牌的目标时，你记录此牌名，然后取消之。你的回合开始时，你可以在“定汉”记录中，增加或移除一种锦囊牌牌名。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%A5%9E%E8%8D%80%E5%BD%A7"
   },
   {
     "id": 145,
     "name": "神赵云",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "2",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/20700.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/207.jpg",
     "intro": "字子龙，常山真定人。身长八尺，姿颜雄伟。长坂坡单骑救阿斗，先主云：“子龙一身都是胆也。”",
@@ -586,14 +611,15 @@ window.SANGUOSHA_HEROES = [
         "龙魂",
         "你可以将至多两张同花色的牌按以下规则使用或打出：红桃当【桃】；方块当火【杀】；梅花当【闪】；黑桃当【无懈可击】。若你以此法使用了两张红色牌，则此牌回复值或伤害值+1。若你以此法使用了两张黑色牌，则你弃置当前回合角色一张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E8%B5%B5%E4%BA%91"
   },
   {
     "id": 214,
     "name": "麹义",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/37400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/374.jpg",
     "intro": "麹[qū]义，生卒年不详，是东汉末年军阀袁绍部下的将领，能征善战，屡建战功，早年在凉州，精通羌人战法，率领着袁绍的精锐部队。后来由于自恃功高而骄纵不轨，被袁绍所杀。",
@@ -607,14 +633,15 @@ window.SANGUOSHA_HEROES = [
         "骄恣",
         "锁定技，若你的手牌数为全场唯一最多，你造成或受到的伤害值+1。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%BA%B9%E4%B9%89"
   },
   {
     "id": 304,
     "name": "祢衡",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/3000501.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/30005.png",
     "intro": "字正平，三国时平原郡般县（今山东德州临邑县）人，东汉末年文学家。颇有才气，但性情狷狭、不能容物。与孔融交好，被孔融推荐去投效曹操。后因羞辱曹操，被曹操遣送去刘表处。后又因对刘表口出恶言，被刘表遣送到黄祖处。黄祖性情暴躁，加之祢衡在宴席上言行失态，遂将祢衡绞杀。",
@@ -628,14 +655,15 @@ window.SANGUOSHA_HEROES = [
         "舌剑",
         "若你于弃牌阶段弃置过至少两张牌且这些牌花色均不相同，你可弃置一名其他角色的一张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%A2%E8%A1%A1"
   },
   {
     "id": 408,
     "name": "周处",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/56000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/560.png",
     "intro": "周处（236—297年 ），字子隐，吴郡阳羡（今江苏宜兴）人。 西晋大臣、将领，东吴鄱阳太守周鲂之子。 少时纵情肆欲，为祸乡里。后来改过自新，拜访名人陆机和陆云，浪子回头，发奋读书，留下“周处除三害”的传说，拜东观左丞，迁无难都督，功业胜过父亲。吴国灭亡后，出仕西晋，拜新平太守，转广汉太守，治境有方。入为散骑常侍，迁御史中丞，刚正不阿。得罪梁孝王司马肜。 元康七年，出任建威将军，前往关中，讨伐氐羌齐万年叛乱，遇害于沙场。追赠平西将军，谥号为孝。",
@@ -649,14 +677,15 @@ window.SANGUOSHA_HEROES = [
         "除害",
         "使命技，出牌阶段限一次，你可以摸一张牌，并与一名其他角色拼点，此次你的拼点牌点数增加X（X为4减去你装备区的装备数量）。若你赢：你观看其手牌，然后从牌堆或弃牌堆中获得其手牌中拥有的牌类型各一张；当你于此阶段对其造成伤害后，你将牌堆或弃牌堆中一张你空置装备栏对应类型的装备牌，置入你的装备区。 成功：当一张装备牌进入你的装备区后，若你的装备区有不少于3张装备，则你将体力值回复至上限，获得“彰名※”，失去“乡害”。 失败：若你于使命达成前，你使用“除害”拼点没赢，且你的拼点结果不大于6点，则使命失败。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%91%A8%E5%A4%84"
   },
   {
     "id": 402,
     "name": "杜预",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/55200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/552.png",
     "intro": "杜预（222年－285年），字元凯，京兆郡杜陵县（今陕西西安）人，中国魏晋时期军事家、经学家、律学家，曹魏散骑常侍杜恕之子。 杜预出身京兆杜氏。初仕曹魏，任尚书郎，后成为权臣司马昭的幕僚，封丰乐亭侯。西晋建立后，历任河南尹、安西军司、秦州刺史、度支尚书等职，与贾充等修《晋律》。咸宁四年（278年）接替羊祜出任镇南大将军，镇守荆州。他积极备战，支持晋武帝司马炎对孙吴作战，并在咸宁五年（279年）成为晋灭吴之战的统帅之一。战后因功进封当阳县侯，仍镇荆州。在战后仍讲武备战，兴建学校，督修水利，被时人称为“杜父”。 太康五年（285年），杜预被征入朝，拜司隶校尉，途中于邓县逝世，终年六十三岁。获赠征南大将军、开府仪同三司，谥号“成”。 杜预耽思经籍，博学多通，多有建树，时誉为“杜武库”。曾注《孙子》十三篇，并著《春秋左氏传集解》《春秋释例》等。为明朝之前唯一一个同时进入文庙和武庙之人。",
@@ -670,14 +699,15 @@ window.SANGUOSHA_HEROES = [
         "三陈",
         "觉醒技，结束阶段，若你已有3个“武库”，你增加一点体力上限，回复一点体力，然后获得技能“灭吴※”。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%9D%9C%E9%A2%84"
   },
   {
     "id": 93,
     "name": "留赞",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/13200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/132.jpg",
     "intro": "字正明，会稽[kuài jī]长山（今浙江金华）人，曾任左护军，有两子：留略、留平。少为会稽郡吏，曾参与镇压黄巾起义，后被东吴大将凌统所引用，任屯骑校尉。诸葛恪[kè]东征，留赞为前部，会战先陷阵，大败魏师，以功升左将军。吴五凤二年（公元255年）留赞任左护军，随孙峻征淮[huái]南，因病撤军，被魏将蒋班围困于道，力战而死，时年73岁。",
@@ -687,14 +717,15 @@ window.SANGUOSHA_HEROES = [
         "奋音",
         "你的回合内，每当你使用了一张与上一张颜色不同的牌时，你摸一张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%95%99%E8%B5%9E"
   },
   {
     "id": 420,
     "name": "文鸯",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/58000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/580.png",
     "intro": "文鸯（238~291年），字次骞，小名阿鸯，世称文鸯，沛国谯郡（今安徽省亳州市）人。魏末晋初时期名将，曹魏扬州刺史文钦之子。司马师废黜皇帝曹芳后，参加毌丘俭淮南起兵，兵败之后投奔吴国。后跟随文钦率军支援诸葛诞发动淮南叛乱，得知父亲为诸葛诞所害，归顺大将军司马昭，受封关内侯。咸宁三年（277年），文鸯大破西部鲜卑首领秃发树机能，名震天下，迁护东夷校尉。西晋永平元年，为东安王司马繇（诸葛诞外孙）所构陷，遭夷三族之祸，时年五十四岁。",
@@ -716,14 +747,15 @@ window.SANGUOSHA_HEROES = [
         "仇决",
         "锁定技，你杀死其他角色后，则你增加1点体力上限，摸两张牌，然后本回合可以额外发动一次“却敌※”。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%96%87%E9%B8%AF"
   },
   {
     "id": 266,
     "name": "王元姬",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/43300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/433.jpg",
     "intro": "王元姬（217年—268年4月20日），东海郯县人。王朗之孙女、王肃之女，司马昭之妻，晋武帝司马炎与齐王司马攸的生母。幼时便通《诗经》、《论语》，嫁司马昭后竭尽妇道、谦虚谨慎。其人颇有远见，曾预言钟会谋反之事。泰始元年（265年），司马炎建立西晋，尊王元姬为皇太后，王元姬身处太后之位，提倡节俭，身体力行，作为众妃子的表率。在其治理之下，后宫井井有条，众人和睦相处。",
@@ -737,14 +769,15 @@ window.SANGUOSHA_HEROES = [
         "尚俭",
         "锁定技，任一角色的结束阶段，若你于此回合失去的牌不大于你的体力值，你可以摸等同于失去数量的牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%8E%8B%E5%85%83%E5%A7%AC"
   },
   {
     "id": 554,
     "name": "十常侍",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "1",
     "image": "https://www.sanguosha.cn/storage/uploads/images/73000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/730.jpg",
     "intro": "十常侍，指中国东汉（公元25年—220年）灵帝时期（168年-189年）操纵政权的宦官，其首领是张让和赵忠。他们玩弄小皇帝于股掌之中，以至灵帝称“张常侍是我父，赵常侍是我母”。十常侍自己横征暴敛，卖官鬻爵，他们的父兄子弟遍布天下，横行乡里，祸害百姓，无官敢管。人民不堪剥削、压迫，纷纷起来反抗。",
@@ -758,14 +791,15 @@ window.SANGUOSHA_HEROES = [
         "殁亡",
         "殁[mò]亡：锁定技，你死亡后，若你拥有技能“党锢”，且你仍有未亮出的“常侍”牌，则改为休整一轮。回合结束后，你死亡。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%8D%81%E5%B8%B8%E4%BE%8D"
   },
   {
     "id": 581,
     "name": "神鲁肃",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/22600.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/a776b36b256d0b22fe649a3161f45968.png",
     "intro": "鲁肃（172年-217年），字子敬，临淮东城（今安徽定远）人。中国东汉末年孙权的谋士与将领。东汉末年的孙权部将、战略家、外交家。 为人方严，生活俭朴，治军有方，又勤于学，虽在军阵，手不释卷，善谈论，能属文辞，深谋远虑，有过人之明，非一般尚武之人可比，对促成周瑜与诸葛亮的合作，维护孙、刘联盟的大局，为赤壁之战的胜利，三国鼎立局面的形成，起到了积极作用。",
@@ -783,14 +817,15 @@ window.SANGUOSHA_HEROES = [
         "智盟",
         "（身份场）你的回合结束后，你可以选择一名其他角色，你与其随机平均分配双方手牌（若为奇数则你分配较多张数）。（斗地主、团战类）你的回合结束后，你可选择一名手牌数不大于x的其他角色（x为你的手牌数+1），你与其随机平均分配双方手牌（若为奇数则你分配较多张数）。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E9%B2%81%E8%82%83"
   },
   {
     "id": 645,
     "name": "神姜维",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/87000.png",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/26db78b333fbbf9655566b397756c76b.png",
     "intro": "姜维身陨后，忠魂不坠，常耀星野。时雍凉大旱，赤地千里。忽星魂垂照，天涛翻涌，神霈沛然骤降，三日不绝。万姓仰观，但见云中有神人执剑布雨，威仪凛然。父老涕泣相告，皆言此乃姜维回天之力。遂立祠天水，四时奉祀。其未酬壮志，终化甘霖济世，虽身死国灭，亦成万民雨神。",
@@ -812,14 +847,15 @@ window.SANGUOSHA_HEROES = [
         "回天",
         "一名体力值大于你的角色回合结束时，你可摸一张牌并执行一个额外的回合。每轮开始时，若你发动过此技能，你死亡。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%A7%9C%E7%BB%B4"
   },
   {
     "id": 347,
     "name": "神张辽",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/46800.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/468.png",
     "intro": "字文远，魏雁门马邑[yì]人。官至前将军、征东将军、晋阳侯。武功高强，又谋略过人，多次建立奇功，以800人突袭孙权十万大军，皆望风披靡[mǐ] 。",
@@ -833,14 +869,15 @@ window.SANGUOSHA_HEROES = [
         "止啼",
         "锁定技，你攻击范围内已受伤的角色手牌上限-1；当你和这些角色拼点或【决斗】你赢时，你恢复一个装备栏。当你受到伤害后，若来源在你的攻击范围内且已受伤，你恢复一个装备栏。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%BC%A0%E8%BE%BD"
   },
   {
     "id": 338,
     "name": "神孙策",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "6",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/22300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/223.png",
     "intro": "字伯符，吴郡富春人。破虏将军孙坚长子、吴大帝孙权长兄。东汉末年割据江东一带的军阀，汉末群雄之一，孙吴政权的奠基者之一，绰号“小霸王”。",
@@ -858,14 +895,15 @@ window.SANGUOSHA_HEROES = [
         "冯河",
         "冯[píng]河，锁定技，你的手牌数上限等于已损失体力值。当你受到其他角色造成的伤害时，若你有手牌且体力上限大于1，则防止本次伤害，然后减少1点体力值上限并将1张手牌交给一名其他角色，然后若你拥有技能“英霸”，令伤害来源获得1个“平定”标记。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%AD%99%E7%AD%96"
   },
   {
     "id": 272,
     "name": "神陆逊",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/44000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/440.jpg",
     "intro": "本名陆议，字伯言，吴郡吴县人。历任东吴大都督、丞相。吴大帝孙权兄孙策之婿，世代为江东大族。以谦逊之书麻痹关羽，夺取荆州，又有火烧连营大破蜀军。",
@@ -883,14 +921,15 @@ window.SANGUOSHA_HEROES = [
         "绽火",
         "限定技，出牌阶段，你可以移去全部“军略”标记，令至多等量的处于连环状态的角色弃置所有装备区里的牌，然后对其中1名角色造成1点火焰伤害。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E9%99%86%E9%80%8A"
   },
   {
     "id": 271,
     "name": "神刘备",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "6",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/43900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/439.jpg",
     "intro": "先主姓刘，讳备，字玄德，涿[zhuō]郡涿县人，汉景帝子中山靖王胜之后也。以仁德治天下。",
@@ -904,14 +943,15 @@ window.SANGUOSHA_HEROES = [
         "结营",
         "锁定技，游戏开始时，你处于连环状态，【铁索连环】解除连环的效果对你无效，其他武将技能或卡牌令你解除连环状态的效果失效，当你受到属性伤害结算后立即进入连环状态；已处于连环状态的角色手牌上限+2；结束阶段，你让一名其他角色进入连环状态。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%88%98%E5%A4%87"
   },
   {
     "id": 143,
     "name": "神曹操",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/20500.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/205.jpg",
     "intro": "魏武帝曹操，字孟德，小名阿瞒、吉利，沛[pèi]国谯人。精兵法，善诗歌，乃治世之能臣，乱世之奸雄也。",
@@ -925,14 +965,15 @@ window.SANGUOSHA_HEROES = [
         "飞影",
         "锁定技，其他角色计算与你的距离+1。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E6%9B%B9%E6%93%8D"
   },
   {
     "id": 146,
     "name": "神司马懿",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/20800.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/208.jpg",
     "intro": "司马懿[yì]（179年－251年9月7日），字仲达，河内郡温县（今河南省焦作市温县）人，三国时期魏国权臣、政治家、军事家。曾挫败蜀汉丞相诸葛亮的北伐军，坚守疆土。历经曹操、曹丕、曹叡、曹芳四代君主，晚年发动高平陵之变，掌握曹魏的政权。 嘉平三年（251年），魏朝谥舞阳宣文侯；次子司马昭称晋王后，追尊谥为晋宣王；孙司马炎称帝后，追尊为高祖宣皇帝[1]，故也称晋高祖、晋宣帝。",
@@ -950,14 +991,15 @@ window.SANGUOSHA_HEROES = [
         "连破",
         "当你杀死任意角色后，你可于此回合结束后获得一个额外回合。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%8F%B8%E9%A9%AC%E6%87%BF"
   },
   {
     "id": 144,
     "name": "神吕布",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "5",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/20600.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/206.jpg",
     "intro": "字奉先，五原郡九原县人。三国第一猛将，曾独力战刘关张三人，其武力世之无双。时人语曰：“人中有吕布，马中有赤兔。”",
@@ -979,14 +1021,15 @@ window.SANGUOSHA_HEROES = [
         "神愤",
         "出牌阶段限一次，你可以弃6枚\"暴怒\"标记，然后对所有其他角色各造成1点伤害，这些角色先各弃置装备区里的所有牌，再弃置四张手牌，最后你翻面。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%90%95%E5%B8%83"
   },
   {
     "id": 139,
     "name": "神关羽",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "5",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/20100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/201.jpg",
     "intro": "关羽,字云长.曾水淹七军、擒于禁、斩庞德、威震华夏,吓得曹操差点迁都躲避,但是东吴偷袭荆州,关羽兵败被害.后传说吕蒙因关羽之魂索命而死。",
@@ -1000,14 +1043,15 @@ window.SANGUOSHA_HEROES = [
         "武魂",
         "锁定技，当你受到1点伤害后，你令伤害来源获得1枚梦魇标记；当你死亡时，你令拥有最多该标记的一名其他角色进行判定，若结果不为【桃】或【桃园结义】，则该角色死亡。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%85%B3%E7%BE%BD"
   },
   {
     "id": 140,
     "name": "神吕蒙",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/20200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/202.jpg",
     "intro": "吕蒙,字子明,汝南富陂人,东吴名将,原有“吴下阿蒙”之贬称,后受孙权劝说,奋发读书,最终成就一代名将。",
@@ -1021,14 +1065,15 @@ window.SANGUOSHA_HEROES = [
         "攻心",
         "出牌阶段限一次，你可以观看一名其他角色的手牌，然后你可以展示其中一张红桃牌，选择一项：1.弃置此牌；2.将此牌置于牌堆顶。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%90%95%E8%92%99"
   },
   {
     "id": 141,
     "name": "神周瑜",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/20300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/203.jpg",
     "intro": "字公瑾，庐江舒县人。东汉末年名将。有姿貌、精音律，江东有“曲有误，周郎顾”之语。周瑜少与孙策交好，后孙策遇刺身亡，孙权继任。周瑜将兵赴丧，以中护军的身份与长史张昭共掌众事，建安十三年（208年），周瑜率东吴军与刘备军联合，在赤壁击败曹操。此战也奠定了三分天下的基础。",
@@ -1042,14 +1087,15 @@ window.SANGUOSHA_HEROES = [
         "业炎",
         "限定技，出牌阶段，你可以选择至多三名角色，对这些角色造成共计至多3点火焰伤害（若你将对一名角色分配2点或更多火焰伤害，你须先弃置四张花色各不相同的手牌并失去3点体力）。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%91%A8%E7%91%9C"
   },
   {
     "id": 332,
     "name": "神太史慈",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/22100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/221.png",
     "intro": "太史慈，字子义，东莱黄县（今山东龙口东黄城集）人。东汉末年武将，守言应诺，恪遵信义，始终如一，弭[mǐ]息诽论。官至建昌都尉。弓马熟练，箭法精良。原为刘繇[yáo]部下，后被孙策收降，于赤壁之战前病逝，死时才四十一岁。",
@@ -1063,14 +1109,15 @@ window.SANGUOSHA_HEROES = [
         "破围",
         "使命技，游戏开始时，你令所有其他角色获得“围”标记。回合开始时，你令所有拥有“围”标记的角色将“围”标记移动到下家角色（若你获得“围”标记，则直接交给下家）。有“围”的角色受到伤害后，弃置其“围”标记。有“围”的角色回合开始时，你可以选择一项：1. 弃置一张手牌，对其造成1点伤害；2.若其体力值不大于你，获得其一张手牌；若如此做，直到本回合结束，你视为在其攻击范围内。 成功：你的回合开始时，若场上没有“围”标记，你获得技能“神著※”。 失败：若你成功达成使命前，进入濒死状态时，你将体力值回复至1点，移除场上所有的“围”标记，然后弃置装备区所有牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%A4%AA%E5%8F%B2%E6%85%88"
   },
   {
     "id": 568,
     "name": "神华佗",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/22501.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/225.jpg",
     "intro": "字元化，一名旉，沛国谯县（今安徽亳州）人，东汉末年著名的医学家，后人称其为“神医华佗”。",
@@ -1084,14 +1131,15 @@ window.SANGUOSHA_HEROES = [
         "游医",
         "游医：弃牌阶段结束时，你可以将此阶段弃置的牌置入”仁“区。出牌阶段限一次，你可以弃置所有”仁“区的牌，令所有角色回复1点体力。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%8D%8E%E4%BD%97"
   },
   {
     "id": 657,
     "name": "神马超",
     "faction": "神",
     "factionClass": "shen",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/90000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/ea826f33d43e8fe419a7ab586920878c.png",
     "intro": "神出西凉，其名马超。雷霆为枪，风云为袍。或镇极雷城，巍然屹立，万雷归序；或尘游人间，闲身自远，世事无拘；或诛妄破伪，涤尽虚妄，真道独存；或和光同尘，藏锋守寂，雷霆含情。一念动而万雷随，神格显而万象生。天地之间，长留其声。",
@@ -1109,14 +1157,15 @@ window.SANGUOSHA_HEROES = [
         "寂灭",
         "限定技，出牌阶段结束时，你可失去8个“霆”，对一名角色造成等于其体力上限的伤害。然后你“驭雳”的两项均执行后，该技能可再次发动。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E9%A9%AC%E8%B6%85"
   },
   {
     "id": 444,
     "name": "谋·黄忠",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/64200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/642.png",
     "intro": "字汉升，今河南南阳人。汉末三国时期蜀汉名将。本为刘表部下中郎将，后归刘备，并助刘备攻益州刘璋，在定军山一战中阵斩曹操部下名将夏侯渊。备称汉中王后改封后将军，赐关内侯。",
@@ -1126,14 +1175,15 @@ window.SANGUOSHA_HEROES = [
         "烈弓",
         "若你未装备武器，你的【杀】只能当作普通【杀】使用或打出。你使用牌时或成为其他角色使用牌的目标后，若此牌的花色未被“烈弓”记录，则记录此种花色。当你使用【杀】指定唯一目标后，你可以展示牌堆顶的X张牌（X为你记录的花色数-1，且至少为0），然后每有一张牌花色与“烈弓”记录的花色相同，你令此【杀】伤害+1，且其不能使用“烈弓”记录花色的牌响应此【杀】。若如此做，此【杀】结算结束后，清除“烈弓”记录的花色。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E9%BB%84%E5%BF%A0"
   },
   {
     "id": 552,
     "name": "谋·孙权",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/66000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/660.jpg",
     "intro": "吴大帝孙权，字仲谋，吴郡富春县（今浙江省杭州市富阳区）人。孙策遇刺身亡后，孙权继之掌事，得张昭、周瑜等委心服事。建安十三年（208年），与刘备联军击败曹操，后又于夷陵之战击败刘备。黄龙元年（229年），在武昌正式称帝，国号吴。",
@@ -1151,14 +1201,15 @@ window.SANGUOSHA_HEROES = [
         "救援",
         "主公技，锁定技，其他吴势力角色使用【桃】时，你摸一张牌。其他吴势力角色对你使用【桃】回复的体力+1。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%AD%99%E6%9D%83"
   },
   {
     "id": 572,
     "name": "谋·关羽",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/69701.png",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/697.png",
     "intro": "字云长，本字长生，并州河东解[hài]州人。五虎上将之首，爵至汉寿亭侯，谥曰“壮缪侯”。被奉为“关圣帝君”，崇为“武圣”。",
@@ -1172,14 +1223,15 @@ window.SANGUOSHA_HEROES = [
         "义绝",
         "义绝：锁定技。一名其他角色于你的回合内受到你造成的伤害时，若此伤害会令其进入濒死状态，防止之（本局游戏每名角色限一次）。若如此做，直到回合结束，你使用牌指定其为目标时，取消之。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%85%B3%E7%BE%BD"
   },
   {
     "id": 498,
     "name": "谋·曹操",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/66100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/661.jpg",
     "intro": "魏武帝曹操，字孟德，小名阿瞒、吉利，沛[pèi]国谯人。精兵法，善诗歌，乃治世之能臣，乱世之奸雄也。",
@@ -1197,14 +1249,15 @@ window.SANGUOSHA_HEROES = [
         "护驾",
         "主公技，每轮限一次，你受到伤害时，可以将伤害转给魏势力角色并令其摸牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9B%B9%E6%93%8D"
   },
   {
     "id": 613,
     "name": "谋·吕布",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "5",
     "image": "https://www.sanguosha.cn/storage/uploads/images/83100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/6573a9616175245acbf84e9d1d0b4b3c.png",
     "intro": "字奉先，五原郡九原县人。三国第一猛将，曾独力战刘关张三人，其武力世之无双。时人语曰：“人中有吕布，马中有赤兔。”",
@@ -1218,14 +1271,15 @@ window.SANGUOSHA_HEROES = [
         "利驭",
         "当你使用【杀】对一名其他角色造成伤害后，你可以获得其区域里的至多等同于伤害数张牌，然后其摸等量张牌。若你与其因此获得了全部类别的牌，其选择一项：令你视为对由其指定的另一名其他角色使用一张【决斗】；其获得技能“无双”直至其下个回合结束。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%90%95%E5%B8%83"
   },
   {
     "id": 590,
     "name": "谋·陆逊",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/78500.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/9ef35024ed06fe138e2b65ea523ff914.png",
     "intro": "本名陆议，字伯言，吴郡吴县人。历任东吴大都督、丞相。吴大帝孙权兄孙策之婿，世代为江东大族。以谦逊之书麻痹关羽，夺取荆州，又有火烧连营大破蜀军。",
@@ -1239,14 +1293,15 @@ window.SANGUOSHA_HEROES = [
         "连营",
         "身份、团战：其他角色的回合结束时，你可观看牌堆顶的x张牌，然后将这些牌交给任意角色（x为你本回合失去的牌数，且至多为5）。斗地主：其他角色的回合结束时，你可观看牌堆顶的x张牌，然后将这些牌交给任意角色（x为你本回合失去的牌数+1，且至多为5）。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%99%86%E9%80%8A"
   },
   {
     "id": 607,
     "name": "谋·郭淮",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/81900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/1e120f89e2f93ac7f2a7ac8bfb9330c8.png",
     "intro": "郭淮[huái]，魏国名将，夏侯渊战死时郭淮收集残兵，与杜袭共推张郃[hé]为主将而得以稳定局势。曹丕称帝后，赐郭淮爵关内侯，又任镇西长史。诸葛亮伐魏时，郭淮料敌准确，多立战功，而后亦曾击退姜维。",
@@ -1256,14 +1311,15 @@ window.SANGUOSHA_HEROES = [
         "精策",
         "锁定技，回合开始时，若你的武将牌上没有“精策”牌，则你清除未验证的预测记录，然后将牌堆顶的三张牌置于你的武将牌上，称为“精策”牌。回合结束时，你预测将获得这些“精策”牌的角色（或预测这些“精策”牌不被任何角色获得），然后根据预测顺序将这些牌分别置为牌堆顶的第三、六、九张牌（若牌堆剩余牌数不足，则将无法达到的牌按预测顺序置于牌堆底）。若你预测正确，则你分别摸一、二、三张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%83%AD%E6%B7%AE"
   },
   {
     "id": 656,
     "name": "谋·田豫",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/87900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/dbd5204d191cd7c5d15113db61e70cbb.png",
     "intro": "田豫之镇边塞，不恃强攻，而明察胡族利异，以官爵分其势，借互市弱其盟。马城被围，能观敌阵之隙，设疑兵于南，率锐卒溃围于北，反戈破敌。其谋在庙堂，已定远人之争；其略在塞外，能于绝境制胜。虽无赫赫战功，然北境宁息数十载，诚以智御边之典范。",
@@ -1277,14 +1333,15 @@ window.SANGUOSHA_HEROES = [
         "扬师",
         "锁定技，你受到伤害后，若你攻击范围内包含所有其他角色，你从牌堆中获得一张【杀】；否则你攻击范围+1。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E7%94%B0%E8%B1%AB"
   },
   {
     "id": 654,
     "name": "谋·张郃",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/87800.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/236ed4a5479c711fe7b4cc2a7b92f1fa.png",
     "intro": "张郃善用常兵，以地制宜。街亭之役，蜀军据山求险，张郃乃断其水道，围而不攻，待其自溃。其智在策外，能辨攻守之机；其略在疆场，可尽地物之利。不用云梯之巧，不恃虎豹之锐，然尽扼要害，终破居高之势。故能化险阻为坦途，转常卒为奇兵，诚魏之巧变良将。",
@@ -1298,14 +1355,15 @@ window.SANGUOSHA_HEROES = [
         "料势",
         "每回合限一次，你可将因“巧变”获得的牌当【杀】或【闪】使用或打出。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%BC%A0%E9%83%83"
   },
   {
     "id": 652,
     "name": "谋·朱然",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/88000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/b872cce1cd870a7435defd0ec13d9bbf.png",
     "intro": "朱然处孤城之危，履绝境之艰，凝众志之同。分余粮以励饥卒，同甘苦于困顿；焚舟楫而固死志，共决绝于存亡。值魏军疫作，乃开城突击：东举火惑敌，西精甲破阵。由是孤城得全，众志愈坚。谋固于上下同欲，攻成于将士一心，可谓甘苦与共，生死相随。",
@@ -1319,14 +1377,15 @@ window.SANGUOSHA_HEROES = [
         "合援",
         "每名角色限一次，结束阶段，你可选择一名已受伤角色并弃置X张牌（X为你上次发动镇围时弃置的牌数），令其执行上次“镇围”执行的最后一项，且此后你对除其以外的角色发动“镇围”时，该角色也可选择弃置牌（视为你弃置的牌）。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E6%9C%B1%E7%84%B6"
   },
   {
     "id": 514,
     "name": "谋·黄盖",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/64400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/644.jpg",
     "intro": "字公覆，零陵郡泉陵县人。官至偏将军、武陵太守。以苦肉计骗曹孟德，亲往诈降，火烧战船，重创敌军。",
@@ -1340,14 +1399,15 @@ window.SANGUOSHA_HEROES = [
         "诈降",
         "锁定技，你于每个回合使用的前X张牌无距离和次数限制且不可被响应。摸牌阶段，你多摸X张牌。（X为你已损失体力值）"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E9%BB%84%E7%9B%96"
   },
   {
     "id": 513,
     "name": "谋·甘宁",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/64300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/643.jpg",
     "intro": "字兴霸，巴郡临江人，祖籍荆州南阳郡。为人勇猛刚强，忠心耿耿，勇往无前。曾带兵百人于二更奇袭曹营，大挫其锐气。",
@@ -1361,14 +1421,15 @@ window.SANGUOSHA_HEROES = [
         "奋威",
         "限定技，出牌阶段，你可以将至多三张牌置于任意名角色的武将牌上（每名角色各一张），称为“威”，然后你摸等量的牌。有“威”的角色成为锦囊牌的目标时，你须选择一项：1.令其获得“威”牌；2.弃置其“威”牌，取消其作为此锦囊牌的目标。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E7%94%98%E5%AE%81"
   },
   {
     "id": 561,
     "name": "谋·孙策",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/71300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/713.jpg",
     "intro": "字伯符，吴郡富春人。孙坚长子，孙权长兄。东汉末年割据江东一带的军阀，汉末群雄之一，三国时期吴国的奠基者。三国演义中绰号“小霸王”，统一江东。在一次狩猎中为刺客所伤，不久后身亡，年仅二十六岁。其弟孙权接掌孙策势力，并于称帝后，追谥孙策为长沙桓王。",
@@ -1386,14 +1447,15 @@ window.SANGUOSHA_HEROES = [
         "制霸",
         "主公技，限定技，当你进入濒死状态时，你可回复X点体力（X为场上吴势力角色数量-1）并升级技能“激昂”，然后其他吴势力角色依次受到1点无来源伤害，若其因此伤害死亡，则其死亡后，你摸三张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%AD%99%E7%AD%96"
   },
   {
     "id": 509,
     "name": "谋·刘备",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/66400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/664.jpg",
     "intro": "刘备，字玄德，东汉末年幽州涿[zhuō]郡涿[zhuō]县人，西汉中山靖王刘胜的后代，三国时期蜀汉开国皇帝，政治家，史家又称他为先主。公元223年，刘备病逝于白帝城，终年63岁，谥号昭烈皇帝，庙号烈祖，葬惠陵。",
@@ -1411,14 +1473,15 @@ window.SANGUOSHA_HEROES = [
         "激将",
         "主公技，出牌阶段结束时，你可指定一名角色，并令另一名攻击范围内含有该角色且体力值不小于你的其他蜀势力角色选择一项：1.视为对你指定的角色使用一张普通【杀】；2.跳过下一个出牌阶段。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%88%98%E5%A4%87"
   },
   {
     "id": 510,
     "name": "谋·姜维",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/69200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/692.jpg",
     "intro": "字伯约，天水冀人。三国时期蜀汉著名将领、军事统帅。原为曹魏天水郡的中郎将，后降蜀汉，官至凉州刺史、大将军。诸葛亮去世后继承诸葛亮的遗志，继续率领蜀汉军队北伐曹魏，与曹魏名将陈泰、郭淮[huái]、邓艾等多次交手。",
@@ -1432,14 +1495,15 @@ window.SANGUOSHA_HEROES = [
         "志继",
         "觉醒技，准备阶段，若你发动“挑衅”选择过至少4名角色，你减少1点体力值上限，令任意名角色直到你的下个回合开始时获得“北伐”标记。拥有“北伐”标记的角色使用牌只能选择你或其为目标。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%A7%9C%E7%BB%B4"
   },
   {
     "id": 511,
     "name": "谋·法正",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/62200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/622.jpg",
     "intro": "字孝直，本为刘璋部下，刘备围成都时劝说刘璋投降，而后又与刘备进取汉中，献计将曹操大将夏侯渊斩首。法正善奇谋，深受刘备信任和敬重。",
@@ -1453,14 +1517,15 @@ window.SANGUOSHA_HEROES = [
         "恩怨",
         "锁定技，准备阶段，你令有“眩”标记的角色执行以下效果：自其获得“眩”标记开始，若你获得其至少三张牌，则你移除其“眩”标记，然后交给其三张牌；否则其流失1点体力值，然后你回复1点体力并移除其“眩”标记。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E6%B3%95%E6%AD%A3"
   },
   {
     "id": 512,
     "name": "谋·陈宫",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/62400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/624.jpg",
     "intro": "陈宫，字公台，东汉末年吕布帐下谋士，东郡东武阳人。性情刚直，足智多谋，年少时与海内知名之士相互结交。192年，陈宫等人主张曹操接任兖州牧。但此后陈宫因曹操杀害边让而与曹操反目，并游说张邈[miǎo]等人背叛曹操迎吕布入兖州，辅助吕布攻打曹操。吕布战败后，随吕布等一同被曹操所擒，决意赴死。",
@@ -1474,14 +1539,15 @@ window.SANGUOSHA_HEROES = [
         "智迟",
         "锁定技，当你受到伤害后，本回合接下来你受到伤害时，防止之。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E9%99%88%E5%AE%AB"
   },
   {
     "id": 508,
     "name": "谋·庞统",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/62300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/623.jpg",
     "intro": "",
@@ -1495,14 +1561,15 @@ window.SANGUOSHA_HEROES = [
         "涅槃",
         "限定技，当你处于濒死状态时，你可以弃置区域里的所有牌，摸两张牌，将体力回复至2点，复原武将牌，并升级“连环”。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%BA%9E%E7%BB%9F"
   },
   {
     "id": 571,
     "name": "谋·诸葛亮",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/66802.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/668.png",
     "intro": "字孔明，号卧龙，琅琊[láng yá]阳都人，蜀汉丞相。在世时被封为武乡侯，谥曰忠武侯。著有《出师表》、《诫子书》等。怀不世之才，以空城戏司马，能观星象而通鬼神。",
@@ -1524,14 +1591,15 @@ window.SANGUOSHA_HEROES = [
         "空城",
         "空城：锁定技，当你受到伤害时，若你有技能“观星”且你的武将牌上有“星”，你进行一次判定，若判定结果点数小于等于你“星”牌的数量，则此伤害-1；若你有技能“观星”且你武将牌上没有“星”，你受到的伤害+1。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%AF%B8%E8%91%9B%E4%BA%AE"
   },
   {
     "id": 597,
     "name": "谋·贾诩",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/79900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/af9bef80bd6d1d5cab912d68ec8dc32f.png",
     "intro": "贾诩[xǔ]，字文和，武威姑臧[zāng]人。三国时期魏国著名谋士。曾先后担任三国军阀李傕[jué]、张绣、曹操的谋士。官至魏国太尉，谥曰肃侯。",
@@ -1549,14 +1617,15 @@ window.SANGUOSHA_HEROES = [
         "帷幕",
         "一级：锁定技，你成为黑色锦囊牌的目标时，取消之。二级：锁定技，你成为黑色锦囊牌的目标时，取消之。每轮开始时，若你上一轮成为其他角色使用牌的目标的次数不大于一次，则你从弃牌堆随机获得一张黑色锦囊牌或防具牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%B4%BE%E8%AF%A9"
   },
   {
     "id": 587,
     "name": "谋·公孙瓒",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/69900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/4ca29963213eee451872475bde2cb086.jpg",
     "intro": "字伯珪[guī]，汉族，号“白马义从”。辽西令支人。东汉末年献帝年间占据幽州一带的军阀，汉末群雄之一。出身贵族，因母地位卑贱，只当了郡中小吏。他貌美，声音洪亮，机智善辩。后随卢植于缑[gōu]氏山中读书，粗通经传。",
@@ -1570,14 +1639,15 @@ window.SANGUOSHA_HEROES = [
         "趫猛",
         "你使用【杀】对一名角色造成伤害后，若你拥有技能“义从”，你可选择一项：1.弃置其区域内的一张牌并摸一张牌 2.获得3蓄力点。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%85%AC%E5%AD%99%E7%93%92"
   },
   {
     "id": 453,
     "name": "谋·马超",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/62100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/621.png",
     "intro": "马腾之子，少年成名，曹操曾多次征召马超入京为官，但都被马超拒绝。而后马腾入京被封为卫尉，马超就统领了马騰的部队。刘备攻打刘璋时，马超投降刘备，与刘备军合围成都，汉中之战后联名上书尊刘备为汉中王。蜀汉建立后，马超官至骠骑将军、鰲乡侯。",
@@ -1591,14 +1661,15 @@ window.SANGUOSHA_HEROES = [
         "马术",
         "你计算与其他角色的距离-1。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E9%A9%AC%E8%B6%85"
   },
   {
     "id": 455,
     "name": "谋·赵云",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/71100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/711.png",
     "intro": "字子龙，常山真定人。身长八尺，姿颜雄伟。长坂坡单骑救阿斗，先主云:“子龙一身都是胆也”",
@@ -1612,14 +1683,15 @@ window.SANGUOSHA_HEROES = [
         "积著",
         "准备阶段,你可以选择一名其他角色，与其进行“协力”。其回合结束后，若你与其“协力”成功，则直到你的下个回合结束后，你修改龙胆为“剩余可用次数×次（×初始为1且最大为3，每名角色的回合结束后X加一），你可以将一张基本牌当做任意基本牌使用或打出，若如此做，你摸一张牌”。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%B5%B5%E4%BA%91"
   },
   {
     "id": 507,
     "name": "谋·袁绍",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/69400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/694.jpg",
     "intro": "字本初，汉族，汝南汝阳人，出身名门望族，自曾祖父起四代有五人位居三公，自己也居三公之上，其家族也因此有“四世三公”之称。曾于初平元年被推举为反董卓联合军的盟主，联军瓦解后，在汉末群雄割据的过程中，袁绍先占据冀州，又先后夺青、并二州，并于建安四年击败了割据幽州的军阀公孙瓒，势力达到顶点；但在建安五年的官渡之战中败于曹操。在平定冀州叛乱之后，于建安七年病死。",
@@ -1633,14 +1705,15 @@ window.SANGUOSHA_HEROES = [
         "血裔",
         "主公技，锁定技，你的手牌上限+X（X为其他群势力角色数的两倍）。你使用牌指定其他群势力角色为目标后，你摸一张牌（每回合你至多以此法获得2张牌）。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%A2%81%E7%BB%8D"
   },
   {
     "id": 506,
     "name": "谋·貂蝉",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/69300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/693.jpg",
     "intro": "中国古代四大美女之一，有闭月羞花之貌。司徒王允之义女，由王允授意施行连环计，离间董卓、吕布，借布手除卓。后貂蝉成为吕布的妾。",
@@ -1654,14 +1727,15 @@ window.SANGUOSHA_HEROES = [
         "闭月",
         "锁定技，结束阶段，你摸X张牌。（X为本回合受到伤害的角色数+1，至多为4）"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%B2%82%E8%9D%89"
   },
   {
     "id": 501,
     "name": "谋·甄姬",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/66300.png",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/663.jpg",
     "intro": "中山无极人，别称甄[zhēn]洛或甄宓[fú]，庙号文昭甄皇后。魏文帝曹丕的正室。懂诗文，有倾国倾城之貌，《洛神赋》即是曹植为她所作。",
@@ -1675,14 +1749,15 @@ window.SANGUOSHA_HEROES = [
         "倾国",
         "你可以将一张黑色手牌当【闪】使用或打出。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E7%94%84%E5%A7%AC"
   },
   {
     "id": 577,
     "name": "谋·黄月英",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/64700.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/cb3525920f9d26d6f7419a5907a4bf54.png",
     "intro": "荆州沔[miǎn]南白水人，沔阳名士黄承彦之女，诸葛亮之妻，诸葛瞻之母。容貌甚丑，而有奇才：上通天文，下察地理，韬略近于诸书无所不晓，诸葛亮在南阳闻其贤而迎娶。",
@@ -1696,14 +1771,15 @@ window.SANGUOSHA_HEROES = [
         "奇才",
         "（身份场、团战类）你使用锦囊牌没有距离限制。出牌阶段限一次，你可以选择一名其他角色，将手牌或弃牌堆中的一张装备牌置入其装备区，然后其获得“奇”标记。拥有“奇”标记的角色接下来获得的三张普通锦囊牌须交给你。（斗地主）你使用锦囊牌没有距离限制。出牌阶段限一次，你可以选择一名其他角色，将手牌或弃牌堆中一张防具牌置入其装备区（每局游戏每个防具名限一次），然后其获得“奇”标记。拥有“奇”标记的角色接下来获得的三张普通锦囊牌须交给你。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E9%BB%84%E6%9C%88%E8%8B%B1"
   },
   {
     "id": 578,
     "name": "谋·小乔",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/71500.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/0143e40b9e44c05d0ee488485f8a142e.png",
     "intro": "庐江皖县人也。父桥国老德尊于时。小乔国色流离，资貌绝伦。建安三年，周瑜协策攻皖，拔之。娶小乔为妻。后人谓英雄美女，天作之合。",
@@ -1717,14 +1793,15 @@ window.SANGUOSHA_HEROES = [
         "红颜",
         "锁定技。你的黑桃手牌只能当做红桃牌使用、打出、弃置或交给其他角色。你的黑桃判定牌只能当做红桃判定牌。当一张判定牌生效前，如果此判定牌为红桃，你将判定结果改为由你指定的一种花色。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%B0%8F%E4%B9%94"
   },
   {
     "id": 583,
     "name": "谋·夏侯惇",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/71600.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/935b5cf719cddf23cc79931fd04b7640.png",
     "intro": "夏侯惇（？－220年），字元让，沛国谯（今安徽亳州）人，曹魏开国元勋，西汉开国元勋夏侯婴的后代。少年时以勇气闻名于乡里人，“有辱其师者，惇杀之，由是以烈气闻”。曹操起兵时，夏侯惇是其最早追随的将领之一，多次为曹操镇守后方，从征吕布时，左目为流矢所中。曾率军民阻断太寿河水，筑陂塘灌溉农田，使百姓受益，功勋卓著。平时深受曹操倚重，“召惇常与同载，特见亲重，出入卧内，诸将莫得比也”。历任折冲校尉、济阴太守、建武将军，官至大将军，封高安乡侯，死后追谥忠侯。夏侯惇一生虽多在军旅，但仍不忘治学，他常亲自迎师，虚心求教。他为人清俭，所得赏赐全部分给将士，一生不置产业，至死家无余财。",
@@ -1738,14 +1815,15 @@ window.SANGUOSHA_HEROES = [
         "清俭",
         "锁定技。当一张牌非因使用而进入弃牌堆时，若你的“清俭”牌不足X张（X为你的体力值-1，至少为1），你将之置于你的武将牌上，称为“清俭”牌；出牌阶段结束时，你将这些牌分配给任意角色。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%A4%8F%E4%BE%AF%E6%83%87"
   },
   {
     "id": 493,
     "name": "谋·孙尚香",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/69100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/691.jpg",
     "intro": "孙夫人，乃孙权之妹。刘备定荆州，孙权进妹与其结姻，重固盟好。孙夫人才捷刚猛，有诸兄之风。后人为其立庙，号曰“枭[xiāo]姬庙”。",
@@ -1763,14 +1841,15 @@ window.SANGUOSHA_HEROES = [
         "枭姬",
         "吴势力技，当你失去装备区内的一张牌时，你摸两张牌，然后可以弃置场上的一张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%AD%99%E5%B0%9A%E9%A6%99"
   },
   {
     "id": 160,
     "name": "界·黄盖",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/30700.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/307.jpg",
     "intro": "字公覆，零陵郡泉陵县人。官至偏将军、武陵太守。以苦肉计骗曹孟德，亲往诈降，火烧战船，重创敌军。",
@@ -1784,14 +1863,15 @@ window.SANGUOSHA_HEROES = [
         "诈降",
         "锁定技，当你失去1点体力后，你摸三张牌，然后若此时在你的出牌阶段内，则直到回合结束，你使用红色【杀】无距离限制且不能被【闪】响应，且你可以多使用一张【杀】。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%BB%84%E7%9B%96"
   },
   {
     "id": 153,
     "name": "界·关羽",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/30000.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/300.jpg",
     "intro": "字云长，本字长生，并州河东解州人。五虎上将之首，爵至汉寿亭侯，谥曰“壮缪侯”。被奉为“关圣帝君”，崇为“武圣”。",
@@ -1805,14 +1885,15 @@ window.SANGUOSHA_HEROES = [
         "义绝",
         "出牌阶段限一次，你可以弃置一张牌，然后令一名其他角色展示一张手牌。若此牌为黑色，则其本回合非锁定技失效且不能使用或打出手牌，你对其使用的红桃【杀】伤害+1；若此牌为红色，则你获得之，然后你可令该角色回复1点体力。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%85%B3%E7%BE%BD"
   },
   {
     "id": 172,
     "name": "界·吕布",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "5",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/31900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/319.jpg",
     "intro": "字奉先，五原郡九原县人。三国第一猛将，曾独力战刘关张三人，其武力世之无双。时人语曰：“人中有吕布，马中有赤兔。”",
@@ -1826,14 +1907,15 @@ window.SANGUOSHA_HEROES = [
         "利驭",
         "当你使用【杀】对一名其他角色造成伤害后，你可获得的其区域里的一张牌。然后若获得的牌不是装备牌，其摸一张牌；若获得的牌是装备牌，则视为你对由其指定的另一名角色使用一张【决斗】。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%90%95%E5%B8%83"
   },
   {
     "id": 264,
     "name": "界·荀彧",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/43100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/431.jpg",
     "intro": "荀彧[xún yù]，字文若，颍[yǐng]川颍阴（今河南许昌）人。东汉末年曹操帐下首席谋臣，杰出的战略家。自小被世人称作“王佐之才”。",
@@ -1847,14 +1929,15 @@ window.SANGUOSHA_HEROES = [
         "节命",
         "当你受到1点伤害后，你可以令一名角色摸两张牌，然后若其手牌数小于其体力上限，你摸一张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%8D%80%E5%BD%A7"
   },
   {
     "id": 383,
     "name": "界·李儒",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/53100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/531.png",
     "intro": "李儒[rú]董卓的首席谋士，为董卓所亲信，大小事宜皆与其商议。董卓趁乱进京、说降吕布、废立皇帝、迁都长安等举动，均离不开李儒的参谋之功，并奉命毒杀皇帝刘辩。李傕[jué]被曹操击败后，李儒从此不知所踪，消失在历史长河中。",
@@ -1872,14 +1955,15 @@ window.SANGUOSHA_HEROES = [
         "焚城",
         "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.弃置至少X张牌（X为发动此技能时该角色的上家以此法弃置牌的数量+1）；2.受到你造成的2点火焰伤害。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9D%8E%E5%84%92"
   },
   {
     "id": 385,
     "name": "界·简雍",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/53300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/533.png",
     "intro": "简雍[yōng]，为刘备同乡，年少时与刘备相识。黄巾之乱时，刘备加入对抗黄巾军的战争，简雍便跟随他奔走。常作为谈客，往来使命，刘备围成都时简雍作为刘备使臣成功劝说刘璋投降。简雍擅于辩论、议事。性情简单直接、不拘小节。",
@@ -1893,14 +1977,15 @@ window.SANGUOSHA_HEROES = [
         "纵适",
         "当你拼点后，你观看牌堆顶的一张牌，并可以选择一项：获得牌堆顶的这张牌，或获得两张拼点牌中点数较小的一张。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%AE%80%E9%9B%8D"
   },
   {
     "id": 389,
     "name": "界·朱然",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/53700.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/537.png",
     "intro": "吴国著名将领，吕蒙白衣渡江取荆州，朱然协助潘璋捉住了关羽。黄武元年，刘备兵伐东吴，朱然与孙桓抵抗刘备大军。后又参加夷陵战役，追击刘备，被来接应的赵云一枪刺死。",
@@ -1910,14 +1995,15 @@ window.SANGUOSHA_HEROES = [
         "胆守",
         "其他角色的结束阶段，若你本回合未成为过其使用牌的目标，你摸一张牌；否则你可以弃置x张牌对其造成1点伤害（x为你本回合成为其使用牌的目标次数）"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9C%B1%E7%84%B6"
   },
   {
     "id": 291,
     "name": "界·姜维",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/5200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/473.jpg",
     "intro": "字伯约，天水冀人。三国时期蜀汉著名将领、军事统帅。原为曹魏天水郡的中郎将，后降蜀汉，官至凉州刺史、大将军。诸葛亮去世后继承诸葛亮的遗志，继续率领蜀汉军队北伐曹魏，与曹魏名将陈泰、郭淮[huái]、邓艾等多次交手。",
@@ -1931,14 +2017,15 @@ window.SANGUOSHA_HEROES = [
         "志继",
         "觉醒技，准备阶段，若你没有手牌，你回复1点体力或摸两张牌，然后减1点体力上限，获得观星准备阶段，你可以观看牌堆顶的五张牌（存活人数小于4时改为三张），然后以任意顺序放回牌堆顶或牌堆底。若你将这些牌均放至牌堆底，则结束阶段你可以再进行一次“观星”。）。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%A7%9C%E7%BB%B4"
   },
   {
     "id": 294,
     "name": "界·左慈",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/5600.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/480.jpg",
     "intro": "左慈，字元放，东汉末方士，汉族，庐江（今安徽[huī]庐江西南）人。在道教历史上，东汉时期的丹鼎派道术是从他一脉相传。",
@@ -1952,14 +2039,15 @@ window.SANGUOSHA_HEROES = [
         "新生",
         "当你受到1点伤害后，你获得一张新的化身牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%B7%A6%E6%85%88"
   },
   {
     "id": 236,
     "name": "界·孙尚香",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/40300.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/403.jpg",
     "intro": "孙夫人，乃孙权之妹。刘备定荆州，孙权进妹与其结姻，重固盟好。孙夫人才捷刚猛，有诸兄之风。后人为其立庙，号曰“枭[xiāo]姬庙”。",
@@ -1973,14 +2061,15 @@ window.SANGUOSHA_HEROES = [
         "枭姬",
         "当你失去装备区里的一张牌时，你可以摸两张牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%AD%99%E5%B0%9A%E9%A6%99"
   },
   {
     "id": 169,
     "name": "界·郭嘉",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/31600.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/316.jpg",
     "intro": "字奉孝，颍[yǐng]川阳翟（今河南禹州）人。原为袁绍部下，后转投曹操，为曹操统一北方立下了功勋，官至军师祭酒，封洧阳亭侯。于曹操征伐乌丸时病逝，年仅三十八岁。谥曰贞侯。史书上称他“才策谋略，世之奇士”。而曹操称赞他见识过人，是自己的“奇佐”。",
@@ -1994,14 +2083,15 @@ window.SANGUOSHA_HEROES = [
         "遗计",
         "当你受到1点伤害后，你可以摸两张牌，然后你可以将至多两张手牌交给一至两名其他角色。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%83%AD%E5%98%89"
   },
   {
     "id": 167,
     "name": "界·张辽",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/31400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/314.jpg",
     "intro": "字文远，魏雁门马邑人。官至前将军、征东将军、晋阳侯。武功高强，又谋略过人，多次建立奇功，以八百人突袭孙权十万大军，皆望风披靡。",
@@ -2011,14 +2101,15 @@ window.SANGUOSHA_HEROES = [
         "突袭",
         "摸牌阶段，你可以少摸任意张牌并获得等量的其他角色各一张手牌。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BC%A0%E8%BE%BD"
   },
   {
     "id": 154,
     "name": "界·张飞",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/30100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/301.jpg",
     "intro": "字翼德，涿[zhuō]郡人，燕颔虎须，豹头环眼。有诗云：“长坂坡头杀气生，横枪立马眼圆睁。一声好似轰雷震，独退曹家百万兵。",
@@ -2032,14 +2123,15 @@ window.SANGUOSHA_HEROES = [
         "替身",
         "出牌阶段结束时，你可发动此技能。你弃置所有锦囊牌和坐骑牌。然后直到你的下回合开始，获得所有以你为目标且未对你造成伤害的【杀】。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BC%A0%E9%A3%9E"
   },
   {
     "id": 171,
     "name": "界·华佗",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/31800.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/318.jpg",
     "intro": "字元化，一名旉，沛[pèi]国谯人，“建安三神医”之一。集平生之所得著《青囊经》，现已失传。",
@@ -2053,14 +2145,15 @@ window.SANGUOSHA_HEROES = [
         "青囊",
         "出牌阶段限一次，你可以弃置一张手牌并令一名角色回复1点体力。若你弃置的牌为红色，则可以再次发动此技能，但不能选择本回合选择过的角色。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%8D%8E%E4%BD%97"
   },
   {
     "id": 162,
     "name": "界·大乔",
     "faction": "吴",
     "factionClass": "wu",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/30900.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/309.jpg",
     "intro": "庐江皖县人，为乔公长女，孙策之妻，小乔之姊。与小乔并称为“江东二乔”，容貌国色流离。",
@@ -2074,14 +2167,15 @@ window.SANGUOSHA_HEROES = [
         "流离",
         "当你成为【杀】的目标时，你可以弃置一张牌并选择你攻击范围内的一名其他角色，然后将此【杀】转移给该角色。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%A4%A7%E4%B9%94"
   },
   {
     "id": 239,
     "name": "刘焉",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/40600.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/406.jpg",
     "intro": "刘焉（2世纪?－194年），字君郎，江夏竟陵（今湖北省潜江市）人，东汉末年割据军阀之一，官至阳城侯益州牧。他以州牧身份建立的割据势力为三国时代最早的一批，同时是持续时间较长的，直到214年其子刘璋向刘备投降才终结。",
@@ -2095,14 +2189,15 @@ window.SANGUOSHA_HEROES = [
         "立牧",
         "出牌阶段，你可以将一张方块牌当【乐不思蜀】对自己使用，然后回复1点体力；你的判定区有牌时，你对攻击范围内的其他角色使用牌没有次数和距离限制。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%88%98%E7%84%89"
   },
   {
     "id": 288,
     "name": "曹婴",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/46100.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/461.jpg",
     "intro": "曹婴是曹操的孙女，弓马娴熟，文武双全，深得曹操的用兵之道及心术。于凤鸣山一战中担任魏军大都督阻止诸葛亮北伐并因罗平安的告密而全歼关兴、张苞、赵云率领的蜀军部队。",
@@ -2116,14 +2211,15 @@ window.SANGUOSHA_HEROES = [
         "伏间",
         "锁定技，结束阶段，若全场角色均有手牌，你随机观看一名其他角色的X张手牌（X为全场手牌数最少的角色手牌数）。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9B%B9%E5%A9%B4"
   },
   {
     "id": 303,
     "name": "曹纯",
     "faction": "魏",
     "factionClass": "wei",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/3000401.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/30004.png",
     "intro": "曹纯统虎豹之骑，骁锐为胆，缮甲为要。麾下皆天下骁锐，所向无不披靡。战则争先，退则殿后，不矜其功。斩袁谭于南皮，未以为荣；败刘备于长坂，视若寻常。唯以整军经武为务，以养锐蓄威为本。故能统骁锐之师，扬虎豹之烈，威震北疆之地。",
@@ -2133,14 +2229,15 @@ window.SANGUOSHA_HEROES = [
         "缮甲",
         "出牌阶段限一次，你可摸三张牌，然后弃置X张牌（X为3-你本局失去过的装备区里的牌数），若你未因此弃置： 基本牌，你可视为使用一张不计入次数且无次数限制的普通【杀】； 锦囊牌，你本阶段使用牌无距离限制。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9B%B9%E7%BA%AF"
   },
   {
     "id": 224,
     "name": "张让",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "",
+    "hp": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/38700.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/387.jpg",
     "intro": "张让（？—189年9月24日），东汉宦官，颍川（今河南禹县）人。桓帝、灵帝时，历为小黄门、中常侍等职，封列侯。在职时以搜刮暴敛、骄纵贪婪见称，灵帝极为宠信，常谓“张常侍是我父”。中平六年（189年），何进谋诛宦官，事泄，他和其余几个常侍设计伏杀何进。袁绍、袁术等人闻何进被杀，入宫杀尽宦官，张让走投无路，投水自尽。",
@@ -2150,14 +2247,15 @@ window.SANGUOSHA_HEROES = [
         "滔乱",
         "你可将一张牌当做任意一张基本牌或普通锦囊牌使用（此牌不得是本局游戏你以此法使用过的牌，且场上所有角色都不能处于濒死状态），然后你令一名其他角色选择一项：1.交给你一张与你以此法使用的牌类别不同的牌；2.你失去1点体力，然后“滔乱”无效直到回合结束。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BC%A0%E8%AE%A9"
   },
   {
     "id": 209,
     "name": "赵襄",
     "faction": "蜀",
     "factionClass": "shu",
-    "hp": "",
+    "hp": "4",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/36700.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/367.jpg",
     "intro": "赵云与马云騄之女，赵统赵广之妹，关平之妻。",
@@ -2171,6 +2269,7 @@ window.SANGUOSHA_HEROES = [
         "扶汉",
         "限定技，回合开始时，如果你拥有过“梅影”标记，你可以发动技能，移去所有“梅影”标记，随机观看五名未登场的蜀势力角色，将武将牌替换为其中一名角色，并将体力上限数调整为本局游戏中移去“梅影”标记的数量（至多为游戏人数），然后若你是体力值最低的角色，你回复1点体力。"
       ]
-    ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%B5%B5%E8%A5%84"
   }
 ];
