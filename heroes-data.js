@@ -2093,28 +2093,6 @@ window.SANGUOSHA_HEROES = [
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%AD%99%E5%B0%9A%E9%A6%99"
   },
   {
-    "id": 169,
-    "name": "界·郭嘉",
-    "faction": "魏",
-    "factionClass": "wei",
-    "hp": "3",
-    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/31600.jpg",
-    "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/316.jpg",
-    "intro": "字奉孝，颍[yǐng]川阳翟（今河南禹州）人。原为袁绍部下，后转投曹操，为曹操统一北方立下了功勋，官至军师祭酒，封洧阳亭侯。于曹操征伐乌丸时病逝，年仅三十八岁。谥曰贞侯。史书上称他“才策谋略，世之奇士”。而曹操称赞他见识过人，是自己的“奇佐”。",
-    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-169.html",
-    "skills": [
-      [
-        "天妒",
-        "当你的判定牌生效后，你可以获得此牌。"
-      ],
-      [
-        "遗计",
-        "当你受到1点伤害后，你可以摸两张牌，然后你可以将至多两张手牌交给一至两名其他角色。"
-      ]
-    ],
-    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%83%AD%E5%98%89"
-  },
-  {
     "id": 167,
     "name": "界·张辽",
     "faction": "魏",
@@ -2153,28 +2131,6 @@ window.SANGUOSHA_HEROES = [
       ]
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BC%A0%E9%A3%9E"
-  },
-  {
-    "id": 171,
-    "name": "界·华佗",
-    "faction": "群",
-    "factionClass": "qun",
-    "hp": "3",
-    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/31800.jpg",
-    "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/318.jpg",
-    "intro": "字元化，一名旉，沛[pèi]国谯人，“建安三神医”之一。集平生之所得著《青囊经》，现已失传。",
-    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-171.html",
-    "skills": [
-      [
-        "急救",
-        "你的回合外，你可以将一张红色牌当【桃】使用。"
-      ],
-      [
-        "青囊",
-        "出牌阶段限一次，你可以弃置一张手牌并令一名角色回复1点体力。若你弃置的牌为红色，则可以再次发动此技能，但不能选择本回合选择过的角色。"
-      ]
-    ],
-    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%8D%8E%E4%BD%97"
   },
   {
     "id": 162,
