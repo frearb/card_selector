@@ -127,7 +127,7 @@ window.SANGUOSHA_HEROES = [
     "skills": [
       [
         "苦谏",
-        "出牌阶段限一次，你可以将至多两张手牌标记为“谏”并交给一名其他角色。当其他角色使用或打出“谏”牌时，你与其各摸两张牌。当其他角色非因使用或打出从手牌区失去“谏”牌时，你与其各弃置一张牌。"
+        "出牌阶段限一次，你可以将至多两张手牌标记为“谏”并交给一名其他角色。当其他角色使用或打出“谏”牌时，你与其各摸一张牌。当其他角色非因使用或打出从手牌区失去“谏”牌时，你与其各弃置一张牌。"
       ],
       [
         "睿敛",
@@ -1803,28 +1803,6 @@ window.SANGUOSHA_HEROES = [
     "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E9%BB%84%E6%9C%88%E8%8B%B1"
   },
   {
-    "id": 578,
-    "name": "谋·小乔",
-    "faction": "吴",
-    "factionClass": "wu",
-    "hp": "3",
-    "image": "https://www.sanguosha.cn/storage/uploads/images/71500.jpg",
-    "thumb": "https://www.sanguosha.cn/storage/uploads/images/0143e40b9e44c05d0ee488485f8a142e.png",
-    "intro": "庐江皖县人也。父桥国老德尊于时。小乔国色流离，资貌绝伦。建安三年，周瑜协策攻皖，拔之。娶小乔为妻。后人谓英雄美女，天作之合。",
-    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-578.html",
-    "skills": [
-      [
-        "天香",
-        "（身份场、斗地主）准备阶段，若场上有“天香”标记，则你清除场上所有“天香”标记，并摸等量的牌。出牌阶段限三次，你可将一张红色手牌交给一名没有“天香”标记的其他角色，并令其获得对应花色的“天香”标记。当你受到伤害时，你可以选择一名拥有“天香”标记的角色，移除其“天香”标记，并根据移除的“天香”花色发动：红桃，你防止此伤害，然后令其受到防止伤害的来源角色造成的1点伤害；方块，其交给你两张牌。（团战类）准备阶段，若场上有“天香”标记，则你清除场上所有“天香”标记，并摸x张牌（x为本次清除的“天香”标记数+2）。出牌阶段限三次，你可将一张红色手牌交给一名没有“天香”标记的其他角色，并令其获得对应花色的“天香”标记。当你受到伤害时，你可以选择一名拥有“天香”标记的角色，移除其“天香”标记，并根据移除的“天香”花色发动：红桃，你防止此伤害，然后令其受到防止伤害的来源角色造成的1点伤害；方块，其交给你两张牌。"
-      ],
-      [
-        "红颜",
-        "锁定技。你的黑桃手牌只能当做红桃牌使用、打出、弃置或交给其他角色。你的黑桃判定牌只能当做红桃判定牌。当一张判定牌生效前，如果此判定牌为红桃，你将判定结果改为由你指定的一种花色。"
-      ]
-    ],
-    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%B0%8F%E4%B9%94"
-  },
-  {
     "id": 583,
     "name": "谋·夏侯惇",
     "faction": "魏",
@@ -2131,28 +2109,6 @@ window.SANGUOSHA_HEROES = [
       ]
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BC%A0%E9%A3%9E"
-  },
-  {
-    "id": 162,
-    "name": "界·大乔",
-    "faction": "吴",
-    "factionClass": "wu",
-    "hp": "3",
-    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/30900.jpg",
-    "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/309.jpg",
-    "intro": "庐江皖县人，为乔公长女，孙策之妻，小乔之姊。与小乔并称为“江东二乔”，容貌国色流离。",
-    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-162.html",
-    "skills": [
-      [
-        "国色",
-        "出牌阶段限一次，你可以选择一项：1.将一张方块牌当【乐不思蜀】使用；2.弃置一张方块牌并弃置场上的一张【乐不思蜀】。选择完成后，你摸一张牌。"
-      ],
-      [
-        "流离",
-        "当你成为【杀】的目标时，你可以弃置一张牌并选择你攻击范围内的一名其他角色，然后将此【杀】转移给该角色。"
-      ]
-    ],
-    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%A4%A7%E4%B9%94"
   },
   {
     "id": 239,
