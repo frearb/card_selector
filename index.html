@@ -660,7 +660,7 @@
     </div>
   </section>
 
-  <script src="heroes-data.js?v=20260503-top110-hp-armor"></script>
+  <script src="heroes-data.js?v=20260503-top110-local-assets"></script>
   <script>
     const heroes = window.SANGUOSHA_HEROES || [];
 
@@ -844,6 +844,17 @@
       return parts.join(" · ");
     }
 
+    function randomItem(items) {
+      if (!items.length) return "";
+      const index = crypto.getRandomValues(new Uint32Array(1))[0] % items.length;
+      return items[index];
+    }
+
+    function getHeroImage(hero) {
+      const images = Array.isArray(hero.images) && hero.images.length ? hero.images : [hero.image].filter(Boolean);
+      return randomItem(images);
+    }
+
     function render() {
       const visibleHeroes = currentHeroes
         .map((hero, index) => ({ hero, index }))
@@ -860,7 +871,7 @@
         `).join("");
         const name = escapeHtml(hero.name);
         const faction = escapeHtml(hero.faction);
-        const image = encodeURI(hero.image);
+        const image = encodeURI(getHeroImage(hero));
         const factionClass = escapeHtml(hero.factionClass);
         const hpText = escapeHtml(formatHeroHp(hero));
 
@@ -923,7 +934,7 @@
         const hpText = escapeHtml(formatHeroHp(hero));
         return `
           <button class="pool-item" type="button" data-hero-id="${hero.id}">
-            <img class="pool-avatar" src="${encodeURI(hero.thumb || hero.image)}" alt="${name}头像" loading="lazy">
+            <img class="pool-avatar" src="${encodeURI(hero.thumb || getHeroImage(hero))}" alt="${name}头像" loading="lazy">
             <div>
               <div class="pool-name">${name}</div>
               <div class="pool-meta">${faction}势力 · ${hpText} · 点击查看技能</div>
