@@ -2215,5 +2215,115 @@ window.SANGUOSHA_HEROES = [
       ]
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E5%8F%8B%E8%AF%B8%E8%91%9B%E4%BA%AE"
+  },
+  {
+    "id": 570,
+    "name": "鲍信",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/75900.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/75900.jpg",
+    "intro": "鲍信(151年-192年)，字允诚(仅见《三国志通俗演义》，正史无记载)，泰山平阳(今山东新泰)人。东汉末年济北相，讨伐董卓的诸路人马之一。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-570.html",
+    "skills": [
+      [
+        "募讨",
+        "出牌阶段限一次，你可以选择一名角色，令其将手牌中所有的【杀】置于其武将牌上，然后其依次将这些【杀】随机交给由其下家开始的每一名角色，然后其对最后一名角色造成X点伤害（X为最后一名角色手牌中【杀】的数量且至多为2）。"
+      ],
+      [
+        "毅谋",
+        "当与你距离1以内的角色受到伤害后，你可以选择一项：1.令其随机获得牌堆中的一张【杀】；2.令其将一张手牌交给另一名角色，然后其摸一张牌。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%B2%8D%E4%BF%A1"
+  },
+  {
+    "id": 388,
+    "name": "羊徽瑜",
+    "faction": "魏",
+    "factionClass": "wei",
+    "hp": "3",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/53600.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/53600.jpg",
+    "intro": "羊徽瑜（214年－278年），司马师第三任妻子。羊徽瑜出身官宦世家，聪慧贤德，嫁给司马师后未有子女。以司马师之弟司马昭的次子司马攸为继子。司马师死后，司马攸侍奉羊徽瑜非常孝顺。咸宁四年（278年），羊徽瑜去世，时年六十五岁，谥号景献皇后，与司马师合葬峻平陵",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-388.html",
+    "skills": [
+      [
+        "弘仪",
+        "出牌阶段限一次，你可以指定一名其他角色，直至你的下个回合开始时，该角色造成伤害时进行一次判定：若为红色则受伤角色摸一张牌；若为黑色则此伤害-1。"
+      ],
+      [
+        "劝封",
+        "限定技，当一名其他角色死亡后，你可以失去技能“弘仪”，然后获得其武将牌的所有技能（主公技除外），若如此做，你加1点体力上限，回复1点体力。当你处于濒死状态时，你可以加2点体力上限，回复4体力。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%BE%8A%E5%BE%BD%E7%91%9C"
+  },
+  {
+    "id": 473,
+    "name": "阮慧",
+    "faction": "魏",
+    "factionClass": "wei",
+    "hp": "3",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/61400.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/61400.jpg",
+    "intro": "阮氏女，曹魏名士许允之妻，中国古代四大丑女之一，貌丑而见识非凡。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-473.html",
+    "skills": [
+      [
+        "明察",
+        "摸牌阶段开始时，你亮出牌堆顶的三张牌，然后你可以获得其中点数不大于8的牌并放弃摸牌。若你以此法获得了牌，你选择一名其他角色，随机获得其一张牌。"
+      ],
+      [
+        "敬重",
+        "弃牌阶段结束时，若你本阶段弃置过至少两张黑色牌，你可以选择一名其他角色。当其于其下个回合的出牌阶段内使用牌结算结束后，若此牌在弃牌堆内，你获得之（每阶段以此法至多获得三次牌）。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%98%AE%E6%85%A7"
+  },
+  {
+    "id": 428,
+    "name": "崔琰",
+    "faction": "魏",
+    "factionClass": "wei",
+    "hp": "3",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/59000.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/59000.jpg",
+    "intro": "崔琰（？—216年），字季珪，清河郡东武城（今河北省衡水市故城县）人。东汉末年名士，司空崔林从兄，丞相曹操谋士。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-428.html",
+    "skills": [
+      [
+        "雅俊",
+        "摸牌阶段，你多摸一张牌。出牌阶段开始时，你可以用本回合获得的一张牌与一名其他角色进行拼点。若你赢，你可以将其中一张拼点牌置于牌堆顶；若你没赢，你本回合手牌上限-1。"
+      ],
+      [
+        "尊嫡",
+        "出牌阶段限一次，你可以弃置一张手牌并选择一名角色，然后你进行判定：黑色，其摸三张牌；红色，其可以移动场上一张牌。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%B4%94%E7%90%B0"
+  },
+  {
+    "id": 189,
+    "name": "夏侯氏",
+    "faction": "蜀",
+    "factionClass": "shu",
+    "hp": "3",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/33600.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/33600.jpg",
+    "intro": "夏侯渊从女，夏侯霸从妹，出城拾柴时被张飞所得，娶其为妻。后生有二女，其中一人为星彩。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-189.html",
+    "skills": [
+      [
+        "樵拾",
+        "其他角色的结束阶段，若其手牌数等于你，你可以与其各摸一张牌。"
+      ],
+      [
+        "燕语",
+        "出牌阶段，你可以重铸【杀】；出牌阶段结束时，若你于此阶段内重铸过两张或更多的【杀】，则你可以令一名男性角色摸两张牌。"
+      ]
+    ],
+    "hpSource": "https://sanguosha.fandom.com/zh/wiki/YJ%E5%A4%8F%E4%BE%AF%E6%B0%8F"
   }
 ];

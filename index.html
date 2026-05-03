@@ -369,7 +369,7 @@
       width: min(960px, 100%);
       max-height: min(820px, 92vh);
       display: grid;
-      grid-template-rows: auto auto 1fr;
+      grid-template-rows: auto auto auto 1fr;
       gap: 12px;
       padding: 14px;
       background: #fffaf1;
@@ -423,6 +423,35 @@
       color: white;
     }
 
+    .pool-tools {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pool-search {
+      width: 100%;
+      min-height: 40px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255, 252, 246, .92);
+      color: var(--ink);
+      outline: none;
+    }
+
+    .pool-search:focus {
+      border-color: rgba(47, 88, 123, .58);
+      box-shadow: 0 0 0 3px rgba(47, 88, 123, .12);
+    }
+
+    .pool-result-count {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
     .pool-list {
       overflow: auto;
       display: grid;
@@ -446,6 +475,15 @@
       cursor: pointer;
       font: inherit;
       color: inherit;
+    }
+
+    .pool-empty {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      text-align: center;
+      background: rgba(255, 252, 246, .72);
     }
 
     .pool-avatar {
@@ -583,6 +621,10 @@
         <button class="icon-button" id="closePoolButton" type="button" aria-label="关闭">×</button>
       </div>
       <div class="pool-tabs" id="poolTabs" aria-label="势力筛选"></div>
+      <div class="pool-tools">
+        <input class="pool-search" id="poolSearch" type="search" placeholder="搜索武将、势力或技能" autocomplete="off">
+        <span class="pool-result-count" id="poolResultCount"></span>
+      </div>
       <div class="pool-list" id="poolList"></div>
     </div>
   </section>
@@ -617,6 +659,8 @@
     const poolModal = document.querySelector("#poolModal");
     const closePoolButton = document.querySelector("#closePoolButton");
     const poolTabs = document.querySelector("#poolTabs");
+    const poolSearch = document.querySelector("#poolSearch");
+    const poolResultCount = document.querySelector("#poolResultCount");
     const poolList = document.querySelector("#poolList");
     const skillModal = document.querySelector("#skillModal");
     const closeSkillButton = document.querySelector("#closeSkillButton");
@@ -630,6 +674,7 @@
     let currentHeroes = [];
     let selectedId = null;
     let refreshTimer = null;
+    let poolFilter = "全";
 
     poolStatus.textContent = `将池 ${heroes.length} 名`;
 
@@ -779,7 +824,19 @@
       }).join("");
     }
 
-    function renderPool(filter = "全") {
+    function getSearchText(hero) {
+      return [
+        hero.name,
+        hero.faction,
+        hero.hp,
+        hero.intro,
+        ...hero.skills.flat()
+      ].join(" ").toLowerCase();
+    }
+
+    function renderPool(filter = poolFilter) {
+      poolFilter = filter;
+      const query = poolSearch.value.trim().toLowerCase();
       const factions = ["全", ...[...new Set(heroes.map(hero => hero.faction))]];
       poolTabs.innerHTML = factions.map(faction => `
         <button class="pool-tab ${faction === filter ? "active" : ""}" type="button" data-faction="${escapeHtml(faction)}">
@@ -787,7 +844,15 @@
         </button>
       `).join("");
 
-      const shown = filter === "全" ? heroes : heroes.filter(hero => hero.faction === filter);
+      const byFaction = filter === "全" ? heroes : heroes.filter(hero => hero.faction === filter);
+      const shown = query ? byFaction.filter(hero => getSearchText(hero).includes(query)) : byFaction;
+      poolResultCount.textContent = `${shown.length}/${byFaction.length} 名`;
+
+      if (!shown.length) {
+        poolList.innerHTML = `<div class="pool-empty">没有匹配的武将</div>`;
+        return;
+      }
+
       poolList.innerHTML = shown.map(hero => {
         const name = escapeHtml(hero.name);
         const faction = escapeHtml(hero.faction);
@@ -805,9 +870,10 @@
     }
 
     function openPool() {
-      renderPool();
+      renderPool(poolFilter);
       poolModal.classList.add("open");
       poolModal.setAttribute("aria-hidden", "false");
+      poolSearch.focus();
     }
 
     function closePool() {
@@ -855,6 +921,8 @@
       if (!button) return;
       renderPool(button.dataset.faction);
     });
+
+    poolSearch.addEventListener("input", () => renderPool(poolFilter));
 
     poolList.addEventListener("click", event => {
       const button = event.target.closest("[data-hero-id]");
