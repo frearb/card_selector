@@ -27,7 +27,11 @@ window.SANGUOSHA_HEROES = [
       ]
     ],
     "images": [
-      "assets/heroes/492-界-沮授-skin-01-bc79a757e7.jpg"
+      "assets/heroes/492-界-沮授-skin-01-bc79a757e7.jpg",
+      "assets/heroes/492-界-沮授-skin-02-d08e738a0e.jpg",
+      "assets/heroes/492-界-沮授-skin-03-0ea2befbfe.jpg",
+      "assets/heroes/492-界-沮授-skin-04-38c00a3795.jpg",
+      "assets/heroes/492-界-沮授-skin-05-6016da1c33.jpg"
     ]
   },
   {
@@ -47,7 +51,11 @@ window.SANGUOSHA_HEROES = [
       ]
     ],
     "images": [
-      "assets/heroes/356-界-徐盛-skin-01-03d2340922.jpg"
+      "assets/heroes/356-界-徐盛-skin-01-03d2340922.jpg",
+      "assets/heroes/356-界-徐盛-skin-02-e70496436a.jpg",
+      "assets/heroes/356-界-徐盛-skin-03-ae2073d87b.jpg",
+      "assets/heroes/356-界-徐盛-skin-04-13ec9d155e.jpg",
+      "assets/heroes/356-界-徐盛-skin-05-ed9f9fd528.jpg"
     ]
   },
   {
@@ -76,7 +84,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E9%83%AD%E5%98%89",
     "images": [
-      "assets/heroes/336-神郭嘉-skin-01-e3e9a5420d.jpg"
+      "assets/heroes/336-神郭嘉-skin-01-e3e9a5420d.jpg",
+      "assets/heroes/336-神郭嘉-skin-02-8b40db09b4.jpg"
     ]
   },
   {
@@ -180,7 +189,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E8%92%8B%E9%92%A6",
     "images": [
-      "assets/heroes/430-蒋钦-skin-01-7ee45edb41.jpg"
+      "assets/heroes/430-蒋钦-skin-01-7ee45edb41.jpg",
+      "assets/heroes/430-蒋钦-skin-02-9af5464b68.jpg"
     ]
   },
   {
@@ -201,7 +211,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E6%98%9F%E5%BE%90%E6%99%83",
     "images": [
-      "assets/heroes/377-星-徐晃-skin-01-382fa765ce.jpg"
+      "assets/heroes/377-星-徐晃-skin-01-382fa765ce.jpg",
+      "assets/heroes/377-星-徐晃-skin-02-d3e9d6b418.jpg"
     ]
   },
   {
@@ -226,7 +237,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E9%A9%AC%E8%89%AF",
     "images": [
-      "assets/heroes/89-马良-skin-01-3ab9c268de.jpg"
+      "assets/heroes/89-马良-skin-01-3ab9c268de.jpg",
+      "assets/heroes/89-马良-skin-02-c7e02926a2.jpg",
+      "assets/heroes/89-马良-skin-03-1d10c9f650.jpg"
     ]
   },
   {
@@ -255,7 +268,10 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E8%AF%B8%E8%91%9B%E4%BA%AE",
     "images": [
-      "assets/heroes/142-神诸葛亮-skin-01-59c73b6fe0.jpg"
+      "assets/heroes/142-神诸葛亮-skin-01-59c73b6fe0.jpg",
+      "assets/heroes/142-神诸葛亮-skin-02-19be48c479.jpg",
+      "assets/heroes/142-神诸葛亮-skin-03-c32b550bb3.jpg",
+      "assets/heroes/142-神诸葛亮-skin-04-0247f102ed.jpg"
     ]
   },
   {
@@ -280,7 +296,10 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/SP%E8%B5%B5%E4%BA%91",
     "images": [
-      "assets/heroes/70-SP赵云-skin-01-3d57a56d6e.jpg"
+      "assets/heroes/70-SP赵云-skin-01-3d57a56d6e.jpg",
+      "assets/heroes/70-SP赵云-skin-02-b65f5774a5.jpg",
+      "assets/heroes/70-SP赵云-skin-03-32d8d3c06c.jpg",
+      "assets/heroes/70-SP赵云-skin-04-03ba404016.jpg"
     ]
   },
   {
@@ -305,7 +324,10 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%95%8C%E6%BB%A1%E5%AE%A0",
     "images": [
-      "assets/heroes/384-界-满宠-skin-01-5300c72830.jpg"
+      "assets/heroes/384-界-满宠-skin-01-5300c72830.jpg",
+      "assets/heroes/384-界-满宠-skin-02-6bc5dda640.jpg",
+      "assets/heroes/384-界-满宠-skin-03-e0222cb6eb.jpg",
+      "assets/heroes/384-界-满宠-skin-04-c528aa2679.jpg"
     ]
   },
   {
@@ -330,7 +352,16 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%95%8C%E5%AD%99%E6%9D%83",
     "images": [
-      "assets/heroes/235-界-孙权-skin-01-5b71cec4b9.jpg"
+      "assets/heroes/235-界-孙权-skin-01-5b71cec4b9.jpg",
+      "assets/heroes/235-界-孙权-skin-02-9553d9da7a.jpg",
+      "assets/heroes/235-界-孙权-skin-03-5103e5aaa2.jpg",
+      "assets/heroes/235-界-孙权-skin-04-dc2fb65101.jpg",
+      "assets/heroes/235-界-孙权-skin-05-cc0a0a02e6.jpg",
+      "assets/heroes/235-界-孙权-skin-06-80d9a82158.jpg",
+      "assets/heroes/235-界-孙权-skin-07-dc3ee0dcf9.jpg",
+      "assets/heroes/235-界-孙权-skin-08-b643889fa3.jpg",
+      "assets/heroes/235-界-孙权-skin-09-98a766a7f6.jpg",
+      "assets/heroes/235-界-孙权-skin-10-7540182158.jpg"
     ]
   },
   {
@@ -355,7 +386,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E5%BC%A0%E7%BB%A3",
     "images": [
-      "assets/heroes/344-张绣-skin-01-c3ce05fce1.jpg"
+      "assets/heroes/344-张绣-skin-01-c3ce05fce1.jpg",
+      "assets/heroes/344-张绣-skin-02-a0163359e5.jpg"
     ]
   },
   {
@@ -559,7 +591,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E9%A9%AC%E9%92%A7",
     "images": [
-      "assets/heroes/258-马钧-skin-01-da08eb8be5.jpg"
+      "assets/heroes/258-马钧-skin-01-da08eb8be5.jpg",
+      "assets/heroes/258-马钧-skin-02-f12948a96d.jpg",
+      "assets/heroes/258-马钧-skin-03-8b414bacdf.jpg"
     ]
   },
   {
@@ -588,7 +622,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9D%A8%E5%BD%AA",
     "images": [
-      "assets/heroes/359-杨彪-skin-01-36e4d3f7ef.jpg"
+      "assets/heroes/359-杨彪-skin-01-36e4d3f7ef.jpg",
+      "assets/heroes/359-杨彪-skin-02-446d177236.jpg",
+      "assets/heroes/359-杨彪-skin-03-e5df44b1f7.jpg"
     ]
   },
   {
@@ -617,7 +653,10 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%AE%B8%E6%94%B8",
     "images": [
-      "assets/heroes/254-许攸-skin-01-e3d3f96055.jpg"
+      "assets/heroes/254-许攸-skin-01-e3d3f96055.jpg",
+      "assets/heroes/254-许攸-skin-02-eb78d8b431.jpg",
+      "assets/heroes/254-许攸-skin-03-f8c2e0861e.jpg",
+      "assets/heroes/254-许攸-skin-04-66a9d384f9.jpg"
     ]
   },
   {
@@ -642,7 +681,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%A5%9E%E7%94%98%E5%AE%81",
     "images": [
-      "assets/heroes/348-神甘宁-skin-01-674ac92e30.jpg"
+      "assets/heroes/348-神甘宁-skin-01-674ac92e30.jpg",
+      "assets/heroes/348-神甘宁-skin-02-c23374c998.jpg"
     ]
   },
   {
@@ -671,7 +711,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%A5%9E%E8%8D%80%E5%BD%A7",
     "images": [
-      "assets/heroes/337-神荀彧-skin-01-c5942bb587.jpg"
+      "assets/heroes/337-神荀彧-skin-01-c5942bb587.jpg",
+      "assets/heroes/337-神荀彧-skin-02-a3c858f67c.jpg"
     ]
   },
   {
@@ -696,7 +737,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E8%B5%B5%E4%BA%91",
     "images": [
-      "assets/heroes/145-神赵云-skin-01-96fa5b6d68.jpg"
+      "assets/heroes/145-神赵云-skin-01-96fa5b6d68.jpg",
+      "assets/heroes/145-神赵云-skin-02-f0eeaa3c0d.jpg"
     ]
   },
   {
@@ -721,7 +763,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E9%BA%B9%E4%B9%89",
     "images": [
-      "assets/heroes/214-麹义-skin-01-413374d567.jpg"
+      "assets/heroes/214-麹义-skin-01-413374d567.jpg",
+      "assets/heroes/214-麹义-skin-02-8b2e2f8f2b.jpg",
+      "assets/heroes/214-麹义-skin-03-7a8c6f02d4.jpg"
     ]
   },
   {
@@ -800,7 +844,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E6%9D%9C%E9%A2%84",
     "images": [
-      "assets/heroes/402-杜预-skin-01-514652ebe7.jpg"
+      "assets/heroes/402-杜预-skin-01-514652ebe7.jpg",
+      "assets/heroes/402-杜预-skin-02-19cab93fe9.jpg"
     ]
   },
   {
@@ -821,7 +866,10 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%95%99%E8%B5%9E",
     "images": [
-      "assets/heroes/93-留赞-skin-01-a760819cef.jpg"
+      "assets/heroes/93-留赞-skin-01-a760819cef.jpg",
+      "assets/heroes/93-留赞-skin-02-653ee8bc95.jpg",
+      "assets/heroes/93-留赞-skin-03-5c193dea98.jpg",
+      "assets/heroes/93-留赞-skin-04-eb9de02cd6.jpg"
     ]
   },
   {
@@ -879,7 +927,11 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%8E%8B%E5%85%83%E5%A7%AC",
     "images": [
-      "assets/heroes/266-王元姬-skin-01-5a97163902.jpg"
+      "assets/heroes/266-王元姬-skin-01-5a97163902.jpg",
+      "assets/heroes/266-王元姬-skin-02-2f25f7f50b.jpg",
+      "assets/heroes/266-王元姬-skin-03-5a5362c94d.jpg",
+      "assets/heroes/266-王元姬-skin-04-022fbd14f3.jpg",
+      "assets/heroes/266-王元姬-skin-05-1dad789845.jpg"
     ]
   },
   {
@@ -1049,7 +1101,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E9%99%86%E9%80%8A",
     "images": [
-      "assets/heroes/272-神陆逊-skin-01-26f590a8d5.jpg"
+      "assets/heroes/272-神陆逊-skin-01-26f590a8d5.jpg",
+      "assets/heroes/272-神陆逊-skin-02-ee5d515343.jpg"
     ]
   },
   {
@@ -1099,7 +1152,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E6%9B%B9%E6%93%8D",
     "images": [
-      "assets/heroes/143-神曹操-skin-01-985e7267d7.jpg"
+      "assets/heroes/143-神曹操-skin-01-985e7267d7.jpg",
+      "assets/heroes/143-神曹操-skin-02-833aca5b95.jpg",
+      "assets/heroes/143-神曹操-skin-03-c5e0fe69a5.jpg"
     ]
   },
   {
@@ -1152,7 +1207,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%8F%B8%E9%A9%AC%E6%87%BF",
     "images": [
-      "assets/heroes/146-神司马懿-skin-01-ba0cb98060.jpg"
+      "assets/heroes/146-神司马懿-skin-01-ba0cb98060.jpg",
+      "assets/heroes/146-神司马懿-skin-02-e9b10ceeab.jpg"
     ]
   },
   {
@@ -1185,7 +1241,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%90%95%E5%B8%83",
     "images": [
-      "assets/heroes/144-神吕布-skin-01-e9fbb61653.jpg"
+      "assets/heroes/144-神吕布-skin-01-e9fbb61653.jpg",
+      "assets/heroes/144-神吕布-skin-02-89be80e3dd.jpg",
+      "assets/heroes/144-神吕布-skin-03-787b5ab0ec.jpg"
     ]
   },
   {
@@ -1210,7 +1268,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%85%B3%E7%BE%BD",
     "images": [
-      "assets/heroes/139-神关羽-skin-01-1243fa5ff5.jpg"
+      "assets/heroes/139-神关羽-skin-01-1243fa5ff5.jpg",
+      "assets/heroes/139-神关羽-skin-02-1f743efb23.jpg",
+      "assets/heroes/139-神关羽-skin-03-c19fa21b49.jpg"
     ]
   },
   {
@@ -1235,7 +1295,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%90%95%E8%92%99",
     "images": [
-      "assets/heroes/140-神吕蒙-skin-01-c77c24e157.jpg"
+      "assets/heroes/140-神吕蒙-skin-01-c77c24e157.jpg",
+      "assets/heroes/140-神吕蒙-skin-02-17136c8070.jpg"
     ]
   },
   {
@@ -1260,7 +1321,10 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%91%A8%E7%91%9C",
     "images": [
-      "assets/heroes/141-神周瑜-skin-01-920f3d7aa8.jpg"
+      "assets/heroes/141-神周瑜-skin-01-920f3d7aa8.jpg",
+      "assets/heroes/141-神周瑜-skin-02-3cc3ff0ee9.jpg",
+      "assets/heroes/141-神周瑜-skin-03-053abd681b.jpg",
+      "assets/heroes/141-神周瑜-skin-04-ac38ffa4d6.jpg"
     ]
   },
   {
@@ -1360,7 +1424,12 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E9%BB%84%E5%BF%A0",
     "images": [
-      "assets/heroes/444-谋-黄忠-skin-01-a6076f8f90.jpg"
+      "assets/heroes/444-谋-黄忠-skin-01-a6076f8f90.jpg",
+      "assets/heroes/444-谋-黄忠-skin-02-9acf6c4699.jpg",
+      "assets/heroes/444-谋-黄忠-skin-03-5aa194a40a.jpg",
+      "assets/heroes/444-谋-黄忠-skin-04-b422150888.jpg",
+      "assets/heroes/444-谋-黄忠-skin-05-3b3f7fba84.jpg",
+      "assets/heroes/444-谋-黄忠-skin-06-6210bbb6c2.jpg"
     ]
   },
   {
@@ -1443,7 +1512,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9B%B9%E6%93%8D",
     "images": [
-      "assets/heroes/498-谋-曹操-skin-01-96e68d8edb.jpg"
+      "assets/heroes/498-谋-曹操-skin-01-96e68d8edb.jpg",
+      "assets/heroes/498-谋-曹操-skin-02-a7533d5fc0.png"
     ]
   },
   {
@@ -1935,7 +2005,13 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%B5%B5%E4%BA%91",
     "images": [
-      "assets/heroes/455-谋-赵云-skin-01-13a1ab98fa.jpg"
+      "assets/heroes/455-谋-赵云-skin-01-13a1ab98fa.jpg",
+      "assets/heroes/455-谋-赵云-skin-02-bdb040efea.jpg",
+      "assets/heroes/455-谋-赵云-skin-03-6492165047.jpg",
+      "assets/heroes/455-谋-赵云-skin-04-f145cf74a0.jpg",
+      "assets/heroes/455-谋-赵云-skin-05-d6ba1267c5.jpg",
+      "assets/heroes/455-谋-赵云-skin-06-0cb95c3040.jpg",
+      "assets/heroes/455-谋-赵云-skin-07-ccf2922d11.jpg"
     ]
   },
   {
@@ -2089,7 +2165,12 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%AD%99%E5%B0%9A%E9%A6%99",
     "images": [
-      "assets/heroes/493-谋-孙尚香-skin-01-af53eba1e5.jpg"
+      "assets/heroes/493-谋-孙尚香-skin-01-af53eba1e5.jpg",
+      "assets/heroes/493-谋-孙尚香-skin-02-985e63b1d5.jpg",
+      "assets/heroes/493-谋-孙尚香-skin-03-292865e0c7.jpg",
+      "assets/heroes/493-谋-孙尚香-skin-04-1cc5bb4f0f.jpg",
+      "assets/heroes/493-谋-孙尚香-skin-05-028cb5c812.jpg",
+      "assets/heroes/493-谋-孙尚香-skin-06-8be5372320.jpg"
     ]
   },
   {
@@ -2114,7 +2195,12 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%BB%84%E7%9B%96",
     "images": [
-      "assets/heroes/160-界-黄盖-skin-01-47a45ab0c2.jpg"
+      "assets/heroes/160-界-黄盖-skin-01-47a45ab0c2.jpg",
+      "assets/heroes/160-界-黄盖-skin-02-3687f3a50a.jpg",
+      "assets/heroes/160-界-黄盖-skin-03-6a531149a1.jpg",
+      "assets/heroes/160-界-黄盖-skin-04-f31356de50.jpg",
+      "assets/heroes/160-界-黄盖-skin-05-1f4abb0182.jpg",
+      "assets/heroes/160-界-黄盖-skin-06-d73fb60278.jpg"
     ]
   },
   {
@@ -2139,7 +2225,13 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%85%B3%E7%BE%BD",
     "images": [
-      "assets/heroes/153-界-关羽-skin-01-c33ed76c59.jpg"
+      "assets/heroes/153-界-关羽-skin-01-c33ed76c59.jpg",
+      "assets/heroes/153-界-关羽-skin-02-bdb018c92a.jpg",
+      "assets/heroes/153-界-关羽-skin-03-78b66f3d33.jpg",
+      "assets/heroes/153-界-关羽-skin-04-c12f3cf1f4.jpg",
+      "assets/heroes/153-界-关羽-skin-05-a644c54230.jpg",
+      "assets/heroes/153-界-关羽-skin-06-a0bbe68401.jpg",
+      "assets/heroes/153-界-关羽-skin-07-75a580056c.jpg"
     ]
   },
   {
@@ -2164,7 +2256,14 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%90%95%E5%B8%83",
     "images": [
-      "assets/heroes/172-界-吕布-skin-01-6e2f3c6ec9.jpg"
+      "assets/heroes/172-界-吕布-skin-01-6e2f3c6ec9.jpg",
+      "assets/heroes/172-界-吕布-skin-02-d1ba3c1065.jpg",
+      "assets/heroes/172-界-吕布-skin-03-0ed9307c2a.jpg",
+      "assets/heroes/172-界-吕布-skin-04-9d9f3d1a39.jpg",
+      "assets/heroes/172-界-吕布-skin-05-e3ac78f97c.jpg",
+      "assets/heroes/172-界-吕布-skin-06-0a2ca9d199.jpg",
+      "assets/heroes/172-界-吕布-skin-07-7dbd6dc62f.jpg",
+      "assets/heroes/172-界-吕布-skin-08-92f18e5286.jpg"
     ]
   },
   {
@@ -2189,7 +2288,13 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%8D%80%E5%BD%A7",
     "images": [
-      "assets/heroes/264-界-荀彧-skin-01-925bdf1668.jpg"
+      "assets/heroes/264-界-荀彧-skin-01-925bdf1668.jpg",
+      "assets/heroes/264-界-荀彧-skin-02-fd8bf15156.jpg",
+      "assets/heroes/264-界-荀彧-skin-03-042fe8f42e.jpg",
+      "assets/heroes/264-界-荀彧-skin-04-721d793524.jpg",
+      "assets/heroes/264-界-荀彧-skin-05-384786fae3.jpg",
+      "assets/heroes/264-界-荀彧-skin-06-242b72b43a.jpg",
+      "assets/heroes/264-界-荀彧-skin-07-3c4daad52d.jpg"
     ]
   },
   {
@@ -2218,7 +2323,11 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9D%8E%E5%84%92",
     "images": [
-      "assets/heroes/383-界-李儒-skin-01-8dd44c0e80.jpg"
+      "assets/heroes/383-界-李儒-skin-01-8dd44c0e80.jpg",
+      "assets/heroes/383-界-李儒-skin-02-65ef302f68.jpg",
+      "assets/heroes/383-界-李儒-skin-03-cec7e6de43.jpg",
+      "assets/heroes/383-界-李儒-skin-04-ffd054796a.jpg",
+      "assets/heroes/383-界-李儒-skin-05-87026422c0.jpg"
     ]
   },
   {
@@ -2243,7 +2352,10 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%AE%80%E9%9B%8D",
     "images": [
-      "assets/heroes/385-界-简雍-skin-01-985710abbd.jpg"
+      "assets/heroes/385-界-简雍-skin-01-985710abbd.jpg",
+      "assets/heroes/385-界-简雍-skin-02-5b3c87fa78.jpg",
+      "assets/heroes/385-界-简雍-skin-03-394f5ea180.jpg",
+      "assets/heroes/385-界-简雍-skin-04-9954536473.jpg"
     ]
   },
   {
@@ -2264,7 +2376,11 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9C%B1%E7%84%B6",
     "images": [
-      "assets/heroes/389-界-朱然-skin-01-f1223983d7.jpg"
+      "assets/heroes/389-界-朱然-skin-01-f1223983d7.jpg",
+      "assets/heroes/389-界-朱然-skin-02-f2581bbd0c.jpg",
+      "assets/heroes/389-界-朱然-skin-03-1dac909761.jpg",
+      "assets/heroes/389-界-朱然-skin-04-970c77e64c.jpg",
+      "assets/heroes/389-界-朱然-skin-05-741ab27674.jpg"
     ]
   },
   {
@@ -2289,7 +2405,11 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%B7%A6%E6%85%88",
     "images": [
-      "assets/heroes/294-界-左慈-skin-01-a70cb2a086.jpg"
+      "assets/heroes/294-界-左慈-skin-01-a70cb2a086.jpg",
+      "assets/heroes/294-界-左慈-skin-02-dcf5383216.jpg",
+      "assets/heroes/294-界-左慈-skin-03-fec0eea166.jpg",
+      "assets/heroes/294-界-左慈-skin-04-e12264484b.jpg",
+      "assets/heroes/294-界-左慈-skin-05-d0c20140bd.jpg"
     ]
   },
   {
@@ -2314,7 +2434,13 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%AD%99%E5%B0%9A%E9%A6%99",
     "images": [
-      "assets/heroes/236-界-孙尚香-skin-01-643a5c4367.jpg"
+      "assets/heroes/236-界-孙尚香-skin-01-643a5c4367.jpg",
+      "assets/heroes/236-界-孙尚香-skin-02-55b39b6e4b.jpg",
+      "assets/heroes/236-界-孙尚香-skin-03-4a1fb99d71.jpg",
+      "assets/heroes/236-界-孙尚香-skin-04-f1293c8e89.jpg",
+      "assets/heroes/236-界-孙尚香-skin-05-b4641cff31.jpg",
+      "assets/heroes/236-界-孙尚香-skin-06-1f44878b4b.jpg",
+      "assets/heroes/236-界-孙尚香-skin-07-82a95a6632.jpg"
     ]
   },
   {
@@ -2335,7 +2461,12 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BC%A0%E8%BE%BD",
     "images": [
-      "assets/heroes/167-界-张辽-skin-01-21aa7d265c.jpg"
+      "assets/heroes/167-界-张辽-skin-01-21aa7d265c.jpg",
+      "assets/heroes/167-界-张辽-skin-02-1e7edf3f5d.jpg",
+      "assets/heroes/167-界-张辽-skin-03-cb2d430942.jpg",
+      "assets/heroes/167-界-张辽-skin-04-f0e6a8ee8c.jpg",
+      "assets/heroes/167-界-张辽-skin-05-5db9c2fe0b.jpg",
+      "assets/heroes/167-界-张辽-skin-06-e1ca5d94f2.jpg"
     ]
   },
   {
@@ -2360,7 +2491,13 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BC%A0%E9%A3%9E",
     "images": [
-      "assets/heroes/154-界-张飞-skin-01-d154ca5818.jpg"
+      "assets/heroes/154-界-张飞-skin-01-d154ca5818.jpg",
+      "assets/heroes/154-界-张飞-skin-02-6af5582c51.jpg",
+      "assets/heroes/154-界-张飞-skin-03-3853d7f378.jpg",
+      "assets/heroes/154-界-张飞-skin-04-20de59fa9c.jpg",
+      "assets/heroes/154-界-张飞-skin-05-b4c678b323.jpg",
+      "assets/heroes/154-界-张飞-skin-06-d6e0f0c21f.jpg",
+      "assets/heroes/154-界-张飞-skin-07-cd9d3d46e2.jpg"
     ]
   },
   {
@@ -2385,7 +2522,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%88%98%E7%84%89",
     "images": [
-      "assets/heroes/239-刘焉-skin-01-73e4ccb37b.jpg"
+      "assets/heroes/239-刘焉-skin-01-73e4ccb37b.jpg",
+      "assets/heroes/239-刘焉-skin-02-4283b8e16d.jpg"
     ]
   },
   {
@@ -2410,7 +2548,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9B%B9%E5%A9%B4",
     "images": [
-      "assets/heroes/288-曹婴-skin-01-2837d1c4c6.jpg"
+      "assets/heroes/288-曹婴-skin-01-2837d1c4c6.jpg",
+      "assets/heroes/288-曹婴-skin-02-e74f548daf.jpg",
+      "assets/heroes/288-曹婴-skin-03-6f94b811a1.jpg"
     ]
   },
   {
@@ -2431,7 +2571,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9B%B9%E7%BA%AF",
     "images": [
-      "assets/heroes/303-曹纯-skin-01-d7f68255c5.jpg"
+      "assets/heroes/303-曹纯-skin-01-d7f68255c5.jpg",
+      "assets/heroes/303-曹纯-skin-02-8c9895cb99.jpg"
     ]
   },
   {
@@ -2452,7 +2593,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BC%A0%E8%AE%A9",
     "images": [
-      "assets/heroes/224-张让-skin-01-bf8a3a6d14.jpg"
+      "assets/heroes/224-张让-skin-01-bf8a3a6d14.jpg",
+      "assets/heroes/224-张让-skin-02-2b75a0e77d.jpg"
     ]
   },
   {
@@ -2477,7 +2619,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%B5%B5%E8%A5%84",
     "images": [
-      "assets/heroes/209-赵襄-skin-01-42d69c53a8.jpg"
+      "assets/heroes/209-赵襄-skin-01-42d69c53a8.jpg",
+      "assets/heroes/209-赵襄-skin-02-9bce6bdc02.jpg",
+      "assets/heroes/209-赵襄-skin-03-afef6e6e83.jpg"
     ]
   },
   {
@@ -2556,7 +2700,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%BE%8A%E5%BE%BD%E7%91%9C",
     "images": [
-      "assets/heroes/388-羊徽瑜-skin-01-3bdd56205a.jpg"
+      "assets/heroes/388-羊徽瑜-skin-01-3bdd56205a.jpg",
+      "assets/heroes/388-羊徽瑜-skin-02-c8c2829925.jpg"
     ]
   },
   {
@@ -2606,7 +2751,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E5%B4%94%E7%90%B0",
     "images": [
-      "assets/heroes/428-崔琰-skin-01-59af82b535.jpg"
+      "assets/heroes/428-崔琰-skin-01-59af82b535.jpg",
+      "assets/heroes/428-崔琰-skin-02-6c63c3ba2b.jpg"
     ]
   },
   {
@@ -2631,7 +2777,12 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/YJ%E5%A4%8F%E4%BE%AF%E6%B0%8F",
     "images": [
-      "assets/heroes/189-夏侯氏-skin-01-11e301c9fb.jpg"
+      "assets/heroes/189-夏侯氏-skin-01-11e301c9fb.jpg",
+      "assets/heroes/189-夏侯氏-skin-02-a4d5b579a4.jpg",
+      "assets/heroes/189-夏侯氏-skin-03-9f2a5a2a96.jpg",
+      "assets/heroes/189-夏侯氏-skin-04-8e97f70212.jpg",
+      "assets/heroes/189-夏侯氏-skin-05-4f45ff99cf.jpg",
+      "assets/heroes/189-夏侯氏-skin-06-d37b0c31bc.jpg"
     ]
   },
   {
@@ -2739,7 +2890,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9C%B1%E5%84%81",
     "images": [
-      "assets/heroes/451-朱儁-skin-01-2a41b78e08.jpg"
+      "assets/heroes/451-朱儁-skin-01-2a41b78e08.jpg",
+      "assets/heroes/451-朱儁-skin-02-2484c82609.jpg"
     ]
   },
   {
@@ -2760,7 +2912,9 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E9%83%9D%E6%98%AD",
     "images": [
-      "assets/heroes/345-郝昭-skin-01-b9962f0a33.jpg"
+      "assets/heroes/345-郝昭-skin-01-b9962f0a33.jpg",
+      "assets/heroes/345-郝昭-skin-02-1fae80e9be.jpg",
+      "assets/heroes/345-郝昭-skin-03-7eb48a0456.jpg"
     ]
   },
   {
@@ -2785,7 +2939,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%BE%90%E8%8D%A3",
     "images": [
-      "assets/heroes/261-徐荣-skin-01-305632a507.jpg"
+      "assets/heroes/261-徐荣-skin-01-305632a507.jpg",
+      "assets/heroes/261-徐荣-skin-02-94bcb8f60f.jpg"
     ]
   },
   {
@@ -2839,7 +2994,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%A2%81%E6%B6%A3",
     "images": [
-      "assets/heroes/421-袁涣-skin-01-8419d2c6de.jpg"
+      "assets/heroes/421-袁涣-skin-01-8419d2c6de.jpg",
+      "assets/heroes/421-袁涣-skin-02-c043fe0879.jpg"
     ]
   },
   {

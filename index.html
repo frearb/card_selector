@@ -354,6 +354,18 @@
       cursor: not-allowed;
     }
 
+    .skin-button {
+      width: calc(100% - 24px);
+      margin: 0 12px 8px;
+      min-height: 36px;
+      border-radius: 8px;
+      background: rgba(47, 116, 95, .13);
+      color: var(--green);
+      border: 1px solid rgba(47, 116, 95, .2);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
     .source {
       margin: 18px 0 0;
       padding: 12px;
@@ -694,6 +706,7 @@
     let refreshTimer = null;
     let poolFilter = "全";
     let rerolledSlots = new Set();
+    let skinIndexes = {};
 
     poolStatus.textContent = `将池 ${heroes.length} 名`;
 
@@ -712,6 +725,7 @@
         selectedId,
         count: Number(countInput.value),
         rerolledSlots: [...rerolledSlots],
+        skinIndexes,
         ...patch
       };
       localStorage.setItem(STATE_KEY, JSON.stringify(next));
@@ -760,6 +774,7 @@
         currentHeroes = heroesFromIds(state.heroIds);
         selectedId = Number(state.selectedId) || null;
         rerolledSlots = new Set(Array.isArray(state.rerolledSlots) ? state.rerolledSlots.map(Number) : []);
+        skinIndexes = state.skinIndexes && typeof state.skinIndexes === "object" ? state.skinIndexes : {};
         render();
         updateRefreshState();
         return;
@@ -805,6 +820,9 @@
     function selectHero(heroId) {
       selectedId = heroId;
       const hero = heroes.find(item => item.id === heroId);
+      if (hero && skinIndexes[hero.id] === undefined) {
+        skinIndexes = { ...skinIndexes, [hero.id]: 0 };
+      }
       selectedStatus.textContent = hero ? `已选择：${hero.name}` : "未选择";
       saveState();
       render();
@@ -850,9 +868,28 @@
       return items[index];
     }
 
+    function getHeroImages(hero) {
+      return Array.isArray(hero.images) && hero.images.length ? hero.images : [hero.image].filter(Boolean);
+    }
+
     function getHeroImage(hero) {
-      const images = Array.isArray(hero.images) && hero.images.length ? hero.images : [hero.image].filter(Boolean);
+      const images = getHeroImages(hero);
+      const skinIndex = skinIndexes[hero.id];
+      if (skinIndex !== undefined) {
+        return images[Number(skinIndex) % images.length] || images[0] || "";
+      }
       return randomItem(images);
+    }
+
+    function nextHeroSkin(heroId) {
+      const hero = heroes.find(item => item.id === heroId);
+      const images = hero ? getHeroImages(hero) : [];
+      if (images.length < 2) return;
+
+      const nextIndex = (Number(skinIndexes[heroId] || 0) + 1) % images.length;
+      skinIndexes = { ...skinIndexes, [heroId]: nextIndex };
+      saveState();
+      render();
     }
 
     function render() {
@@ -863,6 +900,7 @@
       grid.innerHTML = visibleHeroes.map(({ hero, index }) => {
         const isSelected = hero.id === selectedId;
         const isRerolled = rerolledSlots.has(index);
+        const hasMultipleSkins = getHeroImages(hero).length > 1;
         const skills = hero.skills.map(([name, text]) => `
           <div class="skill">
             <span class="skill-name">${escapeHtml(name)}</span>
@@ -890,7 +928,8 @@
               </div>
               <div class="skills">${skills}</div>
             </div>
-            <button class="reroll-button" type="button" data-reroll-index="${index}" ${isRerolled || isSelected ? "disabled" : ""}>${isRerolled ? "已刷新" : "单独刷新"}</button>
+            ${isSelected && hasMultipleSkins ? `<button class="skin-button" type="button" data-skin-id="${hero.id}">切换皮肤</button>` : ""}
+            ${!isSelected ? `<button class="reroll-button" type="button" data-reroll-index="${index}" ${isRerolled ? "disabled" : ""}>${isRerolled ? "已刷新" : "单独刷新"}</button>` : ""}
             <button class="pick-button" type="button" data-id="${hero.id}">${isSelected ? "当前选择" : "选定此将"}</button>
           </article>
         `;
@@ -1020,6 +1059,12 @@
     });
 
     grid.addEventListener("click", event => {
+      const skinButton = event.target.closest("[data-skin-id]");
+      if (skinButton) {
+        nextHeroSkin(Number(skinButton.dataset.skinId));
+        return;
+      }
+
       const rerollButton = event.target.closest("[data-reroll-index]");
       if (rerollButton) {
         rerollHero(Number(rerollButton.dataset.rerollIndex));
@@ -1040,6 +1085,7 @@
       currentHeroes = heroesFromIds(state.heroIds);
       selectedId = Number(state.selectedId) || null;
       rerolledSlots = new Set(Array.isArray(state.rerolledSlots) ? state.rerolledSlots.map(Number) : []);
+      skinIndexes = state.skinIndexes && typeof state.skinIndexes === "object" ? state.skinIndexes : {};
       if (!currentHeroes.length) {
         currentHeroes = shufflePool().slice(0, Number(countInput.value));
         rerolledSlots = new Set();
