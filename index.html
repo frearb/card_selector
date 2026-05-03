@@ -212,6 +212,22 @@
       display: block;
     }
 
+    .card.selected .portrait {
+      height: auto;
+      min-height: 0;
+      background: #1f1711;
+    }
+
+    .card.selected .portrait img {
+      height: auto;
+      max-height: min(72vh, 820px);
+      object-fit: contain;
+    }
+
+    .card.selected .fallback {
+      display: none;
+    }
+
     .fallback {
       position: absolute;
       inset: 0;
