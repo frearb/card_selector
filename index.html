@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>三国杀选将模拟器</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f1e6;
+      --ink: #211913;
+      --muted: #77695f;
+      --line: rgba(65, 44, 27, .18);
+      --red: #a92f24;
+      --gold: #c68a2f;
+      --green: #2f745f;
+      --blue: #2f587b;
+      --black: #202020;
+      --panel: rgba(255, 252, 246, .9);
+      --shadow: 0 16px 42px rgba(38, 25, 12, .15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(135deg, rgba(169, 47, 36, .12), transparent 30%),
+        linear-gradient(315deg, rgba(47, 116, 95, .12), transparent 32%),
+        var(--paper);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    .app {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .topbar {
+      display: grid;
+      gap: 14px;
+      align-items: end;
+      padding: 18px 0 12px;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: clamp(28px, 8vw, 56px);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+
+    .title p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .controls {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .control-line {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .control-label {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .count-value {
+      min-width: 2.5em;
+      text-align: right;
+      font-weight: 800;
+      color: var(--red);
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--red);
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .primary,
+    .secondary {
+      min-height: 44px;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+
+    .primary {
+      background: var(--red);
+      color: white;
+    }
+
+    .secondary {
+      background: #efe1cf;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .status {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .selected-pill {
+      min-height: 30px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(47, 88, 123, .12);
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      min-height: 455px;
+      border-radius: 8px;
+      background: #fffaf1;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      transform: translateZ(0);
+    }
+
+    .card.selected {
+      outline: 4px solid rgba(198, 138, 47, .85);
+      outline-offset: -4px;
+    }
+
+    .portrait {
+      position: relative;
+      height: 255px;
+      background: linear-gradient(135deg, #352018, #7a3428 45%, #d59a45);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: rgba(255, 255, 255, .86);
+      text-align: center;
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .faction {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      color: #fff;
+      font-weight: 900;
+      border: 2px solid rgba(255, 255, 255, .72);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, .22);
+    }
+
+    .faction.wei { background: var(--blue); }
+    .faction.shu { background: var(--red); }
+    .faction.wu { background: var(--green); }
+    .faction.qun { background: var(--black); }
+
+    .picked-mark {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      min-width: 66px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .94);
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 900;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: .18s ease;
+    }
+
+    .card.selected .picked-mark {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .body {
+      padding: 12px;
+    }
+
+    .name-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .name {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .skills {
+      display: grid;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .skill {
+      display: grid;
+      gap: 4px;
+    }
+
+    .skill-name {
+      width: fit-content;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(198, 138, 47, .18);
+      color: #71480f;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .skill-text {
+      margin: 0;
+      color: #3c3028;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .pick-button {
+      width: calc(100% - 24px);
+      margin: 0 12px 12px;
+      min-height: 42px;
+      border-radius: 8px;
+      background: #2f587b;
+      color: white;
+      font-weight: 900;
+    }
+
+    .card.selected .pick-button {
+      background: var(--gold);
+      color: #241405;
+    }
+
+    .source {
+      margin: 18px 0 0;
+      padding: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      background: rgba(255, 252, 246, .65);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .source a {
+      color: var(--blue);
+    }
+
+    @media (min-width: 760px) {
+      .app {
+        padding: 26px;
+      }
+
+      .topbar {
+        grid-template-columns: 1fr 360px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="topbar" aria-labelledby="appTitle">
+      <div class="title">
+        <h1 id="appTitle">三国杀选将</h1>
+        <p>随机翻出若干名武将，点击一张完成选定。</p>
+      </div>
+
+      <div class="controls" aria-label="选将控制">
+        <div class="control-line">
+          <label class="control-label" for="cardCount">本轮候选数量</label>
+          <span class="count-value" id="countValue">6</span>
+        </div>
+        <input id="cardCount" type="range" min="3" max="10" value="6">
+        <div class="actions">
+          <button class="primary" id="refreshButton" type="button">刷新武将</button>
+          <button class="secondary" id="clearButton" type="button">取消选择</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="status" aria-live="polite">
+      <span id="poolStatus">将池 24 名</span>
+      <span class="selected-pill" id="selectedStatus">未选择</span>
+    </div>
+
+    <section class="grid" id="cardGrid" aria-label="候选武将"></section>
+
+    <p class="source">
+      武将图片与技能文本整理自
+      <a href="https://www.sanguosha.cn/index.php/pc/hero-detail-1.html" target="_blank" rel="noreferrer">三国杀移动版官网武将页</a>；
+      标准身份武将列表参考
+      <a href="https://sanguosha.fandom.com/zh/wiki/%E4%B8%89%E5%9B%BD%E6%9D%80%E6%AD%A6%E5%B0%86%E5%88%97%E8%A1%A8?variant=zh-hans" target="_blank" rel="noreferrer">三国杀 Wiki 武将列表</a>。
+    </p>
+  </main>
+
+  <script>
+    const heroes = [
+      {
+        id: 1,
+        name: "刘备",
+        faction: "蜀",
+        factionClass: "shu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/29900.jpg",
+        skills: [
+          ["仁德", "出牌阶段，你可以将任意张手牌交给其他角色，然后若你于此阶段内给出第二张“仁德”牌时，你回复1点体力。"],
+          ["激将", "主公技，当你需要使用或打出【杀】时，你可以令其他蜀势力角色选择是否打出一张【杀】。"]
+        ]
+      },
+      {
+        id: 2,
+        name: "关羽",
+        faction: "蜀",
+        factionClass: "shu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/30000.jpg",
+        skills: [["武圣", "你可以将一张红色牌当【杀】使用或打出。"]]
+      },
+      {
+        id: 3,
+        name: "张飞",
+        faction: "蜀",
+        factionClass: "shu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/30100.jpg",
+        skills: [["咆哮", "锁定技，你使用【杀】无次数限制。"]]
+      },
+      {
+        id: 4,
+        name: "诸葛亮",
+        faction: "蜀",
+        factionClass: "shu",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/400.jpg",
+        skills: [
+          ["观星", "准备阶段，你可以观看牌堆顶的X张牌，然后将其中任意数量的牌置于牌堆顶，将其余的牌置于牌堆底。"],
+          ["空城", "锁定技，若你没有手牌，则你不能被选择为【杀】或【决斗】的目标。"]
+        ]
+      },
+      {
+        id: 5,
+        name: "赵云",
+        faction: "蜀",
+        factionClass: "shu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/500.jpg",
+        skills: [["龙胆", "你可以将一张【杀】当【闪】、【闪】当【杀】使用或打出。"]]
+      },
+      {
+        id: 6,
+        name: "马超",
+        faction: "蜀",
+        factionClass: "shu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/600.jpg",
+        skills: [
+          ["马术", "锁定技，你计算与其他角色的距离-1。"],
+          ["铁骑", "当你使用【杀】指定一个目标后，你可以进行判定，若结果为红色，该角色不能使用【闪】响应此【杀】。"]
+        ]
+      },
+      {
+        id: 7,
+        name: "黄月英",
+        faction: "蜀",
+        factionClass: "shu",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/700.jpg",
+        skills: [
+          ["集智", "当你使用一张普通锦囊牌时，你可以摸一张牌。"],
+          ["奇才", "锁定技，你使用锦囊牌无距离限制。"]
+        ]
+      },
+      {
+        id: 8,
+        name: "孙权",
+        faction: "吴",
+        factionClass: "wu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/800.jpg",
+        skills: [
+          ["制衡", "出牌阶段限一次，你可以弃置任意张牌，然后摸等量的牌。"],
+          ["救援", "主公技，锁定技，其他吴势力角色对你使用【桃】回复的体力+1。"]
+        ]
+      },
+      {
+        id: 9,
+        name: "甘宁",
+        faction: "吴",
+        factionClass: "wu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/900.jpg",
+        skills: [["奇袭", "你可以将一张黑色牌当【过河拆桥】使用。"]]
+      },
+      {
+        id: 10,
+        name: "吕蒙",
+        faction: "吴",
+        factionClass: "wu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/30600.jpg",
+        skills: [["克己", "若你未于出牌阶段内使用或打出过【杀】，则你可以跳过弃牌阶段。"]]
+      },
+      {
+        id: 11,
+        name: "黄盖",
+        faction: "吴",
+        factionClass: "wu",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/30700.jpg",
+        skills: [["苦肉", "出牌阶段，你可以失去1点体力，然后摸两张牌。"]]
+      },
+      {
+        id: 12,
+        name: "周瑜",
+        faction: "吴",
+        factionClass: "wu",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/30800.jpg",
+        skills: [
+          ["英姿", "摸牌阶段，你可以多摸一张牌。"],
+          ["反间", "出牌阶段限一次，你可以令一名其他角色选择一种花色，然后该角色获得你的一张手牌并展示之，若花色不同，你对其造成1点伤害。"]
+        ]
+      },
+      {
+        id: 13,
+        name: "大乔",
+        faction: "吴",
+        factionClass: "wu",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/30900.jpg",
+        skills: [
+          ["国色", "你可以将一张方块牌当【乐不思蜀】使用。"],
+          ["流离", "当你成为【杀】的目标时，你可以弃置一张牌并选择你攻击范围内的一名其他角色，然后将此【杀】转移给该角色。"]
+        ]
+      },
+      {
+        id: 14,
+        name: "陆逊",
+        faction: "吴",
+        factionClass: "wu",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31000.jpg",
+        skills: [
+          ["谦逊", "锁定技，你不能被选择为【顺手牵羊】和【乐不思蜀】的目标。"],
+          ["连营", "当你失去最后的手牌时，你可以摸一张牌。"]
+        ]
+      },
+      {
+        id: 15,
+        name: "曹操",
+        faction: "魏",
+        factionClass: "wei",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31100.jpg",
+        skills: [
+          ["奸雄", "当你受到伤害后，你可以获得造成此伤害的牌。"],
+          ["护驾", "主公技，当你需要使用或打出【闪】时，你可以令其他魏势力角色选择是否打出一张【闪】。"]
+        ]
+      },
+      {
+        id: 16,
+        name: "司马懿",
+        faction: "魏",
+        factionClass: "wei",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31200.jpg",
+        skills: [
+          ["反馈", "当你受到伤害后，你可以获得伤害来源的一张牌。"],
+          ["鬼才", "当一名角色的判定牌生效前，你可以打出一张手牌代替之。"]
+        ]
+      },
+      {
+        id: 17,
+        name: "夏侯惇",
+        faction: "魏",
+        factionClass: "wei",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31300.jpg",
+        skills: [["刚烈", "当你受到伤害后，你可以进行判定，若结果不为红桃，则伤害来源选择一项：弃置两张手牌，或受到你造成的1点伤害。"]]
+      },
+      {
+        id: 18,
+        name: "张辽",
+        faction: "魏",
+        factionClass: "wei",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31400.jpg",
+        skills: [["突袭", "摸牌阶段，你可以改为获得至多两名角色的各一张手牌。"]]
+      },
+      {
+        id: 19,
+        name: "许褚",
+        faction: "魏",
+        factionClass: "wei",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31500.jpg",
+        skills: [["裸衣", "摸牌阶段，你可以少摸一张牌，然后本回合你使用【杀】或【决斗】造成伤害时，此伤害+1。"]]
+      },
+      {
+        id: 20,
+        name: "郭嘉",
+        faction: "魏",
+        factionClass: "wei",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31600.jpg",
+        skills: [
+          ["天妒", "当你的判定牌生效后，你可以获得此牌。"],
+          ["遗计", "当你受到1点伤害后，你可以观看牌堆顶的两张牌，然后将这些牌交给任意角色。"]
+        ]
+      },
+      {
+        id: 21,
+        name: "甄姬",
+        faction: "魏",
+        factionClass: "wei",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/40400.jpg",
+        skills: [
+          ["洛神", "准备阶段，你可以进行判定，当黑色判定牌生效后，你获得之。若结果为黑色，你可以重复此流程。"],
+          ["倾国", "你可以将一张黑色手牌当【闪】使用或打出。"]
+        ]
+      },
+      {
+        id: 22,
+        name: "华佗",
+        faction: "群",
+        factionClass: "qun",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31800.jpg",
+        skills: [
+          ["急救", "你的回合外，你可以将一张红色牌当【桃】使用。"],
+          ["青囊", "出牌阶段限一次，你可以弃置一张手牌，然后令一名已受伤的角色回复1点体力。"]
+        ]
+      },
+      {
+        id: 23,
+        name: "吕布",
+        faction: "群",
+        factionClass: "qun",
+        hp: "4",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/31900.jpg",
+        skills: [["无双", "锁定技，你使用的【杀】需两张【闪】才能抵消；与你进行【决斗】的角色每次需打出两张【杀】。"]]
+      },
+      {
+        id: 24,
+        name: "貂蝉",
+        faction: "群",
+        factionClass: "qun",
+        hp: "3",
+        image: "https://www.sanguosha.cn/storage/uploads/images/skins/40500.jpg",
+        skills: [
+          ["闭月", "结束阶段，你可以摸一张牌。"],
+          ["离间", "出牌阶段限一次，你可以弃置一张牌并选择两名其他男性角色，然后令其中一名男性角色视为对另一名男性角色使用一张【决斗】。"]
+        ]
+      }
+    ];
+
+    const grid = document.querySelector("#cardGrid");
+    const countInput = document.querySelector("#cardCount");
+    const countValue = document.querySelector("#countValue");
+    const selectedStatus = document.querySelector("#selectedStatus");
+    const poolStatus = document.querySelector("#poolStatus");
+    const refreshButton = document.querySelector("#refreshButton");
+    const clearButton = document.querySelector("#clearButton");
+
+    let currentHeroes = [];
+    let selectedId = null;
+
+    poolStatus.textContent = `将池 ${heroes.length} 名`;
+
+    function shufflePool() {
+      return [...heroes].sort(() => crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32 - .5);
+    }
+
+    function drawHeroes() {
+      selectedId = null;
+      selectedStatus.textContent = "未选择";
+      currentHeroes = shufflePool().slice(0, Number(countInput.value));
+      render();
+    }
+
+    function selectHero(heroId) {
+      selectedId = heroId;
+      const hero = heroes.find(item => item.id === heroId);
+      selectedStatus.textContent = hero ? `已选择：${hero.name}` : "未选择";
+      render();
+    }
+
+    function clearSelection() {
+      selectedId = null;
+      selectedStatus.textContent = "未选择";
+      render();
+    }
+
+    function render() {
+      grid.innerHTML = currentHeroes.map(hero => {
+        const isSelected = hero.id === selectedId;
+        const skills = hero.skills.map(([name, text]) => `
+          <div class="skill">
+            <span class="skill-name">${name}</span>
+            <p class="skill-text">${text}</p>
+          </div>
+        `).join("");
+
+        return `
+          <article class="card ${isSelected ? "selected" : ""}">
+            <div class="portrait">
+              <div class="fallback">${hero.name}</div>
+              <img src="${hero.image}" alt="${hero.name}武将图" loading="lazy" onerror="this.style.display='none'">
+              <span class="faction ${hero.factionClass}">${hero.faction}</span>
+              <span class="picked-mark">已选定</span>
+            </div>
+            <div class="body">
+              <div class="name-row">
+                <h2 class="name">${hero.name}</h2>
+                <span class="meta">${hero.faction}势力 · ${hero.hp}体力</span>
+              </div>
+              <div class="skills">${skills}</div>
+            </div>
+            <button class="pick-button" type="button" data-id="${hero.id}">${isSelected ? "当前选择" : "选定此将"}</button>
+          </article>
+        `;
+      }).join("");
+    }
+
+    countInput.addEventListener("input", () => {
+      countValue.textContent = countInput.value;
+    });
+
+    countInput.addEventListener("change", drawHeroes);
+    refreshButton.addEventListener("click", drawHeroes);
+    clearButton.addEventListener("click", clearSelection);
+
+    grid.addEventListener("click", event => {
+      const button = event.target.closest("[data-id]");
+      if (!button) return;
+      selectHero(Number(button.dataset.id));
+    });
+
+    drawHeroes();
+  </script>
+</body>
+</html>
