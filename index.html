@@ -441,6 +441,8 @@
       border: 1px solid var(--line);
       border-radius: 8px;
       background: rgba(255, 252, 246, .88);
+      text-align: left;
+      cursor: pointer;
     }
 
     .pool-avatar {
@@ -465,10 +467,14 @@
 
     .pool-skills {
       grid-column: 1 / -1;
-      display: grid;
+      display: none;
       gap: 6px;
       padding-top: 7px;
       border-top: 1px solid var(--line);
+    }
+
+    .pool-item.expanded .pool-skills {
+      display: grid;
     }
 
     .pool-skill {
@@ -571,6 +577,7 @@
     let currentHeroes = [];
     let selectedId = null;
     let refreshTimer = null;
+    let expandedPoolHeroId = null;
 
     poolStatus.textContent = `将池 ${heroes.length} 名`;
 
@@ -732,24 +739,26 @@
       poolList.innerHTML = shown.map(hero => {
         const name = escapeHtml(hero.name);
         const faction = escapeHtml(hero.faction);
+        const isExpanded = hero.id === expandedPoolHeroId;
         const skills = hero.skills.map(([skillName, skillText]) => `
           <div class="pool-skill"><b>${escapeHtml(skillName)}</b>：${escapeHtml(skillText)}</div>
         `).join("");
         return `
-          <div class="pool-item">
+          <button class="pool-item ${isExpanded ? "expanded" : ""}" type="button" data-hero-id="${hero.id}">
             <img class="pool-avatar" src="${encodeURI(hero.thumb || hero.image)}" alt="${name}头像" loading="lazy">
             <div>
               <div class="pool-name">${name}</div>
-              <div class="pool-meta">${faction}势力 · ${escapeHtml(hero.hp)}体力</div>
+              <div class="pool-meta">${faction}势力 · ${escapeHtml(hero.hp)}体力 · ${isExpanded ? "点击收起技能" : "点击查看技能"}</div>
             </div>
             <span class="faction ${escapeHtml(hero.factionClass)}">${faction}</span>
             <div class="pool-skills">${skills}</div>
-          </div>
+          </button>
         `;
       }).join("");
     }
 
     function openPool() {
+      expandedPoolHeroId = null;
       renderPool();
       poolModal.classList.add("open");
       poolModal.setAttribute("aria-hidden", "false");
@@ -778,7 +787,17 @@
     poolTabs.addEventListener("click", event => {
       const button = event.target.closest("[data-faction]");
       if (!button) return;
+      expandedPoolHeroId = null;
       renderPool(button.dataset.faction);
+    });
+
+    poolList.addEventListener("click", event => {
+      const button = event.target.closest("[data-hero-id]");
+      if (!button) return;
+      const heroId = Number(button.dataset.heroId);
+      expandedPoolHeroId = expandedPoolHeroId === heroId ? null : heroId;
+      const activeTab = poolTabs.querySelector(".active");
+      renderPool(activeTab?.dataset.faction || "全");
     });
 
     document.addEventListener("keydown", event => {
