@@ -642,7 +642,7 @@
     </div>
   </section>
 
-  <script src="heroes-data.js?v=20260503-top101-hp"></script>
+  <script src="heroes-data.js?v=20260503-top109-hp-armor"></script>
   <script>
     const heroes = window.SANGUOSHA_HEROES || [];
 
@@ -784,6 +784,23 @@
       })[char]);
     }
 
+    function formatHeroHp(hero) {
+      if (!hero.hp) return "体力未标注";
+
+      const hp = String(hero.hp);
+      const hpMax = hero.hpMax ? String(hero.hpMax) : hp;
+      const armor = Number(hero.armor || 0);
+      const parts = hpMax !== hp
+        ? [`初始体力${hp}`, `体力上限${hpMax}`]
+        : [`${hp}体力`];
+
+      if (armor > 0) {
+        parts.push(`${hero.armor}护甲`);
+      }
+
+      return parts.join(" · ");
+    }
+
     function render() {
       const visibleHeroes = selectedId
         ? currentHeroes.filter(hero => hero.id === selectedId)
@@ -801,7 +818,7 @@
         const faction = escapeHtml(hero.faction);
         const image = encodeURI(hero.image);
         const factionClass = escapeHtml(hero.factionClass);
-        const hpText = hero.hp ? `${escapeHtml(hero.hp)}体力` : "体力未标注";
+        const hpText = escapeHtml(formatHeroHp(hero));
 
         return `
           <article class="card ${isSelected ? "selected" : ""}">
@@ -829,6 +846,8 @@
         hero.name,
         hero.faction,
         hero.hp,
+        hero.hpMax,
+        hero.armor,
         hero.intro,
         ...hero.skills.flat()
       ].join(" ").toLowerCase();
@@ -856,12 +875,13 @@
       poolList.innerHTML = shown.map(hero => {
         const name = escapeHtml(hero.name);
         const faction = escapeHtml(hero.faction);
+        const hpText = escapeHtml(formatHeroHp(hero));
         return `
           <button class="pool-item" type="button" data-hero-id="${hero.id}">
             <img class="pool-avatar" src="${encodeURI(hero.thumb || hero.image)}" alt="${name}头像" loading="lazy">
             <div>
               <div class="pool-name">${name}</div>
-              <div class="pool-meta">${faction}势力 · ${escapeHtml(hero.hp)}体力 · 点击查看技能</div>
+              <div class="pool-meta">${faction}势力 · ${hpText} · 点击查看技能</div>
             </div>
             <span class="faction ${escapeHtml(hero.factionClass)}">${faction}</span>
           </button>
@@ -885,7 +905,7 @@
       const hero = heroes.find(item => item.id === heroId);
       if (!hero) return;
       skillTitle.textContent = hero.name;
-      skillMeta.textContent = `${hero.faction}势力 · ${hero.hp}体力`;
+      skillMeta.textContent = `${hero.faction}势力 · ${formatHeroHp(hero)}`;
       skillDetail.innerHTML = hero.skills.map(([skillName, skillText]) => `
         <div class="skill-detail-item">
           <span class="skill-detail-name">${escapeHtml(skillName)}</span>

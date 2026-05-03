@@ -1,13 +1,16 @@
 // Curated from the official Sanguosha Mobile hero list.
 // Pool scope: about top 100 Doudizhu-environment high-strength heroes plus requested additions, refreshed 2026-05-03.
 // HP values are parsed from BWIKI classic hero pages where available and supplemented from Sanguosha Wiki/Fandom for pages blocked during refresh.
+// hp is initial HP. hpMax is only included when it differs from hp. armor is only included for nonzero starting armor.
 window.SANGUOSHA_HEROES = [
   {
     "id": 492,
     "name": "界·沮授",
     "faction": "群",
     "factionClass": "qun",
-    "hp": "3",
+    "hp": "2",
+    "hpMax": "3",
+    "armor": "3",
     "image": "https://www.sanguosha.cn/storage/uploads/images/skins/60400.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/604.jpg",
     "intro": "沮[jǔ]授，袁绍帐下谋士。史载他“少有大志，擅于谋略”。曾为冀州别驾，举茂才，并当过两次县令。后来又当韩馥[fù]别驾，被韩馥[fù]表为骑都尉。袁绍占据冀州后任用沮授为从事。经常对袁绍提出良策，但很多时候袁绍并不听从。官渡之战时袁绍大败，沮授未及逃走，被曹操所获，因拒降被曹操处死。",
@@ -1510,6 +1513,7 @@ window.SANGUOSHA_HEROES = [
     "faction": "蜀",
     "factionClass": "shu",
     "hp": "4",
+    "armor": "1",
     "image": "https://www.sanguosha.cn/storage/uploads/images/69200.jpg",
     "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/692.jpg",
     "intro": "字伯约，天水冀人。三国时期蜀汉著名将领、军事统帅。原为曹魏天水郡的中郎将，后降蜀汉，官至凉州刺史、大将军。诸葛亮去世后继承诸葛亮的遗志，继续率领蜀汉军队北伐曹魏，与曹魏名将陈泰、郭淮[huái]、邓艾等多次交手。",
