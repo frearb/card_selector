@@ -2005,28 +2005,6 @@ window.SANGUOSHA_HEROES = [
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E6%9C%B1%E7%84%B6"
   },
   {
-    "id": 291,
-    "name": "界·姜维",
-    "faction": "蜀",
-    "factionClass": "shu",
-    "hp": "4",
-    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/5200.jpg",
-    "thumb": "https://www.sanguosha.cn/storage/uploads/images/pic_index/473.jpg",
-    "intro": "字伯约，天水冀人。三国时期蜀汉著名将领、军事统帅。原为曹魏天水郡的中郎将，后降蜀汉，官至凉州刺史、大将军。诸葛亮去世后继承诸葛亮的遗志，继续率领蜀汉军队北伐曹魏，与曹魏名将陈泰、郭淮[huái]、邓艾等多次交手。",
-    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-291.html",
-    "skills": [
-      [
-        "挑衅",
-        "出牌阶段限一次，你可以选择一名其他角色，然后除非该角色对你使用一张【杀】，否则你弃置其一张牌。"
-      ],
-      [
-        "志继",
-        "觉醒技，准备阶段，若你没有手牌，你回复1点体力或摸两张牌，然后减1点体力上限，获得“观星”。观星：准备阶段，你可以观看牌堆顶的五张牌（存活人数小于4时改为三张），然后以任意顺序放回牌堆顶或牌堆底。若你将这些牌均放至牌堆底，则结束阶段你可以再进行一次“观星”。"
-      ]
-    ],
-    "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E5%A7%9C%E7%BB%B4"
-  },
-  {
     "id": 294,
     "name": "界·左慈",
     "faction": "群",
