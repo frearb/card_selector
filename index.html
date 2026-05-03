@@ -107,7 +107,7 @@
 
     .actions {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 8px;
     }
 
@@ -145,6 +145,16 @@
       color: var(--muted);
       font-size: 13px;
       line-height: 1.45;
+    }
+
+    .pool-button {
+      width: 100%;
+      min-height: 42px;
+      border-radius: 8px;
+      background: rgba(47, 116, 95, .13);
+      color: var(--green);
+      border: 1px solid rgba(47, 116, 95, .2);
+      font-weight: 900;
     }
 
     .status {
@@ -341,6 +351,118 @@
       color: var(--blue);
     }
 
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: none;
+      background: rgba(28, 18, 10, .55);
+      padding: 14px;
+    }
+
+    .modal.open {
+      display: grid;
+      place-items: center;
+    }
+
+    .modal-panel {
+      width: min(960px, 100%);
+      max-height: min(820px, 92vh);
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: 12px;
+      padding: 14px;
+      background: #fffaf1;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .modal-head h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .icon-button {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: #efe1cf;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .pool-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .pool-tab {
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(47, 88, 123, .1);
+      color: var(--blue);
+      white-space: nowrap;
+      font-weight: 800;
+    }
+
+    .pool-tab.active {
+      background: var(--blue);
+      color: white;
+    }
+
+    .pool-list {
+      overflow: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 8px;
+      padding-right: 2px;
+    }
+
+    .pool-item {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      align-items: center;
+      gap: 8px;
+      min-height: 58px;
+      padding: 7px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 252, 246, .88);
+    }
+
+    .pool-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      object-fit: cover;
+      object-position: top center;
+      background: #ead8c3;
+    }
+
+    .pool-name {
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .pool-meta {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     @media (min-width: 760px) {
       .app {
         padding: 26px;
@@ -375,6 +497,7 @@
           <button class="primary" id="refreshButton" type="button">刷新武将</button>
           <button class="danger" id="forceRefreshButton" type="button">强制刷新</button>
           <button class="secondary" id="clearButton" type="button">取消选择</button>
+          <button class="pool-button" id="poolButton" type="button">查看将池</button>
         </div>
         <div class="refresh-note" id="refreshNote">普通刷新后 5 分钟内会锁定结果。</div>
       </div>
@@ -394,6 +517,17 @@
     </p>
   </main>
 
+  <section class="modal" id="poolModal" aria-hidden="true" aria-labelledby="poolTitle">
+    <div class="modal-panel" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h2 id="poolTitle">全武将池</h2>
+        <button class="icon-button" id="closePoolButton" type="button" aria-label="关闭">×</button>
+      </div>
+      <div class="pool-tabs" id="poolTabs" aria-label="势力筛选"></div>
+      <div class="pool-list" id="poolList"></div>
+    </div>
+  </section>
+
   <script src="heroes-data.js?v=20260503-top100-hp"></script>
   <script>
     const heroes = window.SANGUOSHA_HEROES || [];
@@ -406,7 +540,12 @@
     const refreshButton = document.querySelector("#refreshButton");
     const forceRefreshButton = document.querySelector("#forceRefreshButton");
     const clearButton = document.querySelector("#clearButton");
+    const poolButton = document.querySelector("#poolButton");
     const refreshNote = document.querySelector("#refreshNote");
+    const poolModal = document.querySelector("#poolModal");
+    const closePoolButton = document.querySelector("#closePoolButton");
+    const poolTabs = document.querySelector("#poolTabs");
+    const poolList = document.querySelector("#poolList");
 
     const STATE_KEY = "sanguosha-selector-state-v2";
     const LOCK_MS = 5 * 60 * 1000;
@@ -563,6 +702,42 @@
       }).join("");
     }
 
+    function renderPool(filter = "全") {
+      const factions = ["全", ...[...new Set(heroes.map(hero => hero.faction))]];
+      poolTabs.innerHTML = factions.map(faction => `
+        <button class="pool-tab ${faction === filter ? "active" : ""}" type="button" data-faction="${escapeHtml(faction)}">
+          ${escapeHtml(faction)}
+        </button>
+      `).join("");
+
+      const shown = filter === "全" ? heroes : heroes.filter(hero => hero.faction === filter);
+      poolList.innerHTML = shown.map(hero => {
+        const name = escapeHtml(hero.name);
+        const faction = escapeHtml(hero.faction);
+        return `
+          <div class="pool-item">
+            <img class="pool-avatar" src="${encodeURI(hero.thumb || hero.image)}" alt="${name}头像" loading="lazy">
+            <div>
+              <div class="pool-name">${name}</div>
+              <div class="pool-meta">${faction}势力 · ${escapeHtml(hero.hp)}体力</div>
+            </div>
+            <span class="faction ${escapeHtml(hero.factionClass)}">${faction}</span>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function openPool() {
+      renderPool();
+      poolModal.classList.add("open");
+      poolModal.setAttribute("aria-hidden", "false");
+    }
+
+    function closePool() {
+      poolModal.classList.remove("open");
+      poolModal.setAttribute("aria-hidden", "true");
+    }
+
     countInput.addEventListener("input", () => {
       countValue.textContent = countInput.value;
     });
@@ -571,6 +746,22 @@
     refreshButton.addEventListener("click", () => drawHeroes());
     forceRefreshButton.addEventListener("click", () => drawHeroes({ force: true }));
     clearButton.addEventListener("click", clearSelection);
+    poolButton.addEventListener("click", openPool);
+    closePoolButton.addEventListener("click", closePool);
+
+    poolModal.addEventListener("click", event => {
+      if (event.target === poolModal) closePool();
+    });
+
+    poolTabs.addEventListener("click", event => {
+      const button = event.target.closest("[data-faction]");
+      if (!button) return;
+      renderPool(button.dataset.faction);
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closePool();
+    });
 
     grid.addEventListener("click", event => {
       const button = event.target.closest("[data-id]");
