@@ -1,5 +1,5 @@
 // Curated from the official Sanguosha Mobile hero list.
-// Pool scope: about top 100 Doudizhu-environment high-strength heroes, refreshed 2026-05-03.
+// Pool scope: about top 100 Doudizhu-environment high-strength heroes plus requested additions, refreshed 2026-05-03.
 // HP values are parsed from BWIKI classic hero pages where available and supplemented from Sanguosha Wiki/Fandom for pages blocked during refresh.
 window.SANGUOSHA_HEROES = [
   {
@@ -2271,5 +2271,31 @@ window.SANGUOSHA_HEROES = [
       ]
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%B5%B5%E8%A5%84"
+  },
+  {
+    "id": 604,
+    "name": "友·诸葛亮",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "3",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/82400.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/e6e1bee86eda65b260c391a19c873304.png",
+    "intro": "诸葛亮（181年—234年10月8日），字孔明，号卧龙，琅琊阳都（今山东省沂南县）人 ，三国时期蜀汉丞相，中国古代杰出的政治家、军事家、战略家 、发明家、文学家。诸葛亮早年随叔父诸葛玄到荆州，诸葛玄死后，诸葛亮躬耕于南阳。 刘备依附荆州刘表时三顾茅庐，诸葛亮向刘备提出占据荆州、益州，联合孙权共同对抗曹操的《隆中对》，刘备根据诸葛亮的策略，成功占领荆州、益州之地，与孙权、曹操形成三足鼎立之势。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-604.html",
+    "skills": [
+      [
+        "演策",
+        "每轮限一次，首轮开始时，或准备阶段，你可以选择一项：从牌堆中随机获得一张锦囊牌；执行“卧龙演策”。若你执行“卧龙演策”，当一张牌被使用时，若此牌的类别或颜色与你的预测相同，你摸一张牌（每次执行“卧龙演策”至多因此摸五张牌）。当本次“卧龙演策”的预测全部验证后，或当你再次执行“卧龙演策”时，若你本次“卧龙演策”正确的预测数量：为0，你失去1点体力，此后“卧龙演策”可预测的牌数-1；不足一半，你弃置两张牌；至少一半（向上取整），你根据本次预测的方式，从牌堆中获得一张符合你声明条件的牌；全部正确，你摸两张牌，此后“卧龙演策”可预测的牌数+1（至多为7）。"
+      ],
+      [
+        "方遒",
+        "限定技，当你执行“卧龙演策”后，你可以展示你的“卧龙演策”预测，若如此做，本次“卧龙演策”的预测全部验证后，执行效果的值均+1，然后若卧龙演策预测的牌数大于3且预测全部正确，该技能可以再次发动。"
+      ],
+      [
+        "共砺",
+        "身份：此模式无效排位、斗地主：锁定技，若友庞统在场且与你阵营一致，你执行“卧龙演策”可预测的牌数+1；若友徐庶在场且与你阵营一致，你“卧龙演策”预测的第一张牌的结果视为正确。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%8F%8B%E8%AF%B8%E8%91%9B%E4%BA%AE"
   }
 ];
