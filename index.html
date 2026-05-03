@@ -426,7 +426,8 @@
     .pool-list {
       overflow: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      grid-template-columns: 1fr;
+      align-content: start;
       gap: 8px;
       padding-right: 2px;
     }
@@ -443,6 +444,8 @@
       background: rgba(255, 252, 246, .88);
       text-align: left;
       cursor: pointer;
+      font: inherit;
+      color: inherit;
     }
 
     .pool-avatar {
@@ -481,6 +484,8 @@
       color: #3c3028;
       font-size: 12px;
       line-height: 1.45;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
 
     .pool-skill b {
@@ -499,6 +504,10 @@
       .grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 16px;
+      }
+
+      .pool-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
   </style>
