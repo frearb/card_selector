@@ -434,7 +434,7 @@
     .pool-item {
       display: grid;
       grid-template-columns: 44px 1fr auto;
-      align-items: center;
+      align-items: start;
       gap: 8px;
       min-height: 58px;
       padding: 7px;
@@ -461,6 +461,24 @@
       margin-top: 3px;
       color: var(--muted);
       font-size: 12px;
+    }
+
+    .pool-skills {
+      grid-column: 1 / -1;
+      display: grid;
+      gap: 6px;
+      padding-top: 7px;
+      border-top: 1px solid var(--line);
+    }
+
+    .pool-skill {
+      color: #3c3028;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .pool-skill b {
+      color: #71480f;
     }
 
     @media (min-width: 760px) {
@@ -714,6 +732,9 @@
       poolList.innerHTML = shown.map(hero => {
         const name = escapeHtml(hero.name);
         const faction = escapeHtml(hero.faction);
+        const skills = hero.skills.map(([skillName, skillText]) => `
+          <div class="pool-skill"><b>${escapeHtml(skillName)}</b>：${escapeHtml(skillText)}</div>
+        `).join("");
         return `
           <div class="pool-item">
             <img class="pool-avatar" src="${encodeURI(hero.thumb || hero.image)}" alt="${name}头像" loading="lazy">
@@ -722,6 +743,7 @@
               <div class="pool-meta">${faction}势力 · ${escapeHtml(hero.hp)}体力</div>
             </div>
             <span class="faction ${escapeHtml(hero.factionClass)}">${faction}</span>
+            <div class="pool-skills">${skills}</div>
           </div>
         `;
       }).join("");
