@@ -2513,5 +2513,28 @@ window.SANGUOSHA_HEROES = [
       ]
     ],
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E8%A2%81%E6%B6%A3"
+  },
+  {
+    "id": 259,
+    "name": "李傕",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "hpMax": "6",
+    "image": "https://www.sanguosha.cn/storage/uploads/images/skins/42600.jpg",
+    "thumb": "https://www.sanguosha.cn/storage/uploads/images/skins/42600.jpg",
+    "intro": "李傕[jué]，字稚然。北地郡泥阳县（今陕西省耀县）人，汉末群雄之一。东汉末年汉献帝时的军阀、权臣，官至大司马、车骑将军、开府、领司隶校尉、假节。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-259.html",
+    "skills": [
+      [
+        "狼袭",
+        "准备阶段，你可以对一名体力不大于你的其他角色造成0-2点随机伤害。"
+      ],
+      [
+        "亦算",
+        "出牌阶段限一次，当你使用的锦囊牌进入弃牌堆时，你可以减1点体力上限，从弃牌堆获得之。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%9D%8E%E5%82%95"
   }
 ];
