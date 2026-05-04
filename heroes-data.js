@@ -2125,7 +2125,8 @@ window.SANGUOSHA_HEROES = [
       "assets/heroes/236-界-孙尚香-skin-04-f1293c8e89.jpg",
       "assets/heroes/236-界-孙尚香-skin-05-b4641cff31.jpg",
       "assets/heroes/236-界-孙尚香-skin-06-1f44878b4b.jpg",
-      "assets/heroes/236-界-孙尚香-skin-07-82a95a6632.jpg"
+      "assets/heroes/236-界-孙尚香-skin-07-82a95a6632.jpg",
+      "assets/heroes/236-界-孙尚香-skin-08-百器皆擅-dynamic.gif"
     ]
   },
   {
