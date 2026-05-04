@@ -333,7 +333,8 @@ window.SANGUOSHA_HEROES = [
       "assets/heroes/235-界-孙权-skin-07-dc3ee0dcf9.jpg",
       "assets/heroes/235-界-孙权-skin-08-b643889fa3.jpg",
       "assets/heroes/235-界-孙权-skin-09-98a766a7f6.jpg",
-      "assets/heroes/235-界-孙权-skin-10-7540182158.jpg"
+      "assets/heroes/235-界-孙权-skin-10-7540182158.jpg",
+      "assets/heroes/235-界-孙权-skin-11-锦绣乘风-dynamic.gif"
     ]
   },
   {
@@ -789,7 +790,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E5%91%A8%E5%A4%84",
     "images": [
-      "assets/heroes/408-周处-skin-01-cde6480fcd.jpg"
+      "assets/heroes/408-周处-skin-01-cde6480fcd.jpg",
+      "assets/heroes/408-周处-skin-02-翻浪搏蛟-dynamic.gif"
     ]
   },
   {
@@ -819,7 +821,8 @@ window.SANGUOSHA_HEROES = [
     "hpSource": "https://wiki.biligame.com/msgs/%E6%9D%9C%E9%A2%84",
     "images": [
       "assets/heroes/402-杜预-skin-01-514652ebe7.jpg",
-      "assets/heroes/402-杜预-skin-02-19cab93fe9.jpg"
+      "assets/heroes/402-杜预-skin-02-19cab93fe9.jpg",
+      "assets/heroes/402-杜预-skin-03-鹊夜同心-dynamic.gif"
     ]
   },
   {
@@ -905,7 +908,8 @@ window.SANGUOSHA_HEROES = [
       "assets/heroes/266-王元姬-skin-02-2f25f7f50b.jpg",
       "assets/heroes/266-王元姬-skin-03-5a5362c94d.jpg",
       "assets/heroes/266-王元姬-skin-04-022fbd14f3.jpg",
-      "assets/heroes/266-王元姬-skin-05-1dad789845.jpg"
+      "assets/heroes/266-王元姬-skin-05-1dad789845.jpg",
+      "assets/heroes/266-王元姬-skin-06-勇夺魁首-dynamic.gif"
     ]
   },
   {
@@ -1378,7 +1382,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%85%B3%E7%BE%BD",
     "images": [
-      "assets/heroes/572-谋-关羽-skin-01-e26b540e40.png"
+      "assets/heroes/572-谋-关羽-skin-01-e26b540e40.png",
+      "assets/heroes/572-谋-关羽-skin-02-万军取首-dynamic.gif"
     ]
   },
   {
