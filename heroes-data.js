@@ -1918,6 +1918,31 @@ window.SANGUOSHA_HEROES = [
     ]
   },
   {
+    "id": 497,
+    "name": "谋·夏侯氏",
+    "faction": "蜀",
+    "factionClass": "shu",
+    "hp": "3",
+    "image": "assets/heroes/497-谋-夏侯氏-skin-01-1c5f663505.jpg",
+    "thumb": "assets/heroes/497-谋-夏侯氏-thumb-e07586a739.png",
+    "intro": "夏侯渊从女，夏侯霸从妹，出城拾柴时被张飞所得，娶其为妻。后生有二女，其中一人为星彩。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-497.html",
+    "skills": [
+      [
+        "燕语",
+        "出牌阶段限两次，你可以弃置一张【杀】并摸一张牌。出牌阶段结束时，你可以令一名其他角色摸X张牌（X为你本回合以此法弃置的【杀】的数量的三倍）。"
+      ],
+      [
+        "樵拾",
+        "每回合限一次，你受到其他角色造成的伤害后，伤害来源可选择令你回复等同此次伤害值的体力，若如此做，其摸两张牌。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E5%A4%8F%E4%BE%AF%E6%B0%8F",
+    "images": [
+      "assets/heroes/497-谋-夏侯氏-skin-01-1c5f663505.jpg"
+    ]
+  },
+  {
     "id": 493,
     "name": "谋·孙尚香",
     "faction": "蜀",
