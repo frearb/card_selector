@@ -1853,7 +1853,10 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%B2%82%E8%9D%89",
     "images": [
-      "assets/heroes/506-谋-貂蝉-skin-01-9018f69720.jpg"
+      "assets/heroes/506-谋-貂蝉-skin-01-9018f69720.jpg",
+      "assets/heroes/506-谋-貂蝉-skin-02-忧君难寐-edc92e74f9.jpg",
+      "assets/heroes/506-谋-貂蝉-skin-03-舞惑群心-dynamic.gif",
+      "assets/heroes/506-谋-貂蝉-skin-04-绝世倾城-static.jpg"
     ]
   },
   {
