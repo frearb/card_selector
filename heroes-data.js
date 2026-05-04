@@ -654,7 +654,8 @@ window.SANGUOSHA_HEROES = [
     "hpSource": "https://sanguosha.fandom.com/zh/wiki/%E7%A5%9E%E7%94%98%E5%AE%81",
     "images": [
       "assets/heroes/348-神甘宁-skin-01-674ac92e30.jpg",
-      "assets/heroes/348-神甘宁-skin-02-c23374c998.jpg"
+      "assets/heroes/348-神甘宁-skin-02-c23374c998.jpg",
+      "assets/heroes/348-神甘宁-skin-03-神威如芒-dynamic.gif"
     ]
   },
   {
@@ -762,7 +763,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%A2%E8%A1%A1",
     "images": [
-      "assets/heroes/304-祢衡-skin-01-aebf5d7fff.jpg"
+      "assets/heroes/304-祢衡-skin-01-aebf5d7fff.jpg",
+      "assets/heroes/304-祢衡-skin-02-锵锵振声-dynamic.gif"
     ]
   },
   {
@@ -1747,7 +1749,8 @@ window.SANGUOSHA_HEROES = [
     ],
     "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%AF%B8%E8%91%9B%E4%BA%AE",
     "images": [
-      "assets/heroes/571-谋-诸葛亮-skin-01-74e2007058.jpg"
+      "assets/heroes/571-谋-诸葛亮-skin-01-74e2007058.jpg",
+      "assets/heroes/571-谋-诸葛亮-skin-02-山河无恙-dynamic.gif"
     ]
   },
   {
@@ -1970,7 +1973,8 @@ window.SANGUOSHA_HEROES = [
       "assets/heroes/160-界-黄盖-skin-03-6a531149a1.jpg",
       "assets/heroes/160-界-黄盖-skin-04-f31356de50.jpg",
       "assets/heroes/160-界-黄盖-skin-05-1f4abb0182.jpg",
-      "assets/heroes/160-界-黄盖-skin-06-d73fb60278.jpg"
+      "assets/heroes/160-界-黄盖-skin-06-d73fb60278.jpg",
+      "assets/heroes/160-界-黄盖-skin-07-炙索击艟-dynamic.gif"
     ]
   },
   {
