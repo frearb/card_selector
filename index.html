@@ -888,6 +888,12 @@
       return Array.isArray(hero.images) && hero.images.length ? hero.images : [hero.image].filter(Boolean);
     }
 
+    function normalizeSearchText(value) {
+      return String(value || "")
+        .toLowerCase()
+        .replace(/[·••・()（）\s]/g, "");
+    }
+
     function getHeroImage(hero) {
       const images = getHeroImages(hero);
       const skinIndex = skinIndexes[hero.id];
@@ -966,7 +972,7 @@
 
     function renderPool(filter = poolFilter) {
       poolFilter = filter;
-      const query = poolSearch.value.trim().toLowerCase();
+      const query = normalizeSearchText(poolSearch.value.trim());
       const factions = ["全", ...[...new Set(heroes.map(hero => hero.faction))]];
       poolTabs.innerHTML = factions.map(faction => `
         <button class="pool-tab ${faction === filter ? "active" : ""}" type="button" data-faction="${escapeHtml(faction)}">
@@ -975,7 +981,7 @@
       `).join("");
 
       const byFaction = filter === "全" ? heroes : heroes.filter(hero => hero.faction === filter);
-      const shown = query ? byFaction.filter(hero => getSearchText(hero).includes(query)) : byFaction;
+      const shown = query ? byFaction.filter(hero => normalizeSearchText(getSearchText(hero)).includes(query)) : byFaction;
       poolResultCount.textContent = `${shown.length}/${byFaction.length} 名`;
 
       if (!shown.length) {
