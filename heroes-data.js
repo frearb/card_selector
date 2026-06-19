@@ -743,29 +743,28 @@ window.SANGUOSHA_HEROES = [
     ]
   },
   {
-    "id": 304,
-    "name": "祢衡",
-    "faction": "群",
-    "factionClass": "qun",
+    "id": 174,
+    "name": "曹冲",
+    "faction": "魏",
+    "factionClass": "wei",
     "hp": "3",
-    "image": "assets/heroes/304-祢衡-skin-01-aebf5d7fff.jpg",
-    "thumb": "assets/heroes/304-祢衡-thumb-ce7ad469d1.png",
-    "intro": "字正平，三国时平原郡般县（今山东德州临邑县）人，东汉末年文学家。颇有才气，但性情狷狭、不能容物。与孔融交好，被孔融推荐去投效曹操。后因羞辱曹操，被曹操遣送去刘表处。后又因对刘表口出恶言，被刘表遣送到黄祖处。黄祖性情暴躁，加之祢衡在宴席上言行失态，遂将祢衡绞杀。",
-    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-304.html",
+    "image": "assets/heroes/174-曹冲-skin-01-e08b73b8a0.jpg",
+    "thumb": "assets/heroes/174-曹冲-thumb-25ea3131b0.png",
+    "intro": "曹冲，字仓舒，沛国谯县人，曹操之子。少有才智，仁爱识达，以“曹冲称象”的故事闻名。建安十三年前后病逝，年仅十三岁，后追赠谥号为邓哀王。",
+    "source": "https://wiki.biligame.com/msgs/%E6%9B%B9%E5%86%B2",
     "skills": [
       [
-        "狂才",
-        "出牌阶段开始时，你可以令你此阶段内的主动出牌时间变为5秒，响应出牌时间也变为5秒。若如此做，你使用牌没有距离和次数限制，且每当你于此阶段内使用牌时,你摸一张牌且主动出牌时间-1秒。你每个出牌阶段通过狂才最多获得5张牌"
+        "称象",
+        "当你受到伤害后，你可以亮出牌堆顶的四张牌，获得其中任意张点数之和不大于13的牌。"
       ],
       [
-        "舌剑",
-        "若你于弃牌阶段弃置过至少两张牌且这些牌花色均不相同，你可弃置一名其他角色的一张牌。"
+        "仁心",
+        "当其他角色受到伤害时，若其体力值为1，你可以翻面并弃置一张装备牌，防止此伤害。"
       ]
     ],
-    "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%A2%E8%A1%A1",
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%9B%B9%E5%86%B2",
     "images": [
-      "assets/heroes/304-祢衡-skin-01-aebf5d7fff.jpg",
-      "assets/heroes/304-祢衡-skin-02-锵锵振声-dynamic.gif"
+      "assets/heroes/174-曹冲-skin-01-e08b73b8a0.jpg"
     ]
   },
   {
