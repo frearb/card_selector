@@ -1,5 +1,5 @@
 // Curated from the official Sanguosha Mobile hero list.
-// Pool scope: about top 100 Doudizhu-environment high-strength heroes plus requested additions, refreshed 2026-05-03.
+// Pool scope: about top 100 Doudizhu-environment high-strength heroes plus requested additions, refreshed 2026-06-21.
 // HP values are parsed from BWIKI classic hero pages where available and supplemented from Sanguosha Wiki/Fandom for pages blocked during refresh.
 // hp is initial HP. hpMax is only included when it differs from hp. armor is only included for nonzero starting armor.
 // images and thumb point to repository-local assets under assets/heroes/.
@@ -1273,6 +1273,205 @@ window.SANGUOSHA_HEROES = [
     "hpSource": "https://wiki.biligame.com/msgs/%E7%A5%9E%E5%8D%8E%E4%BD%97",
     "images": [
       "assets/heroes/568-神华佗-skin-01-88bdaf3f61.jpg"
+    ]
+  },
+  {
+    "id": 597,
+    "name": "谋·贾诩",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "3",
+    "image": "assets/heroes/597-谋-贾诩-skin-01-86c41db797.jpg",
+    "thumb": "assets/heroes/597-谋-贾诩-thumb-31de96457e.png",
+    "intro": "贾诩[xǔ]，字文和，武威姑臧[zāng]人。三国时期魏国著名谋士。曾先后担任三国军阀李傕[jué]、张绣、曹操的谋士。官至魏国太尉，谥曰肃侯。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-597.html",
+    "skills": [
+      [
+        "完杀",
+        "一级：你的回合内，不处于濒死状态的其他角色不能使用【桃】。每轮限一次，一名角色进入濒死状态时，你可观看其手牌并选择其中的零至两张牌，然后其须选择一项：1、由你将被选择的牌分配给其以外的角色；2、弃置所有未被选择的牌。二级：你的回合内，不处于濒死状态的其他角色不能使用【桃】。每轮限一次，一名角色进入濒死状态时，你可观看其手牌并选择其区域内的零至两张牌，然后其须选择一项：1、由你将被选择的牌分配给其以外的角色；2、弃置所有未被选择的牌。"
+      ],
+      [
+        "乱武",
+        "限定技，出牌阶段，你可令所有其他角色除非对各自距离最小的另一名其他角色使用一张【杀】，否则失去1点体力。每有一名角色因此失去体力时，你便可以选择“完杀”、“帷幕”中的一个进行升级。"
+      ],
+      [
+        "帷幕",
+        "一级：锁定技，你成为黑色锦囊牌的目标时，取消之。二级：锁定技，你成为黑色锦囊牌的目标时，取消之。每轮开始时，若你上一轮成为其他角色使用牌的目标的次数不大于一次，则你从弃牌堆随机获得一张黑色锦囊牌或防具牌。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%B4%BE%E8%AF%A9",
+    "images": [
+      "assets/heroes/597-谋-贾诩-skin-01-86c41db797.jpg"
+    ]
+  },
+  {
+    "id": 598,
+    "name": "谋·诸葛瑾",
+    "faction": "吴",
+    "factionClass": "wu",
+    "hp": "3",
+    "image": "assets/heroes/598-谋-诸葛瑾-skin-01-5264c38ce2.jpg",
+    "thumb": "assets/heroes/598-谋-诸葛瑾-thumb-aaa7871061.png",
+    "intro": "字子瑜，吴国大臣，诸葛亮之兄，诸葛恪[kè]之父。经鲁肃推荐，为东吴效力。胸怀宽广，温厚诚信，得到孙权的深深信赖，努力缓和蜀汉与东吴的关系。建安二十五年（220年）吕蒙病逝，诸葛瑾代吕蒙领南郡太守，驻守公安。孙权称帝后，诸葛瑾官至大将军，领豫州牧。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-598.html",
+    "skills": [
+      [
+        "缓释",
+        "当一名角色的判定牌生效前，你可以观看牌堆顶的一张牌，然后你可以用此牌代替之，或用手牌中的一张替换之。"
+      ],
+      [
+        "弘援",
+        "军争：蓄力技（1/3）。当你一次获得不少于两张牌时，你可以消耗1点蓄力点令至多两名角色各摸一张牌。当一名其他角色一次失去不少于两张牌时，你可以消耗1点蓄力点令其摸一张牌。排位、斗地主：蓄力技（1/3）。当你一次获得不少于两张牌时，你可以消耗1点蓄力点令至多两名角色各摸一张牌。当一名其他角色一次失去不少于两张牌时，你可以消耗1点蓄力点令其摸两张牌。"
+      ],
+      [
+        "明哲",
+        "锁定技，每轮限两次。当你于回合外失去牌时，你选择一名角色，若其有蓄力技，则其获得1点蓄力点；若你失去的牌中有非基本牌，则其摸一张牌。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E8%B0%8B%E8%AF%B8%E8%91%9B%E7%91%BE",
+    "images": [
+      "assets/heroes/598-谋-诸葛瑾-skin-01-5264c38ce2.jpg"
+    ]
+  },
+  {
+    "id": 605,
+    "name": "友·庞统",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "3",
+    "image": "assets/heroes/605-友-庞统-skin-01-d79c760fd2.jpg",
+    "thumb": "assets/heroes/605-友-庞统-thumb-2c5df50a10.png",
+    "intro": "庞统（179年－214年），字士元，号凤雏，襄阳人 。刘备帐下重要谋士，庞统小时候为人朴实，但是表面看上去并不聪明。时颍川司马徽为人清雅而擅长识人，庞统二十岁时前去拜见。司马徽坐于桑树上采桑，而庞统坐于树下，俩人相互交谈一直从白天说到黑夜，司马徽对庞统大为惊异，说是南州士子没有人可以与庞统相比。有了司马徽这句话，庞统渐渐为人所知。 时襄阳庞德公称庞统为“凤雏”，诸葛亮为卧龙，司马德操为水镜。 庞统曾与东吴陆绩、顾劭等品评人物好坏，自称有辅佐帝王的才能。庞统后来被本郡征为功曹，喜欢评价人物，培养别人的名声，所以被他评价的人，都往往超过该人实际的才能。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-605.html",
+    "skills": [
+      [
+        "漫卷",
+        "每轮限五次，当你不因本技能一次性获得至少两张牌后，你可以将这些牌中的任意张牌以任意顺序置于牌堆顶。若如此做，你每放置一张牌，便从弃牌堆中随机获得一张与此牌类别不同的牌（单次至多获得五张）。"
+      ],
+      [
+        "养名",
+        "出牌阶段结束时，若你本阶段失去过三张手牌，你可以将牌堆顶的X张牌置于你的武将牌上（X为本回合进入弃牌堆的花色数），然后使用其中花色各不相同的牌（无次数限制），将剩余的牌置入弃牌堆。"
+      ],
+      [
+        "共砺",
+        "身份：此模式无效排位、斗地主：锁定技，若友诸葛亮在场且与你阵营一致，你发动“养名”置于武将牌上的牌的张数+1；若友徐庶在场且与你阵营一致，你发动“养名”后，获得一张本次置于武将牌上的牌中未使用过的花色的牌。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%8F%8B%E5%BA%9E%E7%BB%9F",
+    "images": [
+      "assets/heroes/605-友-庞统-skin-01-d79c760fd2.jpg"
+    ]
+  },
+  {
+    "id": 606,
+    "name": "友·徐庶",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "image": "assets/heroes/606-友-徐庶-skin-01-8230a79716.jpg",
+    "thumb": "assets/heroes/606-友-徐庶-thumb-612c1e61a0.png",
+    "intro": "徐庶（公元168年—公元235年）[1]，本名徐福，字元直，豫州颍川（今河南省禹州市）人，东汉末年刘备帐下谋士，后归曹操，仕于曹魏。董卓作乱时，徐庶与石广元避难于荆州，与司马徽、诸葛亮等道友来往密切。刘备屯驻新野时，徐庶前往投奔，并向刘备推荐诸葛亮。徐庶南下时因母亲被曹操所掳获，徐庶不得已辞别刘备，进入曹营。魏文帝时，徐庶官至右中郎将、御史中丞。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-606.html",
+    "skills": [
+      [
+        "侠行",
+        "游戏开始时，你获得并使用【玄剑】；当【玄剑】进入弃牌堆时，你可以移除2个“启诲”标记并获得之。（衍生牌）玄剑1362：你可以将一种花色的所有手牌当普通【杀】使用。"
+      ],
+      [
+        "启诲",
+        "锁定技，当你使用牌时，若你没有此牌对应类别的标记，你获得1个对应类别的“启诲”标记，然后若你拥有3个“启诲”标记，你移除2个“启诲”标记并选择一项：回复1点体力；摸两张牌；使用下一张牌不计入次数且无次数限制。"
+      ],
+      [
+        "共砺",
+        "身份：此模式无效排位、斗地主：锁定技，若友诸葛亮在场且与你阵营一致，你发动【玄剑】改为将一张手牌当普通【杀】使用；若友庞统在场且与你阵营一致，你发动【玄剑】使用的【杀】无距离限制。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%8F%8B%E5%BE%90%E5%BA%B6",
+    "images": [
+      "assets/heroes/606-友-徐庶-skin-01-8230a79716.jpg"
+    ]
+  },
+  {
+    "id": 647,
+    "name": "骥·张辽",
+    "faction": "魏",
+    "factionClass": "wei",
+    "hp": "4",
+    "image": "assets/heroes/647-骥-张辽-skin-01-44abf1c6f9.jpg",
+    "thumb": "assets/heroes/647-骥-张辽-thumb-7a424e5fc8.png",
+    "intro": "张辽负重致远，雄略垂疆。前摧蹋顿而定北塞，后镇合肥以慑东吴。其用兵也，摧锋正为固本；其立威也，百战乃求久安。不图斩将夺旗之快，唯谋开疆镇土之坚。终使胡息南牧而北疆宁，吴敛北窥而东境固，遂成安边柱石之业，威名传于千里。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-647.html",
+    "skills": [
+      [
+        "冲垒",
+        "锁定技，你的出牌阶段内，所有其他角色的非基本手牌均只能作为【闪】使用或打出；出牌阶段内限X次（X为其他角色数），你使用的牌被其他角色响应后，或你响应其他角色使用的牌后，你获得该角色一张牌。"
+      ],
+      [
+        "荡势",
+        "你使用伤害牌结算后，你可令一名是此牌目标的其他角色选择一项：1.弃置X张牌（X为所有角色本轮选择过此选项的次数，且至少为1）；2.你对其造成1点伤害。"
+      ],
+      [
+        "合御",
+        "军争：此模式无效。排位、斗地主：锁定技，若骥·乐进在场且与你阵营相同，将“冲垒”中的“非基本手牌”改为“手牌”；若骥·李典在场且与你阵营相同，将“荡势”中的X固定为3。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%AA%A5%E5%BC%A0%E8%BE%BD",
+    "images": [
+      "assets/heroes/647-骥-张辽-skin-01-44abf1c6f9.jpg"
+    ]
+  },
+  {
+    "id": 650,
+    "name": "星·法正",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "3",
+    "image": "assets/heroes/650-星-法正-skin-01-7365a3d75b.jpg",
+    "thumb": "assets/heroes/650-星-法正-thumb-a68cc362b9.png",
+    "intro": "法正少负奇才，羁旅蜀中。郁郁难伸，志不得骋。其藏锋也，忍谤而不辩；其跃渊也，乘势则必起。及刘备入蜀，其献策涪城，深得倚重。不争一朝之进退，唯决千里之浮沉。终使蜀中易帜，基业肇兴；西川归心，霸图始立。其藏锋蹈险、跃渊得时，遂成一代奇士。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-650.html",
+    "skills": [
+      [
+        "藏铗",
+        "锁定技，你于出牌阶段外获得牌时，记录此牌花色。你不能于出牌阶段使用未记录花色的牌；你成为其他角色使用的未记录花色的牌的目标后，除非其弃置一张牌，否则此牌对你无效。"
+      ],
+      [
+        "堕洄",
+        "其他角色的准备阶段，其可交给你一张牌，然后你选择一项：1.交给其另一张同花色的牌；2.令其摸一张牌。"
+      ],
+      [
+        "跃渊",
+        "出牌阶段限一次，你可摸X张牌（X为当前记录花色数），然后清除一个花色记录。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%98%9F%E6%B3%95%E6%AD%A3",
+    "images": [
+      "assets/heroes/650-星-法正-skin-01-7365a3d75b.jpg"
+    ]
+  },
+  {
+    "id": 658,
+    "name": "彻里吉",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "image": "assets/heroes/658-彻里吉-skin-01-0e2bb669c2.jpg",
+    "thumb": "assets/heroes/658-彻里吉-thumb-c14836d148.png",
+    "intro": "彻里吉，西羌雄主，边陲悍帅。驱铁车而驰雪域，控弦骑以震关山。闻策应而东出，欲趁乱以争雄；恃骁勇而深入，竟忘险于穷谷。风雪骤临，铁骑困于深雪；旌旗尽偃，雄师溃在崇峦。既遭擒而受礼宴，感恩德而罢干戈。其兴于朔雪，终服于仁德，亦显一代豪杰气概。",
+    "source": "https://www.sanguosha.cn/index.php/pc/hero-detail-658.html",
+    "skills": [
+      [
+        "驱乘",
+        "锁定技，你使用【杀】无距离限制，且不因此技能使用的【杀】只能指定上家/下家为目标。当你使用指定唯一目标的【杀】结算后，若此【杀】目标角色的上家/下家不是你且未造成伤害，此【杀】不计入次数，然后你视为对其的上家/下家使用一张普通【杀】。"
+      ],
+      [
+        "羌勇",
+        "锁定技，你使用【杀】造成伤害时，弃置受伤角色的X张牌（X为本回合你使用【杀】的次数），然后若其没有手牌，此【杀】伤害+1。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%BD%BB%E9%87%8C%E5%90%89",
+    "images": [
+      "assets/heroes/658-彻里吉-skin-01-0e2bb669c2.jpg"
     ]
   },
   {
