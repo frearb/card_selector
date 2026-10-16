@@ -688,7 +688,7 @@
     </div>
   </section>
 
-  <script src="heroes-data.js?v=20261016-shi-xiaoqiao-shi-zhaoyun-xing-wanglang"></script>
+  <script src="heroes-data.js?v=20261016-mayunlu-rework"></script>
   <script>
     const heroes = window.SANGUOSHA_HEROES || [];
 
@@ -961,6 +961,7 @@
     function getSearchText(hero) {
       return [
         hero.name,
+        ...(hero.aliases || []),
         hero.faction,
         hero.hp,
         hero.hpMax,

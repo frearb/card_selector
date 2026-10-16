@@ -2899,5 +2899,39 @@ window.SANGUOSHA_HEROES = [
     "images": [
       "assets/heroes/664-星王朗-skin-01-6122c8634e.jpg"
     ]
+  },
+  {
+    "id": 247,
+    "name": "马云騄",
+    "aliases": [
+      "马云禄"
+    ],
+    "faction": "蜀",
+    "factionClass": "shu",
+    "hp": "4",
+    "image": "assets/heroes/247-马云騄-skin-01-f035773dbc.jpg",
+    "thumb": "assets/heroes/247-马云騄-skin-01-f035773dbc.jpg",
+    "intro": "马超的妹妹，自幼习武，女中无双。在为马腾复仇的战事中跟随马超来到中原，与赵云一见钟情，闪电结婚。个性纯真率直，有时会十分调皮，故意使坏，让赵云不知所措。对于在战场厮杀的赵云来说，云騄不小心流露出来的温情，也给了困境中的赵云许多慰藉。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-247.html",
+    "skills": [
+      [
+        "凤魄",
+        "每阶段每项限一次，当你使用【杀】或者【决斗】指定一名其他角色为唯一目标后，你可以选择一项：1.摸X张牌；2.令此牌的基础伤害值+X（X为你与其的手牌和装备区中的方块牌数）。"
+      ],
+      [
+        "马术",
+        "锁定技，你计算与其他角色的距离-1。"
+      ]
+    ],
+    "skillSource": "https://wiki.biligame.com/msgs/%E9%A9%AC%E4%BA%91%E9%A8%84",
+    "hpSource": "https://wiki.biligame.com/msgs/%E9%A9%AC%E4%BA%91%E9%A8%84",
+    "images": [
+      "assets/heroes/247-马云騄-skin-01-f035773dbc.jpg",
+      "assets/heroes/247-马云騄-skin-02-de06edea9e.jpg",
+      "assets/heroes/247-马云騄-skin-03-cc8bb20f24.jpg",
+      "assets/heroes/247-马云騄-skin-04-3070078756.jpg",
+      "assets/heroes/247-马云騄-skin-05-37a5c308ff.jpg",
+      "assets/heroes/247-马云騄-skin-06-ad082e5b4d.jpg"
+    ]
   }
 ];
