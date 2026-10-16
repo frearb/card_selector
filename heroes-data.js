@@ -2824,5 +2824,80 @@ window.SANGUOSHA_HEROES = [
       "assets/heroes/259-李傕-skin-01-bf3daabc2e.jpg",
       "assets/heroes/259-李傕-skin-02-a6523c2fec.jpg"
     ]
+  },
+  {
+    "id": 666,
+    "name": "势·小乔",
+    "faction": "吴",
+    "factionClass": "wu",
+    "hp": "3",
+    "image": "assets/heroes/666-势-小乔-skin-01-d589f9109e.jpg",
+    "thumb": "assets/heroes/666-势-小乔-skin-01-d589f9109e.jpg",
+    "intro": "小乔琴心蕙质，以音蕴势。曹军压境，满朝议降；周郎主战，众志未凝。小乔临危和弦，一音定心以决夫志；曲终振袂，片语释疑以固吴盟。其心如箭在弦上，引满必发；其志似船离江岸，解缆难追。吴廷既肃，竟以素手凝抗曹之局。当是时也，其琴鸣心志，曲化旌旗，遂成巾帼之勋。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-666.html",
+    "skills": [
+      [
+        "合韵",
+        "出牌阶段限两次，你可选择一名与你有相同技能的角色，然后你失去一个技能并令其摸两张牌。"
+      ],
+      [
+        "音洄",
+        "每轮开始时，你可清除因此获得的技能，然后你选择一名其他角色当前拥有的一个技能获得之。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%8A%BF%E5%B0%8F%E4%B9%94",
+    "images": [
+      "assets/heroes/666-势-小乔-skin-01-d589f9109e.jpg"
+    ]
+  },
+  {
+    "id": 672,
+    "name": "势·赵云",
+    "faction": "蜀",
+    "factionClass": "shu",
+    "hp": "4",
+    "image": "assets/heroes/672-势-赵云-skin-01-1ed7f5419f.jpg",
+    "thumb": "assets/heroes/672-势-赵云-skin-01-1ed7f5419f.jpg",
+    "intro": "赵云勇慎兼备，以度驭势。昔汉水临阵，摧锋以救黄忠；后偃旗空垒，伺敌退而掩杀。重围既破，蜀将得全；金鼓骤起，魏军惊骇。其势若深渊潜龙，含而不露；其发如苍鹰搏兔，瞬息摧羽。大军既退，竟以战鼓惊破敌胆。当是时也，进退有度，武翊从容，终成勇慎砥柱。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-672.html",
+    "skills": [
+      [
+        "武翊",
+        "若你从手牌使用或打出过的基本牌牌名数大于等于：1.每轮限一次 ，你可视为使用一张【杀】或【闪】。2.你使用基本牌无次数限制。3.你使用基本牌无距离限制。4.将你的手牌数固定为4。"
+      ],
+      [
+        "摧锋",
+        "每轮限两次，每回合结束时，你可视为对当前回合角色使用一张伤害值+X的【决斗】（X为本回合所有人打出【杀】的次数）。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E5%8A%BF%E8%B5%B5%E4%BA%91",
+    "images": [
+      "assets/heroes/672-势-赵云-skin-01-1ed7f5419f.jpg"
+    ]
+  },
+  {
+    "id": 664,
+    "name": "星王朗",
+    "faction": "群",
+    "factionClass": "qun",
+    "hp": "4",
+    "image": "assets/heroes/664-星王朗-skin-01-6122c8634e.jpg",
+    "thumb": "assets/heroes/664-星王朗-skin-01-6122c8634e.jpg",
+    "intro": "王朗少为郎官，博学通经。治会稽，恩信著士民；守孤城，忠节显危难。值江东兵起，其以汉吏自任，据城抗旌，屡挫其锋。及敌军出奇，力竭被俘，仍见重于敌酋。后虽身处流离，犹收恤亲旧。至曹操表请，乃应召北归。此负隅之志、瞻势之识，终位极名儒重臣。",
+    "source": "https://www.sanguosha.cn/pc/hero-detail-664.html",
+    "skills": [
+      [
+        "负隅",
+        "每回合各限一次，你成为其他角色使用基本牌或普通锦囊牌的唯一目标时，或你使用基本牌或普通锦囊牌指定其他角色为唯一目标时，你可与其拼点，若此牌使用者：赢，此牌额外结算一次；没赢，此牌无效。若你的拼点结果与上次发动此技能时相同，你摸两张牌。"
+      ],
+      [
+        "瞻势",
+        "有角色进行拼点时，你可选择此次拼点中的任意名角色并弃置等量张牌，此次拼点结算后，所选角色中每有一名角色赢，你摸三张牌。"
+      ]
+    ],
+    "hpSource": "https://wiki.biligame.com/msgs/%E6%98%9F%E7%8E%8B%E6%9C%97",
+    "images": [
+      "assets/heroes/664-星王朗-skin-01-6122c8634e.jpg"
+    ]
   }
 ];
